@@ -166,20 +166,21 @@ Abreviação de "Número de reprodução". É o número *médio* de pessooas que
 
 **R** muda durante o curso de um surto, já que ganhamos mais imunidade e intervenções.
 
+**R<sub>0</sub>** (pronunciado R-zero) é o valor de R *no início de um surto, antes da imunidade e intervenções.* R<sub>0</sub> reflete mais apropriadamente a força de um vírus em si, mas ele também muda de lugar para lugar. Por exemplo,  R<sub>0</sub> é mais alto em cidades mais densas que áreas rurais esparças.
 
-**R<sub>0</sub>** (pronounced R-nought) is what R is *at the start of an outbreak, before immunity or interventions*. R<sub>0</sub> more closely reflects the power of the virus itself, but it still changes from place to place. For example, R<sub>0</sub> is higher in dense cities than sparse rural areas.
-
-(Most news articles – and even some research papers! – confuse R and R<sub>0</sub>. Again, science terminology is bad)
+(A maior parte dos artigos da imprensa – e até alguns artigos científicos! – confundem R e R<sub>0</sub>. Ainda, a terminologia científica é ruim)
 
 The R<sub>0</sub> for "the" seasonal flu is around 1.28[^r0_flu]. This means, at the *start* of a flu outbreak, each <icon i></icon> infects 1.28 others *on average.* (If it sounds weird that this isn't a whole number, remember that the "average" mom has 2.4 children. This doesn't mean there's half-children running about.)
 
-[^r0_flu]: “The median R value for seasonal influenza was 1.28 (IQR: 1.19–1.37)” [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480)
+O R<sub>0</sub> para "a" gripe sazonal é aproximadamente 1.28[^r0_flu]. Isto significa, que no *início* de um surto de gripe, cada <icon i></icon> infecta 1.28 outras pessoas *em média.* (Se soa estranho que não seja um número inteiro lembre-se que uma mãe "em média" tem 2.4 filhos. Isto não significa que há uma meia-criança por aí.)
 
-The R<sub>0</sub> for COVID-19 is estimated to be around 2.2,[^r0_covid] though one *not-yet-finalized* study estimates it was 5.7(!) in Wuhan.[^r0_wuhan]
+[^r0_flu]: “O valor médio de R para a influenza sazonal era 1.28 (IQR: 1.19–1.37)” [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480)
 
-[^r0_covid]: “We estimated the basic reproduction number R0 of 2019-nCoV to be around 2.2 (90% high density interval: 1.4–3.8)” [Riou J, Althaus CL.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001239/)
+O R<sub>0</sub> para a COVID-19 é estimado em cerca de 2.2,[^r0_covid] ainda que um estudo *ainda-não-finalizado* estime que seja 5.7(!) em Wuhan.[^r0_wuhan]
 
-[^r0_wuhan]: “we calculated a median R0 value of 5.7 (95% CI 3.8–8.9)” [Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article)
+[^r0_covid]: “Nós estimamos que o número de reprodução básico R0 do 2019-nCov seja cerca de 2.2 (90% intervalo de alta densidade: 1.4-3.8)” [Riou J, Althaus CL.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001239/)
+
+[^r0_wuhan]: “Nós calculamos um valor médio R0 de 5.7 (95% CI 3.8–8.9)” [Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article)
 
 In our simulations – *at the start & on average* – an <icon i></icon> infects someone every 4 days, over 10 days. "4 days" goes into "10 days" two-and-a-half times. This means – *at the start & on average* – each <icon i></icon> infects 2.5 others. Therefore, R<sub>0</sub> = 2.5. (caveats:[^r0_caveats_sim])
 
