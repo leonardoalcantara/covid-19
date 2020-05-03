@@ -43,31 +43,33 @@ Então, aperte os cintos: nós estamos prestes a experimentar alguma turbulênci
 <div class="section chapter">
     <div>
 		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-        <div>The Last Few Months</div>
+        <div>Os Últimos Meses</div>
     </div>
 </div>
 
-Pilots use flight simulators to learn how not to crash planes.
+Pilotos usam simuladores de vôo para aprender a não destruir aviões.
 
-**Epidemiologists use epidemic simulators to learn how not to crash humanity.**
+**Epidemiologistas usam simuladores epidêmicos para aprender como não destruir a humanidade.**
 
-So, let's make a very, *very* simple "epidemic flight simulator"! In this simulation, <icon i></icon> Infectious people can turn <icon s></icon> Susceptible people into more <icon i></icon> Infectious people:
+Então, vamos construir um "simulador de vôo epidêmico" muito, muito simples!, <icon i></icon>Pessoas infectadas podem tornar <icon s></icon> Pessoas sucetíveis em mais <icon i></icon>Pessoas infectadas:
 
 ![](pics/spread.png)
 
-It's estimated that, *at the start* of a COVID-19 outbreak, the virus jumps from an <icon i></icon> to an <icon s></icon> every 4 days, *on average*.[^serial_interval] (remember, there's a lot of variation)
+É estimado que, *no início* do surto de COVID-19, o vírus passa de uma <icon i></icon> para uma <icon s></icon> a cada 4 dias, *em média. [^serial_interval] (lembre-se, há muita variação)
 
 [^serial_interval]: “The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)”. [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article) (Disclaimer: Early release articles are not considered as final versions)
 
-If we simulate "double every 4 days" *and nothing else*, on a population starting with just 0.001% <icon i></icon>, what happens? 
+Se nós simularmos "dobra a cada 4 dias" *e nada mais*, em uma população começando com apenas 0.001% <icon i></icon>, o que acontece? 
 
-**Click "Start" to play the simulation! You can re-play it later with different settings:** (technical caveats: [^caveats])
+**Clique "Iniciar" para rodar a simulação! Você pode rodar outras vezes com outros parâmetros:**
+(ressalvas técnicas: [ˆcaveats])
 
-[^caveats]: **Remember: all these simulations are super simplified, for educational purposes.**
+[^caveats]: **Lembre-se: todas estas simulações são super simplificadas, para propósitos educacionais.**
     
-    One simplification: When you tell this simulation "Infect 1 new person every X days", it's actually increasing # of infected by 1/X each day. Same for future settings in these simulations – "Recover every X days" is actually reducing # of infected by 1/X each day.
+	Uma simplificação: Quando você pede que a simulação "Infecte 1 nova pessoa a cada x dias", ele de fato está aumentando o númerdo de infectados por 1/x a cada dia. O mesmo para os demais ajustes destas simulações.
+	- "Recuperar a cada x dias" está de fato reduzindo o número de infectados por 1/x a cada dia.
     
-    Those *aren't* exactly the same, but it's close enough, and for educational purposes it's less opaque than setting the transmission/recovery rates directly.
+	Estas *não são* exatamente as mesmas coisas, mas são próximas o suficiente, e para propósitos educacionais é menos obscuro que ajustar as taxas de transmissão e recuperação diretamente.
 
 <div class="sim">
 		<iframe src="sim?stage=epi-1" width="800" height="540"></iframe>
