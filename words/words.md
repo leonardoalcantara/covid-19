@@ -24,21 +24,21 @@
 
 "A única coisa a temer é o próprio medo" é um conselho estúpido.
 
-Claro, não junte papel higiênico - mas se os governantes temem o próprio medo eles irão minimizar os reais perigos de "pânico em massa". O medo não é o problema, mas como nós *canalizamos* nosso medo. O medo nos dá energia para lidar com os perigos agora, e se preparar para os perigos mais a frente.
+Claro, não junte papel higiênico - mas se os governantes temem o próprio medo eles irão minimizar os reais perigos de "pânico em massa". O medo não é o problema, mas, sim, como nós *canalizamos* nosso medo. O medo nos dá energia para lidar com os perigos agora, e se preparar para os perigos mais à frente.
 
-Honestamente, nós (Marcel, epidemiologista + Nicky, artista/programador) estamos preocupados. Nós podemos apostar que você está também! Por isto nós canalizamos nosso medo em criar estas **simulações jogáveis**, para que *você* possa canalizar seu medo em entender:
+Honestamente, nós (Marcel, epidemiologista + Nicky, artista/programador) estamos preocupados. Nós podemos apostar que você está também! Por isto nós canalizamos nosso medo para criar estas **simulações lúdicas**, para que *você* possa canalizar seu medo para entender:
 
 * **Os Últimos Meses** (epidemiologia 101, modelo SEIR, R & R<sub>0</sub>)
 * **Os Próximos Meses** (lockdowns, rastreamento de contato, máscaras)
 * **Os Próximos Anos** (perda de imunidade? sem vacinas?)
 
-Este guia (publicado em 1º de Maio de 2020. clique nesta nota de rodapé!->[ˆtimestamp]) visa trazer para você esperança *e* medo. Para derrotar COVID-19 **de uma forma que também proteja nossa saúde mental e financeira**, nós precisamos de otimismo para criar planos, e pessimismo para criar planos emergênciais. Como Gladys Bronwyn Stern disse uma vez, *"O otimista inventa o avião e o pessimista o paraquedas."*
+Este guia (publicado em 1º de Maio de 2020. clique nesta nota de rodapé!->[ˆtimestamp]) visa trazer para você esperança *e* medo. Para derrotar o COVID-19 **de uma forma que também proteja nossa saúde mental e financeira**, nós precisamos de otimismo para criar planos, e pessimismo para criar planos emergenciais. Como Gladys Bronwyn Stern disse uma vez, *"O otimista inventa o avião e o pessimista o paraquedas."*
 
 [ˆtimestamp]: Estas notas de rodapé terão fontes, links ou comentário bônus. Como este comentário!
     
 	**Este guia foi publicado em 1º de maio de 2020.** Muitos detalhes irão se tornar desatualizados, mas nós estamos confiantes que o guia cobrirá 95% dos futuros possíveis, e que Epidemiologia 101 será útil para sempre.
 
-Então, aperte os cintos: nós estamos prestes a experimentar alguma turbulência.
+Então, apertem os cintos: nós estamos prestes a experimentar alguma turbulência.
 
 <div class="section chapter">
     <div>
@@ -51,7 +51,7 @@ Pilotos usam simuladores de vôo para aprender a não destruir aviões.
 
 **Epidemiologistas usam simuladores epidêmicos para aprender como não destruir a humanidade.**
 
-Então, vamos construir um "simulador de vôo epidêmico" muito, muito simples!, <icon i></icon>Pessoas infectadas podem tornar <icon s></icon> Pessoas sucetíveis em mais <icon i></icon>Pessoas infectadas:
+Então, vamos construir um "simulador de vôo epidêmico" muito, muito simples!, <icon i></icon> Nesta simulação, pessoas infectadas podem tornar <icon s></icon> Pessoas suscetíveis em mais <icon i></icon>Pessoas infectadas:
 
 ![](pics/spread.png)
 
@@ -59,15 +59,15 @@ Então, vamos construir um "simulador de vôo epidêmico" muito, muito simples!,
 
 [^serial_interval]: “The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)”. [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article) (Disclaimer: Early release articles are not considered as final versions)
 
-Se nós simularmos "dobra a cada 4 dias" *e nada mais*, em uma população começando com apenas 0.001% <icon i></icon>, o que acontece? 
+Se nós simularmos "dobra a cada 4 dias" *e nada mais*, em uma população, começando com apenas 0.001% <icon i></icon>, o que acontece? 
 
 **Clique "Iniciar" para rodar a simulação! Você pode rodar outras vezes com outros parâmetros:**
 (ressalvas técnicas: [ˆcaveats])
 
 [^caveats]: **Lembre-se: todas estas simulações são super simplificadas, para propósitos educacionais.**
     
-	Uma simplificação: Quando você pede que a simulação "Infecte 1 nova pessoa a cada x dias", ele de fato está aumentando o númerdo de infectados por 1/x a cada dia. O mesmo para os demais ajustes destas simulações.
-	- "Recuperar a cada x dias" está de fato reduzindo o número de infectados por 1/x a cada dia.
+	Uma simplificação: Quando você pede que a simulação "Infecte 1 nova pessoa a cada x dias", ele de fato está aumentando o número de infectados 1/x a cada dia. O mesmo ocorre para os demais ajustes destas simulações.
+	- "Recuperar a cada x dias" está de fato reduzindo o número de infectados 1/x a cada dia.
     
 	Estas *não são* exatamente as mesmas coisas, mas são próximas o suficiente, e para propósitos educacionais é menos obscuro que ajustar as taxas de transmissão e recuperação diretamente.
 
@@ -79,7 +79,7 @@ Esta é a **curva de crescimento exponencial.** Começa pequena, e então explod
 
 ![](pics/exponential.png)
 
-Mas, esta simulação está errada. Crescimento exponencial, graças a deus, não pode ser para sempre. Uma coisa que impede o espalhamento do vírus é se outras pessoas *já* tem o vírus:
+Mas, esta simulação está errada. O crescimento exponencial, ainda bem, não pode ser perpétuo. Uma razãopara impedir o espalhamento do vírus é se outras pessoas *já* tem o vírus:
 
 ![](pics/susceptibles.png)
 
@@ -93,12 +93,12 @@ Como isto muda o crescimento de uma epidemia? Vamos descobrir:
 
 Esta é a **curva de crescimento logístico.** em formato de S. Começa devagar, explode, e desacelera de novo.
 
-Mas, esta simulação *ainda* está errada. Nós estamos esquecendo o fato que <icon i></icon>Pessoas infectadas em algum momento para de ser infecciosas, seja 1) se recuperando, 2)"se recuperando" com dano aos pulmões, ou 3) morrendo.
+Mas, esta simulação *ainda* está errada. Nós estamos esquecendo o fato que <icon i></icon>Pessoas infectadas em algum momento param de ser infecciosas, seja 1) se recuperando, 2)"se recuperando" com dano aos pulmões, ou 3) morrendo.
 
 
-Por questão de simplicidade, vamos fingir que todas as <icon i></icon> Pessoas infectadas são <icon r></icon> Recuperadas. (Apenas lembre-se que na realidade algumas morrem.) <icon r></icon>s não podem ser infectadas de novo, e vamos assumir – *por enquanto!* – que se tornam imunes por toda vida.
+Por questão de simplicidade, vamos fingir que todas as <icon i></icon> Pessoas infectadas se tornem <icon r></icon> Recuperadas. (Apenas lembrem-se que na realidade algumas morrem.) <icon r></icon>s não podem ser infectadas de novo, e vamos assumir – *por enquanto!* – que se tornam imunes por toda a vida.
 
-Para a COVID-19, é estimado que você permanece <icon i></icon> Infectado por 10 dias, *em média*.[^infectiousness] Isto significa que alguns vão se recuperar antes de 10 dias e outros depois. **Isto é como se parece, com uma simulação *começando* com 100% <icon i></icon>:**
+No caso da COVID-19, é estimado que você permaneça <icon i></icon> Infectado por 10 dias, *em média*.[^infectiousness] Isto significa que alguns vão se recuperar antes de 10 dias e outros depois. **Este é o resultado, com uma simulação *começando* com 100% <icon i></icon>:**
 
 [^infectiousness]: “The median communicable period \[...\] was 9.5 days.” [Hu, Z., Song, C., Xu, C. et al](https://link.springer.com/article/10.1007/s11427-020-1661-4) Yes, we know "median" is not the same as "average". For simplified educational purposes, close enough.
 
@@ -108,21 +108,21 @@ Para a COVID-19, é estimado que você permanece <icon i></icon> Infectado por 1
 
 Isto é o oposto do crescimento exponencial, a **curva de decaimento exponencial.**
 
-Agora, o que acontece se você simular crescimento logístico em formato de S *com* recuperação?
+Agora, o que acontece se você simular crescimento logístico em formato de S *com* a recuperação?
 
 ![](pics/graphs_q.png)
 
 Vamos descobrir.
 
-<b style='color:#ff4040'>Curva vermelha</b> são os casos *correntes*<icon i></icon>,    
-<b style='color:#999999'>Curva cinza</b> são o *total* de casos (correntes + recuperados <icon r></icon>), 
-iniciandi em apenas 0.001% <icon i></icon>:
+<b style='color:#ff4040'>Curva vermelha</b> são os casos *atuais*<icon i></icon>,    
+<b style='color:#999999'>Curva cinza</b> é o *total* de casos (atuais + recuperados <icon r></icon>), 
+que se inicia em apenas 0.001% <icon i></icon>:
 
 <div class="sim">
 		<iframe src="sim?stage=epi-4" width="800" height="540"></iframe>
 </div>
 
-E é *daí* que esta famosa curva veio! Não é uma curva em sino, e não é nem mesmo uma curva "log-normal". Ela não tem nome. Mas você já deve ter visto um zillião de vezes, e implorado para que achate.
+E é *daí* que esta famosa curva veio! Não é uma curva em sino, e não é nem mesmo uma curva "log-normal". Ela não tem nome. Mas você já deve ter visto um zilhão de vezes, e torcido muito para que ela achatasse.
 
 Este é o **Modelo SIR**,[^sir]    
 (<icon s></icon>**S**uscetível <icon i></icon>**I**nfectado <icon r></icon>**R**ecuperado)      
@@ -132,7 +132,7 @@ a *segunda* idéia mais importante em Epidemiologia 101:
 
 ![](pics/sir.png)
 
-**NOTA: A simulações que informam as políticas são muito, *muito* mais sofisticadas que isto!** Mas o Modelo SIR ainda pode explicar as mesmas conclusões, mesmo que deixando passar nuances.
+**NOTA: A simulações que informam as políticas são muito, *muito* mais sofisticadas que isto!** Mas o Modelo SIR ainda serve para encontrarmos as mesmas conclusõesgerais, mesmo que deixando passar algumas nuances.
 
 De fato, vamos acrescentar uma nuance adicional: antes de um <icon s></icon> se tornar <icon i></icon>, ele primeiro se torna <icon e></icon> Exposto. Isto é quando ele tem o vírus mas ainda não pode passar adiante - infec*tado* mas não infec*cioso*.
 
@@ -143,44 +143,42 @@ De fato, vamos acrescentar uma nuance adicional: antes de um <icon s></icon> se 
 [^seir]: Para mais explicações técnicas do Modelo SEIR, veja [the Institute for Disease Modeling](https://www.idmod.org/docs/hiv/model-seir.html) e [Wikipedia](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SEIR_model)
 
 
-Para a COVID-19, é estimado que você é <icon e></icon> infectado-mas-não-infeccioso por 3 dias, *em média*.[^latent] O que acontece se adicionarmos isto a simulação?
+No caso da COVID-19, é estimado que você fique <icon e></icon> infectado-mas-não-infeccioso por 3 dias, *em média*.[^latent] O que acontece se adicionarmos isto à simulação?
 
-[^latent]: “Assumindo uma distribuição do período de incubação de média 5.2 dias de um estudo em separado dos primeiros casos de COVID-19, nós inferimos que o contágio começa a partir de 2.3 dias ((95% IC, 0.8-3.0 dias) antes dos sintomas se instalarem." (traduzindo: assumindo que os sintomas começam no dia 5, o contágio começa 2 dias antes = contágio começa no dia 3) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5)
+[^latent]: “Assumindo uma distribuição do período de incubação de 5.2 dias, em média, resultado de um estudo em separado dos primeiros casos de COVID-19, nós inferimos que o contágio começa a partir de 2.3 dias ((95% IC, 0.8-3.0 dias) antes dos sintomas se instalarem." (traduzindo: assumindo que os sintomas começam no dia 5, o contágio começa 2 dias antes = contágio começa no dia 3) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5)
 
-<b style='color:#ff4040'>Curva Vermelha</b> <b style='color:#FF9393'>+ Rosa</b> são os casos *correntes* (infeccioso <icon i></icon> + exposto <icon e></icon>),    
-<b style='color:#888'>Curva cinza</b> são casos *totais* (corrente + recuperados <icon r></icon>):
+<b style='color:#ff4040'>Curva Vermelha</b> <b style='color:#FF9393'>+ Rosa</b> são os casos *atuais* (infeccioso <icon i></icon> + exposto <icon e></icon>),    
+<b style='color:#888'>Curva cinza</b> são casos *totais* (atuais + recuperados <icon r></icon>):
 
 <div class="sim">
 		<iframe src="sim?stage=epi-5" width="800" height="540"></iframe>
 </div>
-
-Sem muitas mudanças! Quanto tempo você permanece <icon e></icon> Exposto muda a razão de <icon e></icon>-para-<icon i></icon>, e *quando* os casos correntes atingem o pico... mas a *altura* do pico, e o total de casos no fim, permanece o mesmo.
+Não há muitas mudanças! O tempo que você permanece <icon e></icon> Exposto muda a razão de <icon e></icon>-para-<icon i></icon>, e *quando* os casos correntes atingem o pico... mas a *altura* do pico, e o total de casos no final, permanecem os mesmos.
 
 Por que isto acontece? Por causa da mais importante idéia em Epidemiologia 101:
 
 ![](pics/r.png)
 
-Abreviação de "Número de reprodução". É o número *médio* de pessooas que um <icon i></icon> infecta *antes* de se recuperar (ou morrer).
+Abreviação de "Número de reprodução". É o número *médio* de pessoas que um <icon i></icon> infecta *antes* de se recuperar (ou morrer).
 
 ![](pics/r2.png)
 
 **R** muda durante o curso de um surto, já que ganhamos mais imunidade e intervenções.
 
-**R<sub>0</sub>** (pronunciado R-zero) é o valor de R *no início de um surto, antes da imunidade e intervenções.* R<sub>0</sub> reflete mais apropriadamente a força de um vírus em si, mas ele também muda de lugar para lugar. Por exemplo,  R<sub>0</sub> é mais alto em cidades mais densas que áreas rurais esparças.
 
-(A maior parte dos artigos da imprensa – e até alguns artigos científicos! – confundem R e R<sub>0</sub>. Ainda, a terminologia científica é ruim)
+**R<sub>0</sub>** (pronounced R-nought) is what R is *at the start of an outbreak, before immunity or interventions*. R<sub>0</sub> more closely reflects the power of the virus itself, but it still changes from place to place. For example, R<sub>0</sub> is higher in dense cities than sparse rural areas.
+
+(Most news articles – and even some research papers! – confuse R and R<sub>0</sub>. Again, science terminology is bad)
 
 The R<sub>0</sub> for "the" seasonal flu is around 1.28[^r0_flu]. This means, at the *start* of a flu outbreak, each <icon i></icon> infects 1.28 others *on average.* (If it sounds weird that this isn't a whole number, remember that the "average" mom has 2.4 children. This doesn't mean there's half-children running about.)
 
-O R<sub>0</sub> para "a" gripe sazonal é aproximadamente 1.28[^r0_flu]. Isto significa, que no *início* de um surto de gripe, cada <icon i></icon> infecta 1.28 outras pessoas *em média.* (Se soa estranho que não seja um número inteiro lembre-se que uma mãe "em média" tem 2.4 filhos. Isto não significa que há uma meia-criança por aí.)
+[^r0_flu]: “The median R value for seasonal influenza was 1.28 (IQR: 1.19–1.37)” [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480)
 
-[^r0_flu]: “O valor médio de R para a influenza sazonal era 1.28 (IQR: 1.19–1.37)” [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480)
+The R<sub>0</sub> for COVID-19 is estimated to be around 2.2,[^r0_covid] though one *not-yet-finalized* study estimates it was 5.7(!) in Wuhan.[^r0_wuhan]
 
-O R<sub>0</sub> para a COVID-19 é estimado em cerca de 2.2,[^r0_covid] ainda que um estudo *ainda-não-finalizado* estime que seja 5.7(!) em Wuhan.[^r0_wuhan]
+[^r0_covid]: “We estimated the basic reproduction number R0 of 2019-nCoV to be around 2.2 (90% high density interval: 1.4–3.8)” [Riou J, Althaus CL.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001239/)
 
-[^r0_covid]: “Nós estimamos que o número de reprodução básico R0 do 2019-nCov seja cerca de 2.2 (90% intervalo de alta densidade: 1.4-3.8)” [Riou J, Althaus CL.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001239/)
-
-[^r0_wuhan]: “Nós calculamos um valor médio R0 de 5.7 (95% CI 3.8–8.9)” [Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article)
+[^r0_wuhan]: “we calculated a median R0 value of 5.7 (95% CI 3.8–8.9)” [Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article)
 
 Nas nossa simulações – *no início & na média* – um <icon i></icon> infecta alguém a cada 4 dias, em 10 dias. "4 dias" ocorre dentro de "10 dias" duas vezes e meia. Isto significa – *no início & na média* – cada <icon i></icon> infecta 2.5 outros. Então, R<sub>0</sub> = 2.5. (ressalvas:[^r0_caveats_sim])
 
