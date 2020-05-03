@@ -2,29 +2,29 @@
     <div>
     	<iframe id="splash" width="960" height="480" src="banners/splash.html"></iframe>
         <div style="top: 70px;font-size: 75px;font-weight: bold;">
-        	What Happens Next?
+        	O Que Acontece em Seguida?
        	</div>
 		<div style="font-weight: 500;top: 140px;left: 10px;font-size: 29px;">
-			COVID-19 Futures, Explained With Playable Simulations
+			COVID-19, Futuros Explicados com Simulações
 		</div>
 		<div style="font-weight: 100;top: 189px;left: 10px;font-size: 19px;line-height: 21px;">
 			<b>
-				🕐 30 min play/read
+				🕐 Leitura/Simulações em 30 min
 				&nbsp;&middot;&nbsp;
 			</b>
 			by
 			<a href="https://scholar.google.com/citations?user=_wHMGkUAAAAJ&amp;hl=en">Marcel Salathé</a>
-			(epidemiologist)
+			(epidemiologista)
 			&
 			<a href="https://ncase.me/">Nicky Case</a>
-			(art/code)
+			(arte/código)
 		</div>
 	</div>
 </div>
 
-"The only thing to fear is fear itself" was stupid advice.
+"A única coisa a temer é o próprio medo" é um conselho estúpido.
 
-Sure, don't hoard toilet paper – but if policymakers fear fear itself, they'll downplay real dangers to avoid "mass panic". Fear's not the problem, it's how we *channel* our fear. Fear gives us energy to deal with dangers now, and prepare for dangers later.
+Claro, não junte papel higiênico - mas se os decisores temem o próprio medo eles irão minimizar os reais perigos de "pânico em massa". O medo não é o problema, mas como nós *canalizamos* nosso medo. O medo nos dá energia para lidar com os perigos agora, e se preparar para os perigos mais a frente.
 
 Honestly, we (Marcel, epidemiologist + Nicky, art/code) are worried. We bet you are, too! That's why we've channelled our fear into making these **playable simulations**, so that *you* can channel your fear into understanding:
 
