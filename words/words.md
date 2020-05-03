@@ -26,11 +26,11 @@
 
 Claro, não junte papel higiênico - mas se os decisores temem o próprio medo eles irão minimizar os reais perigos de "pânico em massa". O medo não é o problema, mas como nós *canalizamos* nosso medo. O medo nos dá energia para lidar com os perigos agora, e se preparar para os perigos mais a frente.
 
-Honestly, we (Marcel, epidemiologist + Nicky, art/code) are worried. We bet you are, too! That's why we've channelled our fear into making these **playable simulations**, so that *you* can channel your fear into understanding:
+Honestamente, nós (Marcel, epidemiologista + Nicky, artista/programador) estamos preocupados. Nós podemos apostar que você está também! Por isto nós canalizamos nosso medo em criar estas **simulações jogáveis**, para que *você* possa canalizar seu medo em entender:
 
-* **The Last Few Months** (epidemiology 101, SEIR model, R & R<sub>0</sub>)
-* **The Next Few Months** (lockdowns, contact tracing, masks)
-* **The Next Few Years** (loss of immunity? no vaccine?)
+* **Os Últimos Meses** (epidemiologia 101, modelo SEIR, R & R<sub>0</sub>)
+* **Os Próximos Meses** (lockdowns, rastreamento de contato, máscaras)
+* **Os Próximos Anos** (perda de imunidade? sem vacinas?)
 
 This guide (published May 1st, 2020. click this footnote!→[^timestamp]) is meant to give you hope *and* fear. To beat COVID-19 **in a way that also protects our mental & financial health**, we need optimism to create plans, and pessimism to create backup plans. As Gladys Bronwyn Stern once said, *“The optimist invents the airplane and the pessimist the parachute.”*
 
