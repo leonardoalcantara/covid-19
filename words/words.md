@@ -55,7 +55,7 @@ Então, vamos construir um "simulador de vôo epidêmico" muito, muito simples!,
 
 ![](pics/spread.png)
 
-É estimado que, *no início* do surto de COVID-19, o vírus passa de uma <icon i></icon> para uma <icon s></icon> a cada 4 dias, *em média. [^serial_interval] (lembre-se, há muita variação)
+É estimado que, *no início* do surto de COVID-19, o vírus passa de uma <icon i></icon> para uma <icon s></icon> a cada 4 dias, *em média*. [^serial_interval] (lembre-se, há muita variação)
 
 [^serial_interval]: “The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)”. [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article) (Disclaimer: Early release articles are not considered as final versions)
 
