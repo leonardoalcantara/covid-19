@@ -24,7 +24,7 @@
 
 "A única coisa a temer é o próprio medo" é um conselho estúpido.
 
-Claro, não junte papel higiênico - mas se os decisores temem o próprio medo eles irão minimizar os reais perigos de "pânico em massa". O medo não é o problema, mas como nós *canalizamos* nosso medo. O medo nos dá energia para lidar com os perigos agora, e se preparar para os perigos mais a frente.
+Claro, não junte papel higiênico - mas se os governantes temem o próprio medo eles irão minimizar os reais perigos de "pânico em massa". O medo não é o problema, mas como nós *canalizamos* nosso medo. O medo nos dá energia para lidar com os perigos agora, e se preparar para os perigos mais a frente.
 
 Honestamente, nós (Marcel, epidemiologista + Nicky, artista/programador) estamos preocupados. Nós podemos apostar que você está também! Por isto nós canalizamos nosso medo em criar estas **simulações jogáveis**, para que *você* possa canalizar seu medo em entender:
 
