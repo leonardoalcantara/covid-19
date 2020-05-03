@@ -75,25 +75,26 @@ Se nós simularmos "dobra a cada 4 dias" *e nada mais*, em uma população come�
 		<iframe src="sim?stage=epi-1" width="800" height="540"></iframe>
 </div>
 
-This is the **exponential growth curve.** Starts small, then explodes. "Oh it's just a flu" to "Oh right, flus don't create *mass graves in rich cities*". 
+Esta é a **curva de crescimento exponencial.** Começa pequena, e então explode. "Oh é apenas uma gripe"para "Tá certo, gripes não criam *cemitérios de valas comuns em cidades ricas*".
 
 ![](pics/exponential.png)
 
-But, this simulation is wrong. Exponential growth, thankfully, can't go on forever. One thing that stops a virus from spreading is if others *already* have the virus:
+Mas, esta simulação está errada. Crescimento exponencial, graças a deus, não pode ser para sempre. Uma coisa que impede o espalhamento do vírus é se outras pessoas *já* tem o vírus:
 
 ![](pics/susceptibles.png)
 
-The more <icon i></icon>s there are, the faster <icon s></icon>s become <icon i></icon>s, **but the fewer <icon s></icon>s there are, the *slower* <icon s></icon>s become <icon i></icon>s.**
+Quanto mais <icon i></icon>s existem, mais rápido <icon s></icon>s se tornam <icon i></icon>s, **mas quanto menos <icon s></icon>s existem, mais *lentamente* <icon s></icon>s se tornam <icon i></icon>s.**
 
-How's this change the growth of an epidemic? Let's find out:
+Como isto muda o crescimento de uma epidemia? Vamos descobrir:
 
 <div class="sim">
 		<iframe src="sim?stage=epi-2" width="800" height="540"></iframe>
 </div>
 
-This is the "S-shaped" **logistic growth curve.** Starts small, explodes, then slows down again.
+Esta é a **curva de crescimento logístico.** em formato de S. Começa devagar, explode, e desacelera de novo.
 
-But, this simulation is *still* wrong. We're missing the fact that <icon i></icon> Infectious people eventually stop being infectious, either by 1) recovering, 2) "recovering" with lung damage, or 3) dying.
+Mas, esta simulação *ainda* está errada. Nós estamos esquecendo o fato que <icon i></icon>Pessoas infectadas em algum momento para de ser infecciosas, seja 1) se recuperando, 2)"se recuperando" com dano aos pulmões, ou 3) morrendo.
+
 
 For simplicity's sake, let's pretend that all <icon i></icon> Infectious people become <icon r></icon> Recovered. (Just remember that in reality, some are dead.) <icon r></icon>s can't be infected again, and let's pretend – *for now!* – that they stay immune for life.
 
