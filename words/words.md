@@ -199,8 +199,9 @@ Mas lembre-se, quanto menos <icon s></icon>s há, mais *lentamente* <icon s></ic
 </div>
 
 When enough people have immunity, R < 1, and the virus is contained! This is called **herd immunity**. For flus, herd immunity is achieved *with a vaccine*. Trying to achieve "natural herd immunity" by letting folks get infected is a *terrible* idea. (But not for the reason you may think! We'll explain later.)
+Quando pessoas suficientes tem imunidade, R < 1, e o vírus é contido! Isto é chamado **imunidade de rebanho**. Para gripes, a imunidade de rebanho é atingida *com uma vacina*. Tentando atingir "imunidade de rebanho natural" deixando as pessoas se infectarem é uma idéia *terrível*. (Mas não pelas razões que você pode pensar! Explicaremos mais a frente.)
 
-Now, let's play the SEIR Model again, but showing R<sub>0</sub>, R over time, and the herd immunity threshold:
+Vamos rodar o Modelo SEIR outra vez, mas mostrando R<sub>0</sub>, R ao longo do tempo, e o limiar de imunidade de rebanho:
 
 <div class="sim">
 		<iframe src="sim?stage=epi-7" width="800" height="540"></iframe>
