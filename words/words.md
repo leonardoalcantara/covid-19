@@ -96,9 +96,9 @@ Esta é a **curva de crescimento logístico.** em formato de S. Começa devagar,
 Mas, esta simulação *ainda* está errada. Nós estamos esquecendo o fato que <icon i></icon>Pessoas infectadas em algum momento para de ser infecciosas, seja 1) se recuperando, 2)"se recuperando" com dano aos pulmões, ou 3) morrendo.
 
 
-For simplicity's sake, let's pretend that all <icon i></icon> Infectious people become <icon r></icon> Recovered. (Just remember that in reality, some are dead.) <icon r></icon>s can't be infected again, and let's pretend – *for now!* – that they stay immune for life.
+Por questão de simplicidade, vamos fingir que todas as <icon i></icon> Pessoas infectadas são <icon r></icon> Recuperadas. (Apenas lembre-se que na realidade algumas morrem.) <icon r></icon>s não podem ser infectadas de novo, e vamos assumir – *por enquanto!* – que se tornam imunes por toda vida.
 
-With COVID-19, it's estimated you're <icon i></icon> Infectious for 10 days, *on average*.[^infectiousness] That means some folks will recover before 10 days, some after. **Here's what that looks like, with a simulation *starting* with 100% <icon i></icon>:**
+Com a COVID-19, é estimado que você permanece <icon i></icon> Infectado por 10 dias, *em média*.[^infectiousness] Isto significa que alguns vão se recuperar antes de 10 dias e outros depois. **Isto é como se parece, com uma simulação *começando* com 100% <icon i></icon>:**
 
 [^infectiousness]: “The median communicable period \[...\] was 9.5 days.” [Hu, Z., Song, C., Xu, C. et al](https://link.springer.com/article/10.1007/s11427-020-1661-4) Yes, we know "median" is not the same as "average". For simplified educational purposes, close enough.
 
@@ -106,27 +106,27 @@ With COVID-19, it's estimated you're <icon i></icon> Infectious for 10 days, *on
 		<iframe src="sim?stage=epi-3" width="800" height="540"></iframe>
 </div>
 
-This is the opposite of exponential growth, the **exponential decay curve.**
+Isto é o oposto do crescimento exponencial, a **curva de decaimento exponencial.**
 
-Now, what happens if you simulate S-shaped logistic growth *with* recovery?
+Agora, o que acontece se você simular crescimento logístico em formato de S *com* recuperação?
 
 ![](pics/graphs_q.png)
 
-Let's find out.
+Vamos descobrir.
 
-<b style='color:#ff4040'>Red curve</b> is *current* cases <icon i></icon>,    
-<b style='color:#999999'>Gray curve</b> is *total* cases (current + recovered <icon r></icon>),
-starts at just 0.001% <icon i></icon>:
+<b style='color:#ff4040'>Curva vermelha</b> são os casos *correntes*<icon i></icon>,    
+<b style='color:#999999'>Curva cinza</b> são o *total* de casos (correntes + recuperados <icon r></icon>), 
+iniciandi em apenas 0.001% <icon i></icon>:
 
 <div class="sim">
 		<iframe src="sim?stage=epi-4" width="800" height="540"></iframe>
 </div>
 
-And *that's* where that famous curve comes from! It's not a bell curve, it's not even a "log-normal" curve. It has no name. But you've seen it a zillion times, and beseeched to flatten.
+E é *daí* que esta famosa curva veio! Não é uma curva em sino, e não é nem mesmo uma curva "log-normal". Ela não tem nome. Mas você já deve ter visto um zillião de vezes, e implorado para que achate.
 
-This is the the **SIR Model**,[^sir]    
-(<icon s></icon>**S**usceptible <icon i></icon>**I**nfectious <icon r></icon>**R**ecovered)      
-the *second*-most important idea in Epidemiology 101:
+Este é o **Modelo SIR**,[^sir]    
+(<icon s></icon>**S**uscetível <icon i></icon>**I**nfectado <icon r></icon>**R**ecuperado)      
+a *segunda* idéia mais importante em Epidemiologia 101:
 
 [^sir]: For more technical explanations of the SIR Model, see [the Institute for Disease Modeling](https://www.idmod.org/docs/hiv/model-sir.html#) and [Wikipedia](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SIR_model)
 
