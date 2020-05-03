@@ -696,14 +696,14 @@ Here's the rough idea, with some (less-consensus) backup plans:
 
 ![](pics/plan.png)
 
-So what does this mean for YOU, right now?
+Então o que isto significa para VOCÊ, agora?
 
-**For everyone:** Respect the lockdown so we can get out of Phase I asap. Keep washing those hands. Make your own masks. Download a *privacy-protecting* contact tracing app when those are available next month. Stay healthy, physically & mentally! And write your local policymaker to get off their butt and...
+**Para todo mundo** Respeite a quarentena para que nós possamos sair da Fase I tão logo quanto possível. Continue lavando as suas mãos. Faça suaa própria máscara. Baixe um app de rastreamento de contatos *que protejam identidades* quando estes estiverem disponíveis no próximo mês. Se mantenha física e mentalmente saudável! E escreva para seu legislador local para levantar a bunda da cadeira e...
 
-**For policymakers:** Make laws to support folks who have to self-isolate/quarantine. Hire more manual contact tracers, *supported* by privacy-protecting contact tracing apps. Direct more funds into the stuff we should be building, like...
+**Para legisladores:** Crie leis que deem suporte a quem tem que se isolar/ficar em quarentena. Contrate mais rastreadores de contato manuais, *auxiliados* por app de rastreamento de contatos *que protejam identidades*. Direcione mais fundos para as coisas que deveríamos estar fazendo, tais como...
 
-**For builders:** Build tests. Build ventilators. Build personal protective equipment for hospitals. Build tests. Build masks. Build apps. Build antivirals, prophylactics, and other treatments that aren't vaccines. Build vaccines. Build tests. Build tests. Build tests. Build hope. 
+**Para produtores:** Produzam testes. Produzam respiradores. Produzam equipamentos de proteção para hospitais. Produzam testes. Produzam máscaras. Produzam apps. Produzam antivirais, profiláticos, e outros tratamentos que não são vacinas. Produzam vacinas. Produzam testes. Produzam testes. Produzam testes. Produzam esperança.
 
-Don't downplay fear to build up hope. Our fear should *team up* with our hope, like the inventors of airplanes & parachutes. Preparing for horrible futures is how we *create* a hopeful future.
+Não minimize o medo para construir esperança. Nosso medo deve *trabalhar junto* com nossa esperança, como os inventores de aviões e paraquedas. Se preparar para futuros horríveis é como nós *criamos* um futuro de esperança.
 
-The only thing to fear is the idea that the only thing to fear is fear itself.
+A única coisa a temer é a idéia que a única coisa a temer é o próprio medo.
