@@ -32,13 +32,13 @@ Honestamente, nós (Marcel, epidemiologista + Nicky, artista/programador) estamo
 * **Os Próximos Meses** (lockdowns, rastreamento de contato, máscaras)
 * **Os Próximos Anos** (perda de imunidade? sem vacinas?)
 
-This guide (published May 1st, 2020. click this footnote!→[^timestamp]) is meant to give you hope *and* fear. To beat COVID-19 **in a way that also protects our mental & financial health**, we need optimism to create plans, and pessimism to create backup plans. As Gladys Bronwyn Stern once said, *“The optimist invents the airplane and the pessimist the parachute.”*
+Este guia (publicado em 1º de Maio de 2020. clique nesta nota de rodapé!->[ˆtimestamp]) visa trazer para você esperança *e* medo. Para derrotar COVID-19 **de uma forma que também proteja nossa saúde mental e financeira**, nós precisamos de otimismo para criar planos, e pessimismo para criar planos emergênciais. Como Gladys Bronwyn Stern disse uma vez, *"O otimista inventa o avião e o pessimista o paraquedas."*
 
-[^timestamp]: These footnotes will have sources, links, or bonus commentary. Like this commentary!
+[ˆtimestamp]: Estas notas de rodapé terão fontes, links ou comentário bônus. Como este comentário!
     
-    **This guide was published on May 1st, 2020.** Many details will become outdated, but we're confident this guide will cover 95% of possible futures, and that Epidemiology 101 will remain forever useful.
+	**Este guia foi publicado em 1º de maio de 2020.** Muitos detalhes irão se tornar desatualizados, mas nós estamos confiantes que o guia cobrirá 95% dos futuros possíveis, e que Epidemiologia 101 será útil para sempre.
 
-So, buckle in: we're about to experience some turbulence.
+Então, aperte os cintos: nós estamos prestes a experimentar alguma turbulência.
 
 <div class="section chapter">
     <div>
