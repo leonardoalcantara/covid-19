@@ -207,29 +207,29 @@ Vamos rodar o Modelo SEIR outra vez, mas mostrando R<sub>0</sub>, R ao longo do 
 		<iframe src="sim?stage=epi-7" width="800" height="540"></iframe>
 </div>
 
-**NOTE: Total cases *does not stop* at herd immunity, but overshoots it!** And it crosses the threshold *exactly* when current cases peak. (This happens no matter how you change the settings – try it for yourself!)
+**NOTA: O total de casos *não para* na imunidade de rebanho, mas ultrapassa ele!** E ele cruza o limiar *exatamente* quando os casos correntes atingem o pico. (Isto acontece não importa como você mude os ajustes - tente você mesmo!)
 
-This is because when there are more non-<icon s></icon>s than the herd immunity threshold, you get R < 1. And when R < 1, new cases stop growing: a peak.
+Isto ocorre porque quando há mais não-<icon s></icon>s do que o limiar da imunidade de rebanho, você tem R < 1. E quando R < 1, novos casos param de crescer: um pico.
 
-**If there's only one lesson you take away from this guide, here it is** – it's an extremely complex diagram so please take time to fully absorb it:
+**Se houver apenas uma lição para você tirar deste guia é esta** - é um diagrama extremamente complexo, então tome um tempo para absorvê-lo completamente:
 
 ![](pics/r3.png)
 
-**This means: we do NOT need to catch all transmissions, or even nearly all transmissions, to stop COVID-19!**
+**Isto significa: nós NÃO precisamos impedir todas as transmissões, ou nem mesmo algo próximo de todas as transmissões, para parar o COVID-19!**
 
-It's a paradox. COVID-19 is extremely contagious, yet to contain it, we "only" need to stop more than 60% of infections. 60%?! If that was a school grade, that's a D-. But if R<sub>0</sub> = 2.5, cutting that by 61% gives us R = 0.975, which is R < 1, virus is contained! (exact formula:[^exact_formula])
+É um paradoxo. COVID-19 é extremamente contagioso, porém para contê-lo, nós "só" precisamos impedir 60% das infecções. 60%?! Se fosse uma nota no boletim seria um D-. Mas se R<sub>0</sub> = 2.5, cortando isto por 61% nós temos R = 0.975, que é R < 1, vírus contido! (fórmula exata:[^exact_formula])
 
-[^exact_formula]: Remember R = R<sub>0</sub> * the ratio of transmissions still allowed. Remember also that ratio of transmissions allowed = 1 - ratio of transmissions *stopped*.
+[^exact_formula]: Lembre-se R = R<sub>0</sub> * a proporção das transmissões ainda permitidas. Lembre-se ainda que a proporção das transmissões ainda permitidas = 1 - proporção das transmissões  *impedidas*.
     
-    Therefore, to get R < 1, you need to get R<sub>0</sub> * TransmissionsAllowed < 1. 
+    Logo, para ter R < 1, você precisa ter R<sub>0</sub> * TransmissõesPermitidas < 1. 
     
-    Therefore, TransmissionsAllowed < 1/R<sub>0</sub>
+    Logo, TransmissõesPermitidas < 1/R<sub>0</sub>
     
-    Therefore, 1 - TransmissionsStopped < 1/R<sub>0</sub>
+    Logo, 1 - TransmissõesImpedidas < 1/R<sub>0</sub>
     
-    Therefore, TransmissionsStopped > 1 - 1/R<sub>0</sub>
+    Logo, TransmissõesImpedidas > 1 - 1/R<sub>0</sub>
     
-    Therefore, you need to stop more than **1 - 1/R<sub>0</sub>** of transmissions to get R < 1 and contain the virus!
+    Logo, você precisa parar mais que **1 - 1/R<sub>0</sub>** das transmissões para conseguir R < 1 e conter o vírus!  
 
 ![](pics/r4.png)
 
