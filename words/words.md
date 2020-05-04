@@ -32,9 +32,9 @@ Honestamente, nós (Marcel, epidemiologista + Nicky, artista/programador) estamo
 * **Os Próximos Meses** (lockdowns, rastreamento de contato, máscaras)
 * **Os Próximos Anos** (perda de imunidade? sem vacinas?)
 
-Este guia (publicado em 1º de Maio de 2020. clique nesta nota de rodapé!->[ˆtimestamp]) visa trazer para você esperança *e* medo. Para derrotar o COVID-19 **de uma forma que também proteja nossa saúde mental e financeira**, nós precisamos de otimismo para criar planos, e pessimismo para criar planos emergenciais. Como Gladys Bronwyn Stern disse uma vez, *"O otimista inventa o avião e o pessimista o paraquedas."*
+Este guia (publicado em 1º de Maio de 2020. clique nesta nota de rodapé!→[^timestamp]) visa trazer para você esperança *e* medo. Para derrotar o COVID-19 **de uma forma que também proteja nossa saúde mental e financeira**, nós precisamos de otimismo para criar planos, e pessimismo para criar planos emergenciais. Como Gladys Bronwyn Stern disse uma vez, *"O otimista inventa o avião e o pessimista o paraquedas."*
 
-[ˆtimestamp]: Estas notas de rodapé terão fontes, links ou comentário bônus. Como este comentário!
+[^timestamp]: Estas notas de rodapé terão fontes, links ou comentário bônus. Como este comentário!
     
 	**Este guia foi publicado em 1º de maio de 2020.** Muitos detalhes irão se tornar desatualizados, mas nós estamos confiantes que o guia cobrirá 95% dos futuros possíveis, e que Epidemiologia 101 será útil para sempre.
 
@@ -566,66 +566,68 @@ Not to mention all the *other* interventions we could do, to further push R down
 
 . . .
 
-We hope these plans give you hope. 
+Nós esperamos que estes planos dêem esperança para você.
 
-**Even under a pessimistic scenario, it *is* possible to beat COVID-19, while protecting our mental and financial health.** Use the lockdown as a "reset button", keep R < 1 with case isolation + privacy-protecting contract tracing + at *least* cloth masks for all... and life can get back to a normal-ish!
+**Mesmo em um cenário pessimista é possível bater o COVID-19, enquanto protegemos nossa saúde mental e financeira.** Usando o lockdown como um "botão de reinício", mantendo R < 1 com isolaamento de casos + rastreamento de contatos que proteja a privacidade + *pelo menos* máscaras de pano para todos... e a vida pode voltar a uma normalidade!
 
-Sure, you may have dried-out hands. But you'll get to invite a date out to a comics bookstore! You'll get to go out with friends to watch the latest Hollywood cash-grab. You'll get to people-watch at a library, taking joy in people going about the simple business of *being alive.*
+Claro, você pode terá suas mãos ressecadas, mas você poderá convidar alguém para um encontro em uma livraria de histórias em quadrinhos! Você poderá sair com amigos para assistir o último caça-níqueis de Hollywood. Você poderá ficar observando as pessoas em uma livraria, ficando alegre de vê-las fazendo coisas simples como *estarem vivas.*.
 
-Even under the worst-case scenario... life perseveres.
+Mesmo no cenário de pior caso... a vida persevera.
 
-So now, let's plan for some *worse* worst-case scenarios. Water landing, get your life jacket, and please follow the lights to the emergency exits:
+Então agora vamos planejar para alguns dos *piores* cenários dentre os de pior caso. Aterrisando na água, pegue seu colete de sobrevivência, e por favor siga as luzes para as saídas de emergência:
 
 <div class="section chapter">
     <div>
 		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-        <div>The Next Few Years</div>
+        <div>Os Próximos Anos</div>
     </div>
 </div>
 
-You get COVID-19, and recover. Or you get the COVID-19 vaccine. Either way, you're now immune...
+Se você tiver COVID-19, e se recuperar. Ou tomar a vacina da COVID-19. De qualquer forma você agora estará imune...
 
-...*for how long?*
+...*por quanto tempo?*
 
-* COVID-19 is most closely related to SARS, which gave its survivors 2 years of immunity.[^SARS immunity]
-* The coronaviruses that cause "the" common cold give you 8 months of immunity.[^cold immunity]
-* There's reports of folks recovering from COVID-19, then testing positive again, but it's unclear if these are false positives.[^unclear]
-* One *not-yet-peer-reviewed* study on monkeys showed immunity to the COVID-19 coronavirus for at least 28 days.[^monkeys]
+* COVID-19 é mais similar ao SARS, que dava aos seus sobreviventes 2 anos de imunidade.[^SARS immunity]
+* Os coronavírus que causam "o" resfriado comum dão a você 8 meses de imunidade.[^cold immunity]
+* Há relatos de pessoas recuperadas do COVID-19, que depois voltam a testar positivo, mas ainda é incerto se estes são falsos positivos.[^unclear]
+* Um estudo *ainda-não-revisado-por-pares* em macacos mostrou imunidade ao coronavírus do COVID-19 por pelo menos 28 dias.[ˆmonkeys]
 
-But for COVID-19 *in humans*, as of May 1st 2020, "how long" is the big unknown.
+Mas para o COVID-19 *em humanos*, em 1 de maio de 2020, o "quanto tempo" é a grande dúvida.
 
-[^SARS immunity]: “SARS-specific antibodies were maintained for an average of 2 years [...] Thus, SARS patients might be susceptible to reinfection ≥3 years after initial exposure.” [Wu LP, Wang NC, Chang YH, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2851497/) "Sadly" we'll never know how long SARS immunity would have really lasted, since we eradicated it so quickly.
+[^SARS immunity]: "Anticorpos específicos para o SARS foram mantidos por uma média de 2 anos [...] Então pacientes do SARS devem ser suscetíveis a reinfecção ≥3 anos depois da exposição inicial." [Wu LP, Wang NC, Chang YH, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2851497/) "Infelizmente" nós nunca saberemos por quanto tempo a imunidade do SARS teria realmente durado já que a erradicamos tão rapidamente.
 
-[^cold immunity]: “We found no significant difference between the probability of testing positive at least once and the probability of a recurrence for the beta-coronaviruses HKU1 and OC43 at 34 weeks after enrollment/first infection.” [Marta Galanti & Jeffrey Shaman (PDF)](http://www.columbia.edu/~jls106/galanti_shaman_ms_supp.pdf)
+[^cold immunity]: "Nós não encontramos nenhuma diferença significativa entre a probabilidade de testar positivo pelo menos uma vez e a probabilidade de recorrência para os beta-coronavírus HKU1 e OC43 em 34 semanas depois da inscrição/primeira infecção." [Marta Galanti & Jeffrey Shaman (PDF)](http://www.columbia.edu/~jls106/galanti_shaman_ms_supp.pdf)
 
-[^unclear]: “Once a person fights off a virus, viral particles tend to linger for some time. These cannot cause infections, but they can trigger a positive test.” [from STAT News by Andrew Joseph](https://www.statnews.com/2020/04/20/everything-we-know-about-coronavirus-immunity-and-antibodies-and-plenty-we-still-dont/)
+[^unclear]: "Uma vez que uma pessoa enfrentou um vírus partículas virais tendem a permanecer por algum tempo. Estas não podem causar infecções, mas elas podem disparar um teste positivo." [de STAT News por Andrew Joseph](https://www.statnews.com/2020/04/20/everything-we-know-about-coronavirus-immunity-and-antibodies-and-plenty-we-still-dont/)
 
-[^monkeys]: From [Bao et al.](https://www.biorxiv.org/content/10.1101/2020.03.13.990226v1.abstract) *Disclaimer: This article is a preprint and has not been certified by peer review (yet).* Also, to emphasize: they only tested re-infection 28 days later. 
+[^monkeys]: De [Bao et al.](https://www.biorxiv.org/content/10.1101/2020.03.13.990226v1.abstract) 
+*Ressalva: Este artigo é uma pré-impressão e não foi certificado por revisão por pares (ainda).* Também para enfatizar: eles somente testaram para reinfecção 28 dias depois.
 
-For these simulations, let's say it's 1 year.
-**Here's a simulation starting with 100% <icon r></icon>**, exponentially decaying into susceptible, no-immunity <icon s></icon>s after 1 year, on *average*, with variation:
+Para estas simulações, digamos é um ano.
+**Aqui temos uma simulação iniciando com 100% <icon r></icon>**, decaindo exponencialmente para suscetíveis, sem imunidade <icon s></icon>s depois de 1 ano, na *média*, com variação:
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-1&format=lines&height=600" width="800" height="600"></iframe>
 </div>
 
-Return of the exponential decay!
+O Retorno do decaimento exponencial!
 
-This is the **SEIRS Model**. The final "S" stands for <icon s></icon> Susceptible, again.
+Este é o **Modelo SEIRS**. O último "S" significa <icon s></icon> suscetível, de novo.
 
 ![](pics/seirs.png)
 
-Now, let's simulate a COVID-19 outbreak, over 10 years, with no interventions... *if immunity only lasts a year:*
+
+Agora vamos simular um surto de COVID-19, no período de 10 anos, sem intervenções... *se a imunidade durar apenas um ano:*
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-2&format=lines&height=600" width="800" height="600"></iframe>
 </div>
 
-In previous simulations, we only had *one* ICU-overwhelming spike. Now, we have several, *and* <icon i></icon> cases come to a rest *permanently at* ICU capacity. (Which, remember, we *tripled* for these simulations)
+Nas simulações prévias, nós tinhamos apenas *um* pico de superlotação das UTIs. Agora nós temos vários, *e* <icon i></icon> casos convergem para ficar *permanentemente na* capacidade das UTIs. (Que, lembre-se, nós *triplicamos* para estas simulações)
 
-R = 1, it's **endemic.**
+R = 1, é **endêmico.**
 
-Thankfully, because summer reduces R, it'll make the situation better:
+Felizmente, como o verão reduz o R isto melhorará a situação:
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-3&format=lines&height=640" width="800" height="640"></iframe>
