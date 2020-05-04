@@ -386,39 +386,39 @@ Se os casos só se auto-isolam quando eles sabem que estão doentes (isto é, el
 
 E de fato, 44% de todas as transmissões são assim: *pré*-sintomáticas! [^pre_symp]
 
-[^pre_symp]: “We estimated that 44% (95% confidence interval, 25–69%) of secondary cases were infected during the index cases’ presymptomatic stage” [He, X., Lau, E.H.Y., Wu, P. et al](https://www.nature.com/articles/s41591-020-0869-5)
+[^pre_symp]: “Nós estimamos que 44% (95% IC, 25-69%) de casos secundários foram infectados durante o estágio pré-sintomático dos casos índice"[He, X., Lau, E.H.Y., Wu, P. et al](https://www.nature.com/articles/s41591-020-0869-5)
 
-But, if we find *and quarantine* a symptomatic case's recent close contacts... we stop the spread, by staying one step ahead!
+Mas, se nós encontrarmos *e colocarmos em quarentena* os contatos próximos recentes de um caso sintomático... nós paramos o espalhamento, por estar um passo a frente!
 
 ![](pics/timeline3.png)
 
-This is called **contact tracing**. It's an old idea, was used at an unprecedented scale to contain Ebola[^ebola], and now it's core part of how Taiwan & South Korea are containing COVID-19!
+Isto é chamado **rastreamento de contato**. É uma idéia antigaa, que foi utilizada em uma escala sem precedentes para conter o Ebola[^ebola], e agora é parte central de como Formosa e Coréia do Sul estão contendo o COVID-19!
 
-[^ebola]: “Contact tracing was a critical intervention in Liberia and represented one of the largest contact tracing efforts during an epidemic in history.” [Swanson KC, Altare C, Wesseh CS, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6152989/)
+[^ebola]: “Rastreamento de contatos foi uma intervenção crítica na Libéria e representou um dos maiores esforços de rastreamento de contatos durante uma epidemia na história.” [Swanson KC, Altare C, Wesseh CS, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6152989/)
 
-(It also lets us use our limited tests more efficiently, to find pre-symptomatic <icon i></icon>s without needing to test almost everyone.)
+(Isto também permite que utilizemos nossos recursos de teste limitados de forma mais eficiente, para encontrar <icon i></icon>s pré-sintomáticos sem a necessidade de testar quase todo mundo).
 
-Traditionally, contacts are found with in-person interviews, but those *alone* are too slow for COVID-19's ~48 hour window. That's why contact tracers need help, and be supported by – *NOT* replaced by – contact tracing apps.
+Tradicionalmente, os contatos são encontrados com entrevistas pessoais, mas estas *sozinhas* são muito lentas para a janela de ~48h do COVID-19. Este é o motivo pelo qual os rastreadores de contato precisam de ajuda, e serem auxíliados por - *NÃO* substituídos por - apps de rastreamento de contatos.
 
-(This idea didn't come from "techies": using an app to fight COVID-19 was first proposed by [a team of Oxford epidemiologists](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936).)
+(Esta idéias não surgiu de "techies": usar um app para lutar contra o COVID-19 foi proposto por [um time de epidemiologistas de Oxford](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936).)
 
-Wait, apps that trace who you've been in contact with?... Does that mean giving up privacy, giving in to Big Brother?
+Mas espere aí, apps que rastreiam com quem você esteve em contato?... Isto significa abrir mão da sua privacidade, sucumbindo ao Big Brother?
 
-Heck no! **[DP-3T](https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing)**, a team of epidemiologists & cryptographers (including one of us, Marcel Salathé) is *already* making a contact tracing app – with code available to the public – that reveals **no info about your identity, location, who your contacts are, or even *how many contacts* you've had.**
+Nada disto! **[DP-3T](https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing)**, um time de epidemiologistas e criptografos (incluindo um de nós, Marcel Salathé) *já* está desenvolvento um app de rastreamento de contatos - com o código disponível para o público - que não revela **nenhuma informação sobre a sua identidade, localização, quem são seus contatos, ou nem mesmo *quantos contatos* você teve.**
 
-Here's how it works:
+Aqui está como ele funciona:
 
 ![](pics/dp3t.png)
 
-(& [here's the full comic](https://ncase.me/contact-tracing/))
+(& [e aqui está o quadrinho completo](https://ncase.me/contact-tracing/))
 
-Along with similar teams like TCN Protocol[^tcn] and MIT PACT[^pact], they've inspired Apple & Google to bake privacy-first contact tracing directly into Android/iOS.[^gapple] (Don't trust Google/Apple? Good! The beauty of this system is it doesn't *need* trust!) Soon, your local public health agency may ask you to download an app. If it's privacy-first with publicly-available code, please do!
+Junto com times similares como o protocolo TCN[^tcn] e MIT PACT[^pact], eles inspiraram a Apple e o Google para inserir o rastreamento de contatos, com prioridade na privacidade, diretamente no Android/iOS.[ˆgapple] (Você não confia no Google/Apple? Ótimo! A beleza deste sistema é que ele não *precisa* de confiança!) Em breve sua agência de saúde pública local pode solicitar que você baixe um app. Se ele colocar privacidade em primeiro lugar, com código-fonte público por favor faça! 
 
-[^tcn]: [Temporary Contact Numbers, a decentralized, privacy-first contact tracing protocol](https://github.com/TCNCoalition/TCN#tcn-protocol)
+[^tcn]: [TCN - Números de Contato Temporários, um protocolo de rastreamento de contatos descentralizado, com privacidade em primeiro lugar](https://github.com/TCNCoalition/TCN#tcn-protocol)
 
-[^pact]: [PACT: Private Automated Contact Tracing](https://pact.mit.edu/)
+[^pact]: [PACT: Rastreamento de Contatos Automatizado com Privacidade](https://pact.mit.edu/)
 
-[^gapple]: [Apple and Google partner on COVID-19 contact tracing technology ](https://www.apple.com/ca/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/). Note they're not making the apps *themselves*, just creating the systems that will *support* those apps.
+[^gapple]: [Apple e Google fazem parceria em tecnologia de rastreamento de contatos para o COVID-19](https://www.apple.com/ca/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/). Repare que *eles mesmos* não estão fazendo os apps, apenas criando os sistemas que darão *suporte* a estes apps.
 
 But what about folks without smartphones? Or infections through doorknobs? Or "true" asymptomatic cases? Contact tracing apps can't catch all transmissions... *and that's okay!* We don't need to catch *all* transmissions, just 60%+ to get R < 1.
 
