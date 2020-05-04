@@ -420,17 +420,17 @@ Junto com times similares como o protocolo TCN[^tcn] e MIT PACT[^pact], eles ins
 
 [^gapple]: [Apple e Google fazem parceria em tecnologia de rastreamento de contatos para o COVID-19](https://www.apple.com/ca/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/). Repare que *eles mesmos* não estão fazendo os apps, apenas criando os sistemas que darão *suporte* a estes apps.
 
-But what about folks without smartphones? Or infections through doorknobs? Or "true" asymptomatic cases? Contact tracing apps can't catch all transmissions... *and that's okay!* We don't need to catch *all* transmissions, just 60%+ to get R < 1.
+Mas e as pessoas que não tem smartphones? Ou as infecções por maçanetas de portas? Ou casos "verdadeiramente" assintomáticos? Os apps de rastreamento de contatos não podem pegar todas estas transmissões... *e isto não é problema!* Nós não precisamos pegar *todas* as transmissões, apenas 60%+ para conseguir R < 1.
 
-(Rant about the confusion about pre-symptomatic vs "true" asymptomatic. "True" asymptomatics are rare:[^rant])
+(Resmungo sobre a confusão a respeito de casos pré-sintomáticos vs "verdadeiramente" assintomáticos. "Verdadeiramente" assintomáticos são raros:[^rant])
 
-[^rant]: Lots of news reports – and honestly, many research papers – did not distinguish between "cases who showed no symptoms when we tested them" (pre-symptomatic) and "cases who showed no symptoms *ever*" (true asymptomatic). The only way you could tell the difference is by following up with cases later.
+[^rant]: Muitos artigos de notícia - e honestamente, muitos artigos científicos - não distinguem entre "casos que não mostraram nenhum sintoma quando nós os testamos" (pré-sintomáticos) e "casos que não mostraram nenhum sintoma *nunca*" (verdadeiramente assintomáticos). A única forma de você diferenciá-los é fazer o acompanhamento dos casos depois.
    
-    Which is what [this study](https://wwwnc.cdc.gov/eid/article/26/8/20-1274_article) did. (Disclaimer: "Early release articles are not considered as final versions.") In a call center in South Korea that had a COVID-19 outbreak, "only 4 (1.9%) remained asymptomatic within 14 days of quarantine, and none of their household contacts acquired secondary infections."
+	E isto é o que [este estudo](https://wwwnc.cdc.gov/eid/article/26/8/20-1274_article) fez. (Ressalva: "Artigos com divulgação antecipada não são considerados como versões finais.") Em um call center na Coréia do Sul onde houve um surto "apenas 4 (1.9%) permaneceram assintomáticos dentro de 14 dias de quarentena, e nenhum de seus contatos domiciliares adquiriram infecções secundárias."
     
-    So that means "true asymptomatics" are rare, and catching the disease from a true asymptomatic may be even rarer!
+	Então isto significa que "verdadeiramente assintomáticos" são raros, e ser contaminado por um verdadeiramente assintomático pode ser ainda mais raro!
 
-Isolating *symptomatic* cases would reduce R by up to 40%, and quarantining their *pre/a-symptomatic* contacts would reduce R by up to 50%[^oxford]:
+O isolamento de casos *sintomáticos* reduziria R em cerca de 40%, e colocando em quarentena os seus contatos *pré-sintomáticos ou assintomáticos* reduziria R em até 50%[^oxford]:
 
 [^oxford]: From the same Oxford study that first recommended apps to fight COVID-19: [Luca Ferretti & Chris Wymant et al](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936/tab-figures-data) See Figure 2. Assuming R<sub>0</sub> = 2.0, they found that:    
     
