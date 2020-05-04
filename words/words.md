@@ -12,12 +12,12 @@
 				🕐 Leitura/Simulações em 30 min
 				&nbsp;&middot;&nbsp;
 			</b>
-			by
+			por
 			<a href="https://scholar.google.com/citations?user=_wHMGkUAAAAJ&amp;hl=en">Marcel Salathé</a>
 			(epidemiologista)
 			&
 			<a href="https://ncase.me/">Nicky Case</a>
-			(arte/código)
+			(artista/programador)
 		</div>
 	</div>
 </div>
@@ -62,10 +62,9 @@ Então, vamos construir um "simulador de vôo epidêmico" muito, muito simples!,
 Se nós simularmos "dobra a cada 4 dias" *e nada mais*, em uma população, começando com apenas 0.001% <icon i></icon>, o que acontece? 
 
 **Clique "Iniciar" para rodar a simulação! Você pode rodar outras vezes com outros parâmetros:**
-(ressalvas técnicas: [ˆcaveats])
+(ressalvas técnicas:[^caveats])
 
 [^caveats]: **Lembre-se: todas estas simulações são super simplificadas, para propósitos educacionais.**
-    
 	Uma simplificação: Quando você pede que a simulação "Infecte 1 nova pessoa a cada x dias", ele de fato está aumentando o número de infectados 1/x a cada dia. O mesmo ocorre para os demais ajustes destas simulações.
 	- "Recuperar a cada x dias" está de fato reduzindo o número de infectados 1/x a cada dia.
     
@@ -287,7 +286,7 @@ Ambos os planos, entretanto, tinham literalmente uma falha fatal.
 
 Primeiro, vamos olhar nas duas principais formas de "achatar a curva": lavar as mãos e distanciamento físico.
 
-O aumento da lavagem das mãos corta a incidência de gripes e resfriados em países de alta renda em ~25%[^handwashing], enquanto o lockdown de toda a cidade de Londres corta os contatos próximos em ~70%[ˆlondon]. Então, vamos assumir que a lavagem de mãos pode reduzir R *em até* 25%, e o distanciamento pode reduzir R *em até* 70%:
+O aumento da lavagem das mãos corta a incidência de gripes e resfriados em países de alta renda em ~25%[^handwashing], enquanto o lockdown de toda a cidade de Londres corta os contatos próximos em ~70%[^london]. Então, vamos assumir que a lavagem de mãos pode reduzir R *em até* 25%, e o distanciamento pode reduzir R *em até* 70%:
 
 [^handwashing]:"Todos os oito estudos elegíveis reportaram que lavagem de mãos reduziram os riscos de infecção respiratória, com redução de riscos entre 6% a 44% [valor agrupado 24% (95% IC 6-40%)]."Nós arredondamos o valor agrupado para 25% nestas simulações por simplicidade.[Rabie, T. and Curtis, V.](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-3156.2006.01568.x) Nota: como esta meta-análise aponta, a qualidade dos estudos para lavagem de mãos (pelo menos em países de alta renda) é péssima.
 
@@ -634,35 +633,35 @@ Thankfully, because summer reduces R, it'll make the situation better:
 
 Oh.
 
-Counterintuitively, summer makes the spikes worse *and* regular! This is because summer reduces new <icon i></icon>s, but that in turn reduces new immune <icon r></icon>s. Which means immunity plummets in the summer, *creating* large regular spikes in the winter.
+Contraintuitivamente, o verão faz os surtos piores *e* regulares! Isto acontece por que o verão reduz novos <icon i></icon>s, mas isto por outro lado reduz novos <icon r></icon>s imunes. O que significa que a imunidade despenca no verão, *criando* surtos grandes e regulares no inverno.
 
-Thankfully, the solution to this is pretty straightforward – just vaccinate people every fall/winter, like we do with flu shots:
+Por sorte, a solução é bem direta - apenas vacines as pessoas todo outono/inverno, como nós fazemos com as vacinas da gripe:
 
-**(After playing the recording, try simulating your own vaccination campaigns! Remember you can pause/continue the sim at any time)**
+**(Depois de rodar a simulação padrão tente simular suas próprias campanhas de vacinação! Lembre-se que você pode pausar/continuar a simulação a qualquer momento)**
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-4&format=lines" width="800" height="540"></iframe>
 </div>
 
-But here's the scarier question:
+Mas aqui vai uma questão mais assustadora:
 
-What if there's no vaccine for *years*? Or *ever?*
+E se não houver vacina por *anos*? Ou *nunca?*
 
-**To be clear: this is unlikely.** Most epidemiologists expect a vaccine in 1 to 2 years. Sure, there's never been a vaccine for any of the other coronaviruses before, but that's because SARS was eradicated quickly, and "the" common cold wasn't worth the investment. 
+**Para deixar claro: isto é improvável.** A maior parte dos epidemiologistas espera uma vacina em 1 ou 2 anos. Claro, nunca houve uma vacina para outro coronavírus antes, mas por que a SARS foi erradicada rapidamente, e "a" gripe comum não vale o investimento.
 
-Still, infectious disease researchers have expressed worries: What if we can't make enough?[^vax_enough] What if we rush it, and it's not safe?[^vax_safe]
+Ainda, pesquisadores de doenças infecciosas expressaram preocupações: E se nós não pudermos fazer a quantidade suficiente?[^vax_enough] E se nós corrermos com ela, e ela não for segura?[^vax_safe]
 
-[^vax_enough]: “If a coronavirus vaccine arrives, can the world make enough?” [by Roxanne Khamsi, on Nature](https://www.nature.com/articles/d41586-020-01063-8)
+[^vax_enough]: “Se uma vacina para o coronavírus surgir poderemos fazer em quantidade suficiente?” [por Roxanne Khamsi, na revista Nature](https://www.nature.com/articles/d41586-020-01063-8)
 
-[^vax_safe]: “Don’t rush to deploy COVID-19 vaccines and drugs without sufficient safety guarantees” [by Shibo Jiang, on Nature](https://www.nature.com/articles/d41586-020-00751-9)
+[^vax_safe]: “Não corra para distribuir vacinas e drogas para o COVID-19 sem garantias de segurança suficientes"[por Shibo Jiang, na revista Nature](https://www.nature.com/articles/d41586-020-00751-9)
 
-Even in the nightmare "no-vaccine" scenario, we still have 3 ways out. From most to least terrible:
+Mesmo no cenário de pesadelo de "sem vacinas", nós ainda temos 3 saídas. Da mais para a menos terrível:
 
-1) Do intermittent or loose R < 1 interventions, to reach "natural herd immunity". (Warning: this will result in many deaths & damaged lungs. *And* won't work if immunity doesn't last.)
+1) Fazer intervenções R < 1, intermitentes ou avulsas, para atingir a "imunidade de rebanho natural". (Aviso: isto resultará em muitas mortes e pulmões lesionados). *E* não irá funcionar se a imunidade não durar.)
 
-2) Do the R < 1 interventions forever. Contact tracing & wearing masks just becomes a new norm in the post-COVID-19 world, like how STI tests & wearing condoms became a new norm in the post-HIV world.
+2) Fazer intervenções R < 1 para sempre. Rastreamento de contatos e usar máscaras simplesmente se tornará a nova norma no mundo pós-COVID-19, como testes para DST e usar camisinhas se tornaram a nova norma no mundo pós-HIV.
 
-3) Do the R < 1 interventions until we develop treatments that make COVID-19 way, way less likely to need critical care. (Which we should be doing *anyway!*) Reducing ICU use by 10x is the same as increasing our ICU capacity by 10x:
+3) Fazer intervenções R < 1 até que nós desenvolvamos tratamentos que façam a COVID-19 muito, muito menos provável de precisar de cuidados intensivos. (O que nós devemos já estar fazendo *de qualquer forma!*) Reduzindo o uso de UTIs por um fator de 10x é o mesmo que aumentar nossa capacidade de leitos de UTI em 10x:
 
 **Aqui está uma simulação de imunidade *não* duradoura, *sem* vacinas, e mesmo sem nenhuma intervenção - apenas incrementando lentamente a capacidade de sobrevivência aos surtos de longo prazo:**
 
