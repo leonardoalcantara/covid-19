@@ -449,46 +449,47 @@ Se nós mantivermos R < 1 até que nós tenhamos uma vacina, que tornará suscet
 		<iframe src="https://ncase.github.io/covid-19/sim?stage=int-4b&format=calc" width="285" height="230"></iframe>
 </div>
 
-(Note: this calculator pretends the vaccines are 100% effective. Just remember that in reality, you'd have to compensate by vaccinating *more* than "herd immunity", to *actually* get herd immunity)
+(Nota: esta calculadora assume que as vacinas são 100% efetivas. Apenas se lembre que na realidade você deve compensar vacinando *mais* que a "imunidade de rebanho" para *de fato* atingir a imunidade de rebanho)
 
-Okay, enough talk. Here's a simulation of:
+Bom, chega de conversa. Aqui temos uma simulação de:
 
-1. A few-month lockdown, until we can...
-2. Switch to "Test, Trace, Isolate" until we can...
-3. Vaccinate enough people, which means...
-4. We win.
+1. Confinamento de alguns meses, até que possamos...
+2. Mudar para "Testas, Rastrear, Isolar" até que possamos...
+3. Vacinar pessoas suficientes, que significa...
+4. Nós vencemos.
 
 <div class="sim">
 		<iframe src="https://ncase.github.io/covid-19/sim?stage=int-5&format=lines" width="800" height="540"></iframe>
 </div>
 
-So that's it! That's how we make an emergency landing on this plane.
+Então é isto! É assim que nós fazemos um pouso de emergência com este avião.
 
-That's how we beat COVID-19.
+É assim que derrotaremos a COVID-19.
 
 ...
 
-But what if things *still* go wrong? Things have gone horribly wrong already. That's fear, and that's good! Fear gives us energy to create *backup plans*.
+Mas se *ainda assim* as coisas não derem certo? As coisas já tem dado horrivelmente errado. Isto é medo, e isto é bom! O medo nos dá energia para criar *planos emergenciais*.
 
-The pessimist invents the parachute.
+O pessimista inventa o paraquedas.
 
-###Scenario 4+: Masks For All, Summer, Circuit Breakers
+###Cenário 4+: Máscaras Para Todos, Verão, Interruptores
 
-What if R<sub>0</sub> is way higher than we thought, and the above interventions, even with mild distancing, *still* aren't enough to get R < 1?
+E se R<sub>0</sub> é muito mais alto do que nós imaginamos, e as intervenções acima, mesmo com um leve distanciamento, *ainda* não são suficientes para conseguir R < 1?
 
-Remember, even if we can't get R < 1, reducing R still reduces the "overshoot" in total cases, thus saving lives. But still, R < 1 is the ideal, so here's a few other ways to reduce R:
+Lembre-se, mesmo se nós não pudermos conseguir R < 1 reduzir R ainda reduz o "excesso" no total de casos, salvando vidas. Mas como R < 1 ainda é o ideal há outras formas de reduzir R:
 
-**Masks For All:**
+**Máscaras Para Todos:**
 
-*"Wait,"* you might ask, *"I thought face masks don't stop you from getting sick?"*
+*"Espere,"* você pode perguntar, *"Eu pensei que máscaras não impedissem você de ficar doente?"*
 
-You're right. Masks don't stop you from getting sick[^incoming]... they stop you from getting *others* sick.
+Você está certo. Máscaras não impedem você de ficar doente[^incoming]... elas impedem que você de fazer os *outros* ficarem doentes.
 
-[^incoming]: “None of these surgical masks exhibited adequate filter performance and facial fit characteristics to be considered respiratory protection devices.” [Tara Oberg & Lisa M. Brosseau](https://www.sciencedirect.com/science/article/pii/S0196655307007742)
+[^incoming]: "Nenhuma destas máscaras cirúrgicas apresentaram desempenho de filtragem adequado e características de encaixe facial para serem consideradas dispositivos de proteção respiratória." [Tara Oberg & Lisa M. Brosseau](https://www.sciencedirect.com/science/article/pii/S0196655307007742)
 
-[^outgoing]: “The overall 3.4 fold reduction [70% reduction] in aerosol copy numbers we observed combined with a nearly complete elimination of large droplet spray demonstrated by Johnson et al. suggests that surgical masks worn by infected persons could have a clinically significant impact on transmission.” [Milton DK, Fabian MP, Cowling BJ, Grantham ML, McDevitt JJ](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3591312/)
+[^outgoing]: "A redução geral de 3.4 vezes [redução de 70%] nos números de cópias do aerosol que foram observados junto com uma eliminação quase completa de grandes gotas de spray demonstradas por Johnson et al. sugerem que as máscaras cirúrgicas usadas por pessoas infectadas pode ter um impacto clinico significante na transmissão." [Milton DK, Fabian MP, Cowling BJ, Grantham ML, McDevitt JJ](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3591312/)
 
-[^homemade]: [Davies, A., Thompson, K., Giri, K., Kafatos, G., Walker, J., & Bennett, A](https://www.cambridge.org/core/journals/disaster-medicine-and-public-health-preparedness/article/testing-the-efficacy-of-homemade-masks-would-they-protect-in-an-influenza-pandemic/0921A05A69A9419C862FA2F35F819D55) See Table 1: a 100% cotton T-shirt has around 2/3 the filtration efficiency as a surgical mask, for the two bacterial aerosols they tested.
+[^homemade]: [Davies, A., Thompson, K., Giri, K., Kafatos, G., Walker, J., & Bennett, A](https://www.cambridge.org/core/journals/disaster-medicine-and-public-health-preparedness/article/testing-the-efficacy-of-homemade-masks-would-they-protect-in-an-influenza-pandemic/0921A05A69A9419C862FA2F35F819D55) Veja a Tabela 1: uma camiseta de 100% algodão tem cerca de 2/3 de eficiência de filtragem de uma máscara cirúrgica, para os dois aerosóis de bacterias que foram testados.
+
 
 ![](pics/masks.png)
 
