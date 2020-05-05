@@ -29,7 +29,7 @@ Claro, não junte papel higiênico - mas se os governantes temem o próprio medo
 Honestamente, nós (Marcel, epidemiologista + Nicky, artista/programador) estamos preocupados. Nós podemos apostar que você está também! Por isto nós canalizamos nosso medo para criar estas **simulações lúdicas**, para que *você* possa canalizar seu medo para entender:
 
 * **Os Últimos Meses** (epidemiologia 101, modelo SEIR, R & R<sub>0</sub>)
-* **Os Próximos Meses** (lockdowns, rastreamento de contato, máscaras)
+* **Os Próximos Meses** (confinamentos (lockdown), rastreamento de contato, máscaras)
 * **Os Próximos Anos** (perda de imunidade? sem vacinas?)
 
 Este guia (publicado em 1º de Maio de 2020. clique nesta nota de rodapé!→[^timestamp]) visa trazer para você esperança *e* medo. Para derrotar o COVID-19 **de uma forma que também proteja nossa saúde mental e financeira**, nós precisamos de otimismo para criar planos, e pessimismo para criar planos emergenciais. Como Gladys Bronwyn Stern disse uma vez, *"O otimista inventa o avião e o pessimista o paraquedas."*
@@ -142,7 +142,6 @@ De fato, vamos acrescentar uma nuance adicional: antes de um <icon s></icon> se 
 
 [^seir]: Para mais explicações técnicas do Modelo SEIR, veja [the Institute for Disease Modeling](https://www.idmod.org/docs/hiv/model-seir.html) e [Wikipedia](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SEIR_model)
 
-
 No caso da COVID-19, é estimado que você fique <icon e></icon> infectado-mas-não-infeccioso por 3 dias, *em média*.[^latent] O que acontece se adicionarmos isto à simulação?
 
 [^latent]: “Assumindo uma distribuição do período de incubação de 5.2 dias, em média, resultado de um estudo em separado dos primeiros casos de COVID-19, nós inferimos que o contágio começa a partir de 2.3 dias ((95% IC, 0.8-3.0 dias) antes dos sintomas se instalarem." (traduzindo: assumindo que os sintomas começam no dia 5, o contágio começa 2 dias antes = contágio começa no dia 3) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5)
@@ -169,15 +168,15 @@ Abreviação de "Número de reprodução". É o número *médio* de pessoas que 
 
 (A maior parte das reportagens - e até alguns artigos científicos! - confundem R e R<sub>0</sub>. Mais uma vez, a terminologia científica é ruim)
 
-O R<sub>0</sub> para "a" gripe sazonal é cerca de 1.28[^r0_flu]. Isto significa que no *início* de um surto de gripe, cada <icon i></icon> infecta 1.28 outros *em média.* (If it sounds weird that this isn't a whole number, remember that the "average" mom has 2.4 children. This doesn't mean there's half-children running about.)
+O R<sub>0</sub> para "a" gripe sazonal é cerca de 1.28[^r0_flu]. Isto significa que no *início* de um surto de gripe, cada <icon i></icon> infecta 1.28 outros *em média.* (Se parecer estranho não ser um número inteiro lembre-se que uma "mãe" em média tem 2.4 filhos. Isto não significa que vemos meia criança correndo por aí.)
 
-[^r0_flu]: “The median R value for seasonal influenza was 1.28 (IQR: 1.19–1.37)” [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480)
+[^r0_flu]: “O valor médio R para a influenza sazonal foi 1.28 (IQR: 1.19–1.37)” [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480)
 
-The R<sub>0</sub> for COVID-19 is estimated to be around 2.2,[^r0_covid] though one *not-yet-finalized* study estimates it was 5.7(!) in Wuhan.[^r0_wuhan]
+O R<sub>0</sub> para a COVID-19 é estimado para cerca de 2.2,[^r0_covid] porém um estudo *ainda não finalizado* estima que foi 5.7(!) em Wuhan.[^r0_wuhan]
 
-[^r0_covid]: “We estimated the basic reproduction number R0 of 2019-nCoV to be around 2.2 (90% high density interval: 1.4–3.8)” [Riou J, Althaus CL.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001239/)
+[^r0_covid]: “Nós estimamos que o número de reprodução básica R0 para a 2019-nCoV seja 2.2 (90% intervalo de alta densidade: 1.4–3.8)” [Riou J, Althaus CL.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001239/)
 
-[^r0_wuhan]: “we calculated a median R0 value of 5.7 (95% CI 3.8–8.9)” [Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article)
+[^r0_wuhan]: “nós calculamos o valor médio R0 de 5.7 (95% IC 3.8–8.9)” [Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article)
 
 Nas nossa simulações – *no início & na média* – um <icon i></icon> infecta alguém a cada 4 dias, em 10 dias. "4 dias" ocorre dentro de "10 dias" duas vezes e meia. Isto significa – *no início & na média* – cada <icon i></icon> infecta 2.5 outros. Então, R<sub>0</sub> = 2.5. (ressalvas:[^r0_caveats_sim])
 
@@ -189,15 +188,12 @@ Nas nossa simulações – *no início & na média* – um <icon i></icon> infec
 		<iframe src="https://ncase.github.io/covid-19/sim?stage=epi-6a&format=calc" width="285" height="255"></iframe>
 </div>
 
-But remember, the fewer <icon s></icon>s there are, the *slower* <icon s></icon>s become <icon i></icon>s. The *current* reproduction number (R) depends not just on the *basic* reproduction number (R<sub>0</sub>), but *also* on how many people are no longer <icon s></icon> Susceptible. (For example, by recovering & getting natural immunity.)
-
 Mas lembre-se, quanto menos <icon s></icon>s há, mais *lentamente* <icon s></icon>s tornam-se <icon i></icon>s. O número de reprodução (R) *corrente* depende não apenas do número de reprodução *básico* (R<sub>0</sub>), mas *também* em quantas pessoas não são mais <icon s></icon> Suscetíveis. (Por exemplo, por se recuperar e conseguindo imunidade natural.)
 
 <div class="sim">
 		<iframe src="https://ncase.github.io/covid-19/sim?stage=epi-6b&format=calc" width="285" height="390"></iframe>
 </div>
 
-When enough people have immunity, R < 1, and the virus is contained! This is called **herd immunity**. For flus, herd immunity is achieved *with a vaccine*. Trying to achieve "natural herd immunity" by letting folks get infected is a *terrible* idea. (But not for the reason you may think! We'll explain later.)
 Quando pessoas suficientes tem imunidade, R < 1, e o vírus é contido! Isto é chamado **imunidade de rebanho**. Para gripes, a imunidade de rebanho é atingida *com uma vacina*. Tentando atingir "imunidade de rebanho natural" deixando as pessoas se infectarem é uma idéia *terrível*. (Mas não pelas razões que você pode pensar! Explicaremos mais a frente.)
 
 Vamos rodar o Modelo SEIR outra vez, mas mostrando R<sub>0</sub>, R ao longo do tempo, e o limiar de imunidade de rebanho:
@@ -234,7 +230,7 @@ Isto ocorre porque quando há mais não-<icon s></icon>s do que o limiar da imun
 
 (Se você pensa que R<sub>0</sub> ou outros números nas nossas simulações são muito baixos/altos, isto é bom pois está desafiando nossas premissas! Haverá um "Modo Caixa de Areia" no fim deste guia, onde você poderá inserir os seus *próprios* números, e simular o que acontece.)
 
-*Cada* intervenção sobre COVID-19 que você já ouviu sobre - lavar as mãos, distanciamento social/físico, lockdowns, auto-isolamento, rastreamento de contatos e quarentena, máscaras faciais, e mesmo "imunidade de rebanho" - todas estão visando a mesma coisa:
+*Cada* intervenção sobre COVID-19 que você já ouviu sobre - lavar as mãos, distanciamento social/físico, confinamentos, auto-isolamento, rastreamento de contatos e quarentena, máscaras faciais, e mesmo "imunidade de rebanho" - todas estão visando a mesma coisa:
 
 Fazer R < 1.
 
@@ -255,7 +251,7 @@ Preparem-se para uma aterrisagem de emergência...
 
 Perto de 1 em cada 20 pessoas infectadas com COVID-19 precisam ir para um UTI(Unidade de Terapia Intensiva.)[^icu_covid] Em um país rico como os EUA, há 1 cama de UTI para cada 3400 pessoas. [^icu_us] Portanto os EUA podem tratar 20 de 3400 pessoas *simultaneamente* infectadas - ou 0.6% da população.
 
-[^icu_covid]: ["Percentage of COVID-19 cases in the United States from February 12 to March 16, 2020 that required intensive care unit (ICU) admission, by age group"](https://www.statista.com/statistics/1105420/covid-icu-admission-rates-us-by-age-group/). Entre 4.9% e 11.5% de *todos* os casos de COVID-19 requereram UTI. Generosamente escolhendo a faixa inferior, isto significa 5% ou 1 em 20. Note que este total é específico para a estrutura etária dos EUA, e será maior em países com populações mais velhas, e menor em países com populações mais jovens.
+[^icu_covid]: ["Percentagem dos casos de COVID-19 nos Estados Unidos de 12 de fevereiro a 16 de março de 2020 que necessitaram admissão em Unidades de Terapia Intensiva (UTI), por faixa etária"](https://www.statista.com/statistics/1105420/covid-icu-admission-rates-us-by-age-group/). Entre 4.9% e 11.5% de *todos* os casos de COVID-19 requereram UTI. Generosamente escolhendo a faixa inferior, isto significa 5% ou 1 em 20. Note que este total é específico para a estrutura etária dos EUA, e será maior em países com populações mais velhas, e menor em países com populações mais jovens.
 
 [^icu_us]: “Números de camas de UTI = 96,596”. Em [the Society of Critical Care Medicine](https://sccm.org/Blog/March-2020/United-States-Resource-Availability-for-COVID-19) População dos EUA era 328.200.000 em 2019. 96.596 de cada 328,200,000 = aproximadamente 1 em 3400. 
 
@@ -272,7 +268,7 @@ Isto é o que [o relatório do Imperial College em 16 de março](http://www.impe
 Mesmo se apenas 0.5% dos infectados morressem - uma suposição generosa quando não há mais vagas na UTI - em um país grande como os EUA, com 300 milhões de pessoas, 0.5% de 80% de 300 milhões = ainda são 1.2 milhões de mortos...
 *SE não fizessemos nada.*
 
-(Muitos canais de notícia e mídia social reportaram "80% serão infectados" *SEM* o "SE NÃO FIZERMOS NADA". O medo foi canalizado em clicks, e não para o entendimento. *Suspiro.*)
+(Muitos canais de notícia e mídia social reportaram "80% serão infectados" *SEM* o "SE NÃO FIZERMOS NADA". O medo foi canalizado em cliques, e não para o entendimento. *Suspiro.*)
 
 ###Cenário 1: Achatar a Curva / Imunidade de Rebanho
 
@@ -286,11 +282,11 @@ Ambos os planos, entretanto, tinham literalmente uma falha fatal.
 
 Primeiro, vamos olhar nas duas principais formas de "achatar a curva": lavar as mãos e distanciamento físico.
 
-O aumento da lavagem das mãos corta a incidência de gripes e resfriados em países de alta renda em ~25%[^handwashing], enquanto o lockdown de toda a cidade de Londres corta os contatos próximos em ~70%[^london]. Então, vamos assumir que a lavagem de mãos pode reduzir R *em até* 25%, e o distanciamento pode reduzir R *em até* 70%:
+O aumento da lavagem das mãos corta a incidência de gripes e resfriados em países de alta renda em ~25%[^handwashing], enquanto o confinamento de toda a cidade de Londres corta os contatos próximos em ~70%[^london]. Então, vamos assumir que a lavagem de mãos pode reduzir R *em até* 25%, e o distanciamento pode reduzir R *em até* 70%:
 
 [^handwashing]:"Todos os oito estudos elegíveis reportaram que lavagem de mãos reduziram os riscos de infecção respiratória, com redução de riscos entre 6% a 44% [valor agrupado 24% (95% IC 6-40%)]."Nós arredondamos o valor agrupado para 25% nestas simulações por simplicidade.[Rabie, T. and Curtis, V.](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-3156.2006.01568.x) Nota: como esta meta-análise aponta, a qualidade dos estudos para lavagem de mãos (pelo menos em países de alta renda) é péssima.
 
-[^london]: "Nós encontramos uma redução de 73% no número de contatos diários observados por participante. Isto seria suficiente para reduzir R<sub>0</sub> de um valor de 2.6 antes do lockdown para 0.62 (0.37 - 0.89) durante o lockdown". Nós arredondamos este valor para 70% nestas simulações por simplicidade. [Jarvis and Zandvoort et al](https://cmmid.github.io/topics/covid19/comix-impact-of-physical-distance-measures-on-transmission-in-the-UK.html)
+[^london]: "Nós encontramos uma redução de 73% no número de contatos diários observados por participante. Isto seria suficiente para reduzir R<sub>0</sub> de um valor de 2.6 antes do confinamento para 0.62 (0.37 - 0.89) durante o confinamento". Nós arredondamos este valor para 70% nestas simulações por simplicidade. [Jarvis and Zandvoort et al](https://cmmid.github.io/topics/covid19/comix-impact-of-physical-distance-measures-on-transmission-in-the-UK.html)
 
 **Brinque com esta calculadora para ver qual o % de non-<icon s></icon>, lavagem de mão, e distanciamento reduzem R:** (esta calculadora visualiza os seus efeitos *relativos*, e é por isto que incrementando um *parece* como se estivessemos diminuindo o efeito de outros.[^log_caveat])
 
@@ -320,9 +316,9 @@ Este foi o outro achado do relatório do Imperial College em 16 de março, que c
 
 Isto é, não apenas "achate" a curva, *esmague* a curva. Por exemplo, com um...
 
-###Cenário 3: Lockdown de Meses
+###Cenário 3: Confinamento de Meses
 
-Vamos ver o que acontece se nós *esmagamos* a curva com um lockdown de 5 meses, reduzindo <icon i></icon> para quase nada, e então - *finalmente* - retornando para a vida normal:
+Vamos ver o que acontece se nós *esmagamos* a curva com um confinamento de 5 meses, reduzindo <icon i></icon> para quase nada, e então - *finalmente* - retornando para a vida normal:
 
 <div class="sim">
 		<iframe src="https://ncase.github.io/covid-19/sim?stage=int-3&format=lines" width="800" height="540"></iframe>
@@ -330,25 +326,25 @@ Vamos ver o que acontece se nós *esmagamos* a curva com um lockdown de 5 meses,
 
 Oh.
 
-Esta é a "segunda onda" que todo mundo está falando a respeito. Assim que removemos o lockdown, nós voltamos a ter R > 1 de novo. Então, um único <icon i></icon> deixado para trás (ou importado) pode causar um disparo nos casos que é quase tão ruim como se tivessemos feito o Cenário 0: Absolutamente Nada.
+Esta é a "segunda onda" que todo mundo está falando a respeito. Assim que removemos o confinamento, nós voltamos a ter R > 1 de novo. Então, um único <icon i></icon> deixado para trás (ou importado) pode causar um disparo nos casos que é quase tão ruim como se tivessemos feito o Cenário 0: Absolutamente Nada.
 
-**Um lockdown não é a cura, ele é apenas um reinício.**
+**Um confinamento não é a cura, ele é apenas um reinício.**
 
-Então o que? Nós apenas entramos em lockdown de novo e de novo?
+Então o que? Nós apenas entramos em confinamento de novo e de novo?
 
-###Cenário 3: Lockdown Intermitente
+###Cenário 3: Confinamento Intermitente
 
 Esta solução foi sugerida inicialmente pelo relatório do Imperial College de 16 de março, e de novo por um artigo de Harvard.[^lockdown_harvard]
 
 [^lockdown_harvard]: "Na falta de outras intervenções, uma métrica chave para o sucesso do distanciamento social é se as capacidades críticas de cuidado são excedidas. Para evitar isto, distanciamento social prolongado ou intermitente pode ser necessário até 2022." [Kissler and Tedijanto et al](https://science.sciencemag.org/content/early/2020/04/14/science.abb5793)
 
-**Aqui está uma simulação:** (Depois de brincar com o "cenário gravado", você pode tentar simular seus *próprios* cronogramas de lockdown, mudando os cursores *enquanto* a simulação está rodando! Lembre-se que você pode parar e continuar a simulação, e alterar a sua velocidade).
+**Aqui está uma simulação:** (Depois de brincar com o "cenário gravado", você pode tentar simular seus *próprios* cronogramas de confinamento, mudando os cursores *enquanto* a simulação está rodando! Lembre-se que você pode parar e continuar a simulação, e alterar a sua velocidade).
 
 <div class="sim">
 		<iframe src="https://ncase.github.io/covid-19/sim?stage=int-4&format=lines" width="800" height="540"></iframe>
 </div>
 
-Isto *iria* manter os casos abaixo da capacidade das UTIs! E é *muito* melhor que um lockdown de 18 meses até que uma vacina esteja disponível. (E se não houver vacina, repita até que a imunidade de rebanho seja atingida... em 2022.)
+Isto *iria* manter os casos abaixo da capacidade das UTIs! E é *muito* melhor que um confinamento de 18 meses até que uma vacina esteja disponível. (E se não houver vacina, repita até que a imunidade de rebanho seja atingida... em 2022.)
 
 Veja, é legal desenhar uma linha dizendo "capacidade das UTIs", mas tem várias coisas importantes que nós *não podemos* simular aqui. Como:
 
@@ -358,7 +354,7 @@ Veja [Figure 6 from Holt-Lunstad & Smith 2010](https://journals.sagepub.com/doi/
 
 **Saúde Financeira:** "E a respeito da economia" soa como se você se importasse mais com dólares que com vidas, mas "a economia" não é apenas a bolsa de valores: é a capacidade das pessoas prover comida e abrigo para os seus entes queridos, para investir no futuro dos seus filhos, e desfrutar de artes, comidas, videogames - as coisas que fazem a vida valer a pena. E além disto, pobreza *por si só* tem impactos horríveis na saúde mental e física.
 
-Não estou dizendo que nós *não devamos* ter outro lockdown! Nós iremos falar de lockdowns "disjuntores" depois. De toda forma não é o ideal.
+Não estou dizendo que nós *não devamos* ter outro confinamento! Nós iremos falar de confinamentos "disjuntores" depois. De toda forma não é o ideal.
 
 Mas espere... Formosa e a Coréia do Sul não contiveram a COVID-19? Por 4 meses inteiros *sem* quarentenas de longo prazo?
 
@@ -445,7 +441,7 @@ O isolamento de casos *sintomáticos* reduziria R em cerca de 40%, e colocando e
 		<iframe src="https://ncase.github.io/covid-19/sim?stage=int-4a&format=calc" width="285" height="340"></iframe>
 </div>
 
-Então, mesmo sem 100% de distanciamento, nós podemos chegar a R < 1 *sem um lockdown!* Muito melhor para a nossa saúde mental e financeira. (E para os custos das pessoas que tiverem que se auto-isolar/entrar em quarentena, *os governos devem sustentá-los* - pagar pelos testes, proteger seus empregos, subsidiar licenças remuneradas, etc. Ainda será muito mais barato que lockdown intermitente.)
+Então, mesmo sem 100% de distanciamento, nós podemos chegar a R < 1 *sem confinamento!* Muito melhor para a nossa saúde mental e financeira. (E para os custos das pessoas que tiverem que se auto-isolar/entrar em quarentena, *os governos devem sustentá-los* - pagar pelos testes, proteger seus empregos, subsidiar licenças remuneradas, etc. Ainda será muito mais barato que confinamento intermitente.)
 
 Se nós mantivermos R < 1 até que nós tenhamos uma vacina, que tornará suscetíveis <icon s></icon>s em imunizados <icon r></icon>s. Imunidade de rebanho, o jeito *certo*:
 
@@ -496,7 +492,7 @@ You're right. Masks don't stop you from getting sick[^incoming]... they stop you
 
 ![](pics/masks.png)
 
-Para colocar um número nisto: máscaras cirúrgicas *em uma pessoa doente* reduzem vírus de gripe e resfriado em aerosóis em 70% [^outgoing] Reduzir as transmissões em 70% teria um impacto tão grande quanto um lockdown!
+Para colocar um número nisto: máscaras cirúrgicas *em uma pessoa doente* reduzem vírus de gripe e resfriado em aerosóis em 70% [^outgoing] Reduzir as transmissões em 70% teria um impacto tão grande quanto um confinamento!
 
 Entretanto, nós não sabemos com certeza o impacto das máscaras *especificamente* no COVID-19. Em ciência alguém só pode publicar uma descoberta se estiver com 95% de certeza. (...poderia.[^replication]) Máscaras, em 1 de maio de 2020, são menos de "95% de certas" de funcionar.
 
@@ -508,7 +504,7 @@ Entretanto pandemias são como poker. **Aposte apenas quando você tiver 95% de 
 
 Custos: Se máscaras caseiras de tecido (que tem ~2/3 da efetividade das máscaras cirúrgicas[^homemade]), super baratas. Se máscaras cirúrgicas, mais caro, mas ainda bem barato.
 
-Benefícios: Mesmo se para uma chance de 50-50 de máscaras cirúrgicas reduzirem a transmissão por 0% ou 70%, na média o "valor esperado" é ainda 35%, o mesmo que meio lockdown! Então vamos chutar que máscaras cirúrgicas reduzem R em até 35%, descontada por toda a nossa incerteza. (De novo, você pode desafiar nossas premissas movendo os cursores para cima/para baixo)
+Benefícios: Mesmo se para uma chance de 50-50 de máscaras cirúrgicas reduzirem a transmissão por 0% ou 70%, na média o "valor esperado" é ainda 35%, o mesmo que meio confinamento! Então vamos chutar que máscaras cirúrgicas reduzem R em até 35%, descontada por toda a nossa incerteza. (De novo, você pode desafiar nossas premissas movendo os cursores para cima/para baixo)
 
 <div class="sim">
 		<iframe src="https://ncase.github.io/covid-19/sim?stage=int-6a&format=calc" width="285" height="380"></iframe>
@@ -566,7 +562,7 @@ Sem mencionar todas as *outras* intervenções que poderíamos fazer, para empur
 
 Nós esperamos que estes planos dêem esperança para você.
 
-**Mesmo em um cenário pessimista é possível bater o COVID-19, enquanto protegemos nossa saúde mental e financeira.** Usando o lockdown como um "botão de reinício", mantendo R < 1 com isolaamento de casos + rastreamento de contatos que proteja a privacidade + *pelo menos* máscaras de pano para todos... e a vida pode voltar a uma normalidade!
+**Mesmo em um cenário pessimista é possível bater o COVID-19, enquanto protegemos nossa saúde mental e financeira.** Usando o confinamento como um "botão de reinício", mantendo R < 1 com isolaamento de casos + rastreamento de contatos que proteja a privacidade + *pelo menos* máscaras de pano para todos... e a vida pode voltar a uma normalidade!
 
 Claro, você pode terá suas mãos ressecadas, mas você poderá convidar alguém para um encontro em uma livraria de histórias em quadrinhos! Você poderá sair com amigos para assistir o último caça-níqueis de Hollywood. Você poderá ficar observando as pessoas em uma livraria, ficando alegre de vê-las fazendo coisas simples como *estarem vivas.*.
 
