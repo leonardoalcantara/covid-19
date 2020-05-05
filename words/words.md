@@ -57,7 +57,7 @@ Então, vamos construir um "simulador de vôo epidêmico" muito, muito simples!,
 
 É estimado que, *no início* do surto de COVID-19, o vírus passa de uma <icon i></icon> para uma <icon s></icon> a cada 4 dias, *em média*. [^serial_interval] (lembre-se, há muita variação)
 
-[^serial_interval]: “The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)”. [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article) (Disclaimer: Early release articles are not considered as final versions)
+[^serial_interval]: “A média [serial] do intervalo foi de 3.96 dias (95% IC 3.53–4.39 dias)”. [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article) (Ressalva: "Artigos com divulgação antecipada não são considerados como versões finais.")
 
 Se nós simularmos "dobra a cada 4 dias" *e nada mais*, em uma população, começando com apenas 0.001% <icon i></icon>, o que acontece? 
 
@@ -165,12 +165,11 @@ Abreviação de "Número de reprodução". É o número *médio* de pessoas que 
 
 **R** muda durante o curso de um surto, já que ganhamos mais imunidade e intervenções.
 
+**R<sub>0</sub>** (pronunciado R-zero) é o R *no início do surto, antes de que surjam imunidade e intervenções*. R<sub>0</sub> reflete de forma mais próxima a força do vírus em si, mas ainda assim varia de lugar para lugar. Por exemplo, R<sub>0</sub> é maior em cidades densamente povoadas que em áreas rurais esparsas.
 
-**R<sub>0</sub>** (pronounced R-nought) is what R is *at the start of an outbreak, before immunity or interventions*. R<sub>0</sub> more closely reflects the power of the virus itself, but it still changes from place to place. For example, R<sub>0</sub> is higher in dense cities than sparse rural areas.
+(A maior parte das reportagens - e até alguns artigos científicos! - confundem R e R<sub>0</sub>. Mais uma vez, a terminologia científica é ruim)
 
-(Most news articles – and even some research papers! – confuse R and R<sub>0</sub>. Again, science terminology is bad)
-
-The R<sub>0</sub> for "the" seasonal flu is around 1.28[^r0_flu]. This means, at the *start* of a flu outbreak, each <icon i></icon> infects 1.28 others *on average.* (If it sounds weird that this isn't a whole number, remember that the "average" mom has 2.4 children. This doesn't mean there's half-children running about.)
+O R<sub>0</sub> para "a" gripe sazonal é cerca de 1.28[^r0_flu]. Isto significa que no *início* de um surto de gripe, cada <icon i></icon> infecta 1.28 outros *em média.* (If it sounds weird that this isn't a whole number, remember that the "average" mom has 2.4 children. This doesn't mean there's half-children running about.)
 
 [^r0_flu]: “The median R value for seasonal influenza was 1.28 (IQR: 1.19–1.37)” [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480)
 
@@ -423,7 +422,7 @@ Junto com times similares como o protocolo TCN[^tcn] e MIT PACT[^pact], eles ins
 
 Mas e as pessoas que não tem smartphones? Ou as infecções por maçanetas de portas? Ou casos "verdadeiramente" assintomáticos? Os apps de rastreamento de contatos não podem pegar todas estas transmissões... *e isto não é problema!* Nós não precisamos pegar *todas* as transmissões, apenas 60%+ para conseguir R < 1.
 
-(Resmungo sobre a confusão a respeito de casos pré-sintomáticos vs "verdadeiramente" assintomáticos. "Verdadeiramente" assintomáticos são raros:[^rant])
+(Esclarecimento sobre a confusão a respeito de casos pré-sintomáticos vs "verdadeiramente" assintomáticos. "Verdadeiramente" assintomáticos são raros:[^rant])
 
 [^rant]: Muitos artigos de notícia - e honestamente, muitos artigos científicos - não distinguem entre "casos que não mostraram nenhum sintoma quando nós os testamos" (pré-sintomáticos) e "casos que não mostraram nenhum sintoma *nunca*" (verdadeiramente assintomáticos). A única forma de você diferenciá-los é fazer o acompanhamento dos casos depois.
    
