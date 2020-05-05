@@ -517,53 +517,51 @@ Benefícios: Mesmo se para uma chance de 50-50 de máscaras cirúrgicas reduzire
 
 (outros argumentos a favor/contra máscaras:[^mask_args])
 
-[^mask_args]: **"We need to save supplies for hospitals."** *Absolutely agreed.* But that's more of an argument for increasing mask production, not rationing. In the meantime, we can make cloth masks.
+[^mask_args]: **"Nós precisamos reservar os insumos para os hospitais."** *Concordo totalmente.* Mas este é mais um argumento para aumentar a produção de máscaras, e não para racionar. No meio tempo nós podemos usar máscaras de pano.
 
-   **"They're hard to wear correctly."** It's also hard to wash your hands according to the WHO Guidelines – seriously, "Step 3) right palm over left dorsum"?! – but we still recommend handwashing, because imperfect is still better than nothing.
-   
-   **"It'll make people more reckless with handwashing & social distancing."** Sure, and safety belts make people ignore stop signs, and flossing makes people eat rocks. But seriously, we'd argue the opposite: masks are a *constant physical reminder* to be careful – and in East Asia, masks are also a symbol of solidarity!
-    
-    
+   **"Elas são difíceis de usar corretamente."** Também é difícil de lavar suas mãos de acordo com a recomendações da OMS - sério, "Passo 3) palma da mão direita sobre o dorso da mão esquerda"?! - mas nós ainda podemos recomendar a lavagem de mãos, por que imperfeito ainda é melhor que nada.
 
-Masks *alone* won't get R < 1. But if handwashing & "Test, Trace, Isolate" only gets us to R = 1.10, having just 1/3 of people wear masks would tip that over to R < 1, virus contained!
+   **"Isto fará com que as pessoas se tornem descuidadas com menos lavagens de mãos e distanciamento social."** Claro, e cintos de segurança fazem as pessoas ignorarem sinais de trânsito, e passar fio dental faz com que pessoas comam pedras. Mas sério, nós podemos argumentar o contrário: máscaras são um *lembrete físico constante* para ser cuidadoso - e na Ásia Oriental máscaras são também um símbolo de solidariedade!
 
-**Summer:**
+*Apenas* as máscaras não tornarão R < 1. Mas se a lavagem de mãos & "Testar, Rastrear e Isolar" só nos levar a R = 1.10, ter apenas 1/3 da população usando máscaras será o suficiente para levar a R < 1, vírus contido!
 
-Okay, this isn't an "intervention" we can control, but it will help! Some news outlets report that summer won't do anything to COVID-19. They're half right: summer won't get R < 1, but it *will* reduce R.
+**Verão:**
 
-For COVID-19, every extra 1° Celsius (2.2° Fahrenheit) makes R drop by 1.2%.[^heat] The summer-winter difference in New York City is 15°C (60°F), so summer will make R drop by 18%.
+Certo, isto não é uma "intervenção" que nós podemos controlar, mas também ajuda! Alguns veículos de notícias reportam que o verão não fara diferença para a COVID-19. Eles estão meio certos: o verão não irá fazer R < 1, mas ele *irá* reduzir R.
 
-[^heat]: “One-degree Celsius increase in temperature [...] lower[s] R by 0.0225” and “The average R-value of these 100 cities is 1.83”. 0.0225 ÷ 1.83 = ~1.2%. [Wang, Jingyuan and Tang, Ke and Feng, Kai and Lv, Weifeng](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3551767)
+Para a COVID-19, cada 1º Celsius a mais faz com que R caia 1.2%. [^heat] A diferença de temperatura verão/inverno na cidade de Nova Iorque é 15ºC, então o verão fará R cair 18%.
+
+[^heat]: “Aumento de 1º Celsius na temperatura [...] diminui R em 0.0225” e “O valor médio de R destas 100 cidades é 1.83”. 0.0225 ÷ 1.83 = ~1.2%. [Wang, Jingyuan and Tang, Ke and Feng, Kai and Lv, Weifeng](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3551767)
 
 <div class="sim">
 		<iframe src="https://ncase.github.io/covid-19/sim?stage=int-6b&format=calc" width="285" height="220"></iframe>
 </div>
 
-Summer alone won't make R < 1, but if we have limited resources, we can scale back some interventions in the summer – so we can scale them *higher* in the winter.
+Apenas o verão não trará R < 1, mas se temos recursos limitados, nós podemos reduzir a escala de algumas intervenções no verão - para que nós possamos *aumentar* a sua escala no inverno.
 
-**A "Circuit Breaker" Lockdown:**
+**Um Confinamento "Interruptor":**
 
-And if all that *still* isn't enough to get R < 1... we can do another lockdown.
+E se tudo isto *ainda* não for suficiente para fazer R < 1... nós podemos ter outro confinamento.
 
-But we wouldn't have to be 2-months-closed / 1-month-open over & over! Because R is reduced, we'd only need one or two more "circuit breaker" lockdowns before a vaccine is available. (Singapore had to do this recently, "despite" having controlled COVID-19 for 4 months. That's not failure: this *is* what success takes.)
+Mas nós não precisaríamos ficar fechados por 2 meses / abertos por 1 mês para sempre! Por que como R foi diminuído nós só precisaríamos de um ou dois confinamentos "interruptores" antes que uma vacina esteja disponível. (Cingapura teve que fazer isto recentemente, "apesar" de ter controlado a COVID-19 por 4 meses. Isto não é falha: isto *é* o que o sucesso requer.)
 
-Here's a simulation a "lazy case" scenario:
+Aqui está uma simulação para um cenário "simplificado":
 
-1. Lockdown, then
-2. A moderate amount of hygiene & "Test, Trace, Isolate", with a mild amount of "Masks For All", then...
-3. One more "circuit breaker" lockdown before a vaccine's found.
+1. Confinamento, e então
+2. Uma quantidade moderada de higiene e "Testar, Rastrear, Isolar", com uma pequena quantidade de "Máscaras para Todos", e então.
+3. Mais um confinamento "Interruptor" antes que a vacina seja encontrada.
 
 <div class="sim">
 		<iframe src="https://ncase.github.io/covid-19/sim?stage=int-7&format=lines&height=620" width="800" height="620"></iframe>
 </div>
 
-Not to mention all the *other* interventions we could do, to further push R down:
+Sem mencionar todas as *outras* intervenções que poderíamos fazer, para empurrar R para baixo:
 
-* Travel restrictions/quarantines
-* Temperature checks at malls & schools
-* Deep-cleaning public spaces
-* [Replacing hand-shaking with foot-bumping](https://twitter.com/V_actually/status/1233785527788285953)
-* And all else human ingenuity shall bring
+* Restrições de viagem/quarentenas
+* Verificações de Temperatura em centros comerciais e escolas
+* Limpeza profunda de espaços públicos
+* [Substituir apertos de mão por cumprimento com os pés](https://twitter.com/V_actually/status/1233785527788285953)
+* E tudo mais que a engenhosidade humana pode trazer
 
 . . .
 
