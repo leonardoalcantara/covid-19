@@ -99,7 +99,8 @@ Por questão de simplicidade, vamos fingir que todas as <icon i></icon> Pessoas 
 
 No caso da COVID-19, é estimado que você permaneça <icon i></icon> Infectado por 10 dias, *em média*.[^infectiousness] Isto significa que alguns vão se recuperar antes de 10 dias e outros depois. **Este é o resultado, com uma simulação *começando* com 100% <icon i></icon>:**
 
-[^infectiousness]: “The median communicable period \[...\] was 9.5 days.” [Hu, Z., Song, C., Xu, C. et al](https://link.springer.com/article/10.1007/s11427-020-1661-4) Yes, we know "median" is not the same as "average". For simplified educational purposes, close enough.
+[^infectiousness]: "A mediana do período contagioso \[...\] era de 9.5 dias.” [Hu, Z., Song, C., Xu, C. et al](https://link.springer.com/article/10.1007/s11427-020-1661-4) Sim nós sabemos que "mediana" não é igual a "média". Para o propósito educacional simplificado é perto o suficiente.
+
 
 <div class="sim">
 		<iframe src="https://ncase.github.io/covid-19/sim?stage=epi-3" width="800" height="540"></iframe>
@@ -496,25 +497,25 @@ You're right. Masks don't stop you from getting sick[^incoming]... they stop you
 
 ![](pics/masks.png)
 
-To put a number on it: surgical masks *on the sick person* reduce cold & flu viruses in aerosols by 70%.[^outgoing] Reducing transmissions by 70% would be as large an impact as a lockdown!
+Para colocar um número nisto: máscaras cirúrgicas *em uma pessoa doente* reduzem vírus de gripe e resfriado em aerosóis em 70% [^outgoing] Reduzir as transmissões em 70% teria um impacto tão grande quanto um lockdown!
 
-However, we don't know for sure the impact of masks on COVID-19 *specifically*. In science, one should only publish a finding if you're 95% sure of it. (...should.[^replication]) Masks, as of May 1st 2020, are less than "95% sure".
+Entretanto, nós não sabemos com certeza o impacto das máscaras *especificamente* no COVID-19. Em ciência alguém só pode publicar uma descoberta se estiver com 95% de certeza. (...poderia.[^replication]) Máscaras, em 1 de maio de 2020, são menos de "95% de certas" de funcionar.
 
-[^replication]: Any actual scientist who read that last sentence is probably laugh-crying right now. See: [p-hacking](https://en.wikipedia.org/wiki/Data_dredging), [the replication crisis](https://en.wikipedia.org/wiki/Replication_crisis))
+[^replication]: Qualquer cientista de verdade que leu o parágrafo acima está provavelmente morrendo de rir agora. Veja: [p-hacking](https://en.wikipedia.org/wiki/Data_dredging), [the replication crisis](https://en.wikipedia.org/wiki/Replication_crisis))
 
-However, pandemics are like poker. **Make bets only when you're 95% sure, and you'll lose everything at stake.** As a recent article on masks in the British Medical Journal notes,[^precautionary] we *have* to make cost/benefit analyses under uncertainty. Like so:
+Entretanto pandemias são como poker. **Aposte apenas quando você tiver 95% de certeza e você perderá tudo que está em jogo.** Como um artigo recente sobre máscaras no British Medical Journal diz [^precautionary] nós *temos* que fazer análises de custo/benefício diante da incerteza. Assim sendo:
 
-[^precautionary]: “It is time to apply the precautionary principle” [Trisha Greenhalgh et al \[PDF\]](https://www.bmj.com/content/bmj/369/bmj.m1435.full.pdf)
+[^precautionary]: “É hora de aplicar o princípio da precaução.” [Trisha Greenhalgh et al \[PDF\]](https://www.bmj.com/content/bmj/369/bmj.m1435.full.pdf)
 
-Cost: If homemade cloth masks (which are ~2/3 as effective as surgical masks[^homemade]), super cheap. If surgical masks, more expensive but still pretty cheap.
+Custos: Se máscaras caseiras de tecido (que tem ~2/3 da efetividade das máscaras cirúrgicas[^homemade]), super baratas. Se máscaras cirúrgicas, mais caro, mas ainda bem barato.
 
-Benefit: Even if it's a 50–50 chance of surgical masks reducing transmission by 0% or 70%, the average "expected value" is still 35%, same as a half-lockdown! So let's guess-timate that surgical masks reduce R by up to 35%, discounted for our uncertainty. (Again, you can challenge our assumptions by turning the sliders up/down)
+Benefícios: Mesmo se para uma chance de 50-50 de máscaras cirúrgicas reduzirem a transmissão por 0% ou 70%, na média o "valor esperado" é ainda 35%, o mesmo que meio lockdown! Então vamos chutar que máscaras cirúrgicas reduzem R em até 35%, descontada por toda a nossa incerteza. (De novo, você pode desafiar nossas premissas movendo os cursores para cima/para baixo)
 
 <div class="sim">
 		<iframe src="https://ncase.github.io/covid-19/sim?stage=int-6a&format=calc" width="285" height="380"></iframe>
 </div>
 
-(other arguments for/against masks:[^mask_args])
+(outros argumentos a favor/contra máscaras:[^mask_args])
 
 [^mask_args]: **"We need to save supplies for hospitals."** *Absolutely agreed.* But that's more of an argument for increasing mask production, not rationing. In the meantime, we can make cloth masks.
 
@@ -696,7 +697,7 @@ Então finalmente, vamos retornar para...
 
 O avião afundou. Nós subimos nos botes salva-vidas. É hora de encontrar terra firme.[^dry_land]
 
-[^dry_land]: A metáfora de terra firme [from Marc Lipsitch & Yonatan Grad, on STAT News](https://www.statnews.com/2020/04/01/navigating-covid-19-pandemic/)
+[^dry_land]: A metáfora de terra firme [de Marc Lipsitch & Yonatan Grad, em STAT News](https://www.statnews.com/2020/04/01/navigating-covid-19-pandemic/)
 
 
 Equipes de epidemiologistas e governantes ([left](https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/), [right](https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/ ), e [multi-partisan](https://ethics.harvard.edu/covid-roadmap)) chegaram a um consenso em como bater a COVID-19, enquento protegem nossas vidas *e* liberdades. 
