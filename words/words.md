@@ -432,22 +432,22 @@ Mas e as pessoas que não tem smartphones? Ou as infecções por maçanetas de p
 
 O isolamento de casos *sintomáticos* reduziria R em cerca de 40%, e colocando em quarentena os seus contatos *pré-sintomáticos ou assintomáticos* reduziria R em até 50%[^oxford]:
 
-[^oxford]: From the same Oxford study that first recommended apps to fight COVID-19: [Luca Ferretti & Chris Wymant et al](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936/tab-figures-data) See Figure 2. Assuming R<sub>0</sub> = 2.0, they found that:    
-    
-    * Symptomatics contribute R = 0.8 (40%)
-    * Pre-symptomatics contribute R = 0.9 (45%)
-    * Asymptomatics contribute R = 0.1 (5%, though their model has uncertainty and it could be much lower)
-    * Environmental stuff like doorknobs contribute R = 0.2 (10%)
+[^oxford]: Do mesmo estudo de Oxford que inicialmente recomendou o uso de apps para combater a COVID-19: [Luca Ferretti & Chris Wymant et al](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936/tab-figures-data) Veja a Figura 2. Assumindo R<sub>0</sub> = 2.0, eles encontraram que:    
+  
+	* Sintomáticos contribuem R = 0.8 (40%)
+    * Pré-sintomáticos contribuem R = 0.9 (45%)
+    * Assintomáticos contribute R = 0.1 (5%, apesar que o seu modelo tem incertezas e este valor pode ser muito mais baixo)
+	* Elementos ambientais como maçanetas contribuem R = 0.2 (10%)
 
-    And add up the pre- & a-symptomatic contacts (45% + 5%) and you get 50% of R!
+	E adicione os contatos pré & assintomáticos (45% + 5%) e você terá 50% de R!
 
 <div class="sim">
 		<iframe src="sim?stage=int-4a&format=calc" width="285" height="340"></iframe>
 </div>
 
-Thus, even without 100% contact quarantining, we can get R < 1 *without a lockdown!* Much better for our mental & financial health. (As for the cost to folks who have to self-isolate/quarantine, *governments should support them* – pay for the tests, job protection, subsidized paid leave, etc. Still way cheaper than intermittent lockdown.)
+Então, mesmo sem 100% de distanciamento, nós podemos chegar a R < 1 *sem um lockdown!* Muito melhor para a nossa saúde mental e financeira. (E para os custos das pessoas que tiverem que se auto-isolar/entrar em quarentena, *os governos devem sustentá-los* - pagar pelos testes, proteger seus empregos, subsidiar licenças remuneradas, etc. Ainda será muito mais barato que lockdown intermitente.)
 
-We then keep R < 1 until we have a vaccine, which turns susceptible <icon s></icon>s into immune <icon r></icon>s. Herd immunity, the *right* way:
+Se nós mantivermos R < 1 até que nós tenhamos uma vacina, que tornará suscetíveis <icon s></icon>s em imunizados <icon r></icon>s. Imunidade de rebanho, o jeito *certo*:
 
 <div class="sim">
 		<iframe src="sim?stage=int-4b&format=calc" width="285" height="230"></iframe>
