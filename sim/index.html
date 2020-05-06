@@ -15,36 +15,36 @@
 			<div id="hide_on_first_playthrough">
 				<div id="section_dynamics">
 
-					On <i>average</i>,
-					each <icon i></icon>...
+					Em <i>média</i>,
+					cada <icon i></icon>...
 					<br><br>
 					
 					<div id="label_transmission">
-						Infects 1 <icon s></icon> per <span id="label_p_transmission">N</span> days
+						Infecta 1 <icon s></icon> por <span id="label_p_transmission">N</span> dias
 						<br>
 						<span id="label_transmission_caveat">
-							(at the start of the epidemic)<br>
+							(no início da epidemia))<br>
 						</span>
 						<input class="sim_input" type="range" id="p_transmission" min="1" max="30" step="1" value="4">
 					</div>
 
 					<div id="label_c_exposed">
 						<input class="sim_checkbox" type="checkbox" id="c_exposed">
-						Takes <span id="label_p_exposed">N</span> days to go from <icon e></icon> to <icon i></icon>
+						Demora <span id="label_p_exposed">N</span> dias para ir de <icon e></icon> para <icon i></icon>
 						<br>
 						<input class="sim_input" type="range" id="p_exposed" min="1" max="30" step="1" value="3">
 					</div>
 					
 					<div id="label_c_recovery">
 						<input class="sim_checkbox" type="checkbox" id="c_recovery">
-						Takes <span id="label_p_recovery">N</span> days to go from <icon i></icon> to <icon r></icon>
+						Demora <span id="label_p_recovery">N</span> dias para ir de <icon i></icon> para <icon r></icon>
 						<br>
 						<input class="sim_input" type="range" id="p_recovery" min="1" max="30" step="1" value="10">
 					</div>
 					
 					<div id="label_c_waning">
 						<input class="sim_checkbox" type="checkbox" id="c_waning">
-						Loses immunity <icon s></icon> in <span id="label_p_waning">N</span> months
+						Perde imunidade <icon s></icon> em <span id="label_p_waning">N</span> meses
 						<br>
 						<input class="sim_input" type="range" id="p_waning" min="1" max="60" step="1" value="12">
 					</div>
@@ -61,61 +61,61 @@
 					<br>
 
 					<span id="label_s">
-						% of people who are <i>NOT</i> <icon s></icon>
+						% de pessoas que <i>NÃO</i> são <icon s></icon>
 						<input class="sim_input" type="range" id="p_s" min="0" max="1" step="0.001" value="0" disabled>
 						<div class="herd"></div>
 						<br>
 					</span>
 
 					<span id="int_block_0">
-						Increased Hygiene
+						Aumentar Higiene
 						<br>
 						<input class="sim_input recordable" type="range" id="p_hygiene" min="0" max="1" step="0.001" value="0">
 						<br>
 					</span>
 					<span id="int_block_1">
-						Physical Distancing
+						Distanciamento Físico
 						<br>
 						<input class="sim_input recordable" type="range" id="p_distancing" min="0" max="1" step="0.001" value="0">
 						<br>
 					</span>
 					<span id="int_block_2">
-						Isolating Cases
+						Isolar Casos
 						<br>
 						<input class="sim_input recordable" type="range" id="p_isolate" min="0" max="1" step="0.001" value="0">
 						<br>
-						Quarantining Contacts
+						Quarantenar Contatos
 						<br>
 						<input class="sim_input recordable" type="range" id="p_quarantine" min="0" max="1" step="0.001" value="0">
 						<br>
 					</span>
 					<span id="int_block_3">
-						Face Masks
+						Máscaras Faciais
 						<br>
 						<input class="sim_input recordable" type="range" id="p_masks" min="0" max="1" step="0.001" value="0">
 						<br>
 					</span>
 					<span id="int_block_4">
-						Summer
+						Verão
 						<br>
 						<input class="sim_input recordable" type="range" id="p_summer" min="0" max="1" step="0.001" value="0">
 						<br>
 					</span>
 					<span id="int_block_5">
-						Vaccinations
+						Vacinas
 						<br>
 						<input class="sim_input recordable" type="range" id="p_vaccines" min="0" max="1" step="0.001" value="0">
 						<br>
 					</span>
 
 					<span id="label_re">
-						R is now <span id="label_p_re" toFixed="2"></span>
+						R é agora <span id="label_p_re" toFixed="2"></span>
 						<canvas class="r_canvas" id="canvas_re"></canvas>
 						<!--<input class="sim_input" type="range" id="p_re" min="0" max="6" step="0.01" disabled>-->
 					</span>
 
 					<span id="hospital_capacity">
-						ICU capacity at <span id="label_p_hospital">N</span>%
+						Capacidade de UTIs em <span id="label_p_hospital">N</span>%
 						<br>
 						<input class="sim_input recordable" type="range" id="p_hospital" min="100" max="1000" step="1" value="333">
 					</span>
@@ -126,13 +126,13 @@
 
 				<div id="section_meta">
 
-					Simulate <span id="label_p_years" toFixed="1">N</span> years
+					Simular <span id="label_p_years" toFixed="1">N</span> anos
 					<span id="section_meta_years">
 						<br>
 						<input class="sim_input" type="range" id="p_years" min="0.5" max="10" step="0.5" value="2">
 						<br>
 					</span>
-					in <span id="label_p_speed">N</span> seconds
+					em <span id="label_p_speed">N</span> segundos
 					<br>
 					<input class="sim_input" type="range" id="p_speed" min="1" max="60" step="1" value="30">
 
@@ -143,29 +143,29 @@
 				<div class="big_button">
 					<div id="bb_start">
 						<div class='control_icon' start></div>
-						Start
+						Iniciar
 					</div>
 					<div id="bb_pause">
 						<div class='control_icon' pause></div>
-						Pause
+						Pausar
 					</div>
 					<div id="bb_continue">
 						<div class='control_icon' continue></div>
-						Continue
+						Continuar
 					</div>
 					<div id="bb_reset">
 						<div class='control_icon' reset></div>
-						Reset
+						Reiniciar
 					</div>
 				</div>
 				<!--div id="sb_stop">
 					Stop
 				</div-->
 				<div id="sb_reset">
-					Reset All
+					Reiniciar Tudo
 				</div>
 				<div id="sb_replay">
-					Replay Recording
+					Repetir Gravação
 				</div>
 			</div>
 
@@ -182,31 +182,31 @@
 			<div id="legend">
 				
 				<span id="label_susceptible" class="lines">
-					<icon s></icon> Susceptible<span id="show_percent_s"></span>
+					<icon s></icon> Suscetível<span id="show_percent_s"></span>
 					<br>
 				</span>
 				<span id="label_exposed" class="lines">
-					<icon e></icon> Exposed<span id="show_percent_e"></span>
+					<icon e></icon> Exposto<span id="show_percent_e"></span>
 					<br>
 				</span>
 				<span id="label_infectious" class="lines">
-					<icon i></icon> Infectious<span id="show_percent_i"></span>
+					<icon i></icon> Infeccioso<span id="show_percent_i"></span>
 					<br>
 				</span>
 				<span id="label_removed" class="lines">
-					<icon r></icon> Recovered<span id="show_percent_r"></span>
+					<icon r></icon> Recuperado<span id="show_percent_r"></span>
 				</span>
 				
 				<br class="lines">
 				
 				<span id="label_herd_immunity">
-				- - - Herd Immunity
+				- - - Imunidade de Rebanho
 				</span>
 
 				<br class="lines">
 				
 				<span id="label_capacity">
-				––– ICU Capacity
+				––– Capacidade de UTIs
 				</span>
 
 			</div>
@@ -218,21 +218,21 @@
 			</div>
 			<div id="pointer_words">
 				<span id="pointer_params">
-					Try re-running the simulation
-					with different numbers!
+					Tente rodar a simulação
+					com números diferentes!
 					<span id="pointer_params_2">
-						<b>(note: you can change the numbers <i>while</i> the sim is running)</b>
+						<b>(nota: você pode mudar os números <i>enquanto</i> a simulação roda)</b>
 					</span>
 				</span>
 				<span id="pointer_scroll">
-					Once you're done playing around,
-					scroll down to keep reading!
+					Quando estiver satisfeito,
+					rode a tela para continuar a ler!
 				</span>
 				<span id="pointer_replay">
-					This simulation has a "recorded scenario"!
+					Esta simulação tem um "cenário gravado"!
 					<br>
-					Click "Start" to watch the recording <i>before</i>
-					you change any of the numbers
+					Clique "Iniciar" para assistir a gravação <i>antes</i>
+					que você altere qualquer número.
 				</span>
 			</div>
 		</div>
@@ -241,17 +241,17 @@
 
 	<span id="month_names">
 		<span>jan</span>
-		<span>feb</span>
+		<span>fev</span>
 		<span>mar</span>
-		<span>apr</span>
-		<span>may</span>
+		<span>abr</span>
+		<span>mai</span>
 		<span>jun</span>
 		<span>jul</span>
-		<span>aug</span>
-		<span>sep</span>
-		<span>oct</span>
+		<span>ago</span>
+		<span>set</span>
+		<span>out</span>
 		<span>nov</span>
-		<span>dec</span>
+		<span>dez</span>
 	</span>
 
 </body>
