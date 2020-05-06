@@ -2,10 +2,10 @@
     <div>
     	<iframe id="splash" width="960" height="480" src="banners/splash.html"></iframe>
         <div style="top: 70px;font-size: 75px;font-weight: bold;">
-        	O Que Acontece em Seguida?
+        	O Que Vem Pela Frente?
        	</div>
 		<div style="font-weight: 500;top: 140px;left: 10px;font-size: 29px;">
-			COVID-19, Futuros Explicados com Simulações
+			COVID-19, Futuros Explicados com Simulações Interativas
 		</div>
 		<div style="font-weight: 100;top: 189px;left: 10px;font-size: 19px;line-height: 21px;">
 			<b>
@@ -274,7 +274,7 @@ Mesmo se apenas 0.5% dos infectados morressem - uma suposição generosa quando 
 
 O plano de "Achatar a Curva" foi apregoado por todas as organizações de saúde pública, enquanto que o plano original de "imunidade de rebanho" do Reino Unido era universalmente vaiado. Eles eram *o mesmo plano.* O Reino Unido apenas comunicou mal seu plano.[^yong]
 
-"Ele diz que a meta real é a mesma dos outros países: achatar a curva ao escalonar o início as infecções. Como consequência, a nação deve atingir imunidade de rebanho; é um efeito colateral, e não um objetivo. [...] O verdadeiro plano de ação para o coronavírus do gorverno, disponível online, não menciona imunidade de rebanho em nenhum lugar.""
+[^yong]: "Ele diz que a meta real é a mesma dos outros países: achatar a curva ao escalonar o início as infecções. Como consequência, a nação deve atingir imunidade de rebanho; é um efeito colateral, e não um objetivo. [...] O verdadeiro plano de ação para o coronavírus do gorverno, disponível online, não menciona imunidade de rebanho em nenhum lugar.""
   
     Do [artigo de Ed Yong para o The Atlantic](https://www.theatlantic.com/health/archive/2020/03/coronavirus-pandemic-herd-immunity-uk-boris-johnson/608065/)
 
@@ -350,7 +350,7 @@ Veja, é legal desenhar uma linha dizendo "capacidade das UTIs", mas tem várias
 
 **Saúde Mental:** Solidão é um dos maiores fatores de risco para depressão, ansiedade, e suicídio. E está tão associado com a morte prematura quanto fumar 15 cigarros por dia.[^loneliness]
 
-Veja [Figure 6 from Holt-Lunstad & Smith 2010](https://journals.sagepub.com/doi/abs/10.1177/1745691614568352). Claro, grande ressalva que eles encontraram uma *correlação*. Mas a não ser que você queira tentar aleatóriamente designar pessoas para serem solitárias a vida toda evidência de observação é tudo que você pode ter. 
+Veja a [Figura 6 de Holt-Lunstad & Smith 2010](https://journals.sagepub.com/doi/abs/10.1177/1745691614568352). Claro, grande ressalva que eles encontraram uma *correlação*. Mas a não ser que você queira tentar aleatóriamente designar pessoas para serem solitárias a vida toda evidência de observação é tudo que você pode ter. 
 
 **Saúde Financeira:** "E a respeito da economia" soa como se você se importasse mais com dólares que com vidas, mas "a economia" não é apenas a bolsa de valores: é a capacidade das pessoas prover comida e abrigo para os seus entes queridos, para investir no futuro dos seus filhos, e desfrutar de artes, comidas, videogames - as coisas que fazem a vida valer a pena. E além disto, pobreza *por si só* tem impactos horríveis na saúde mental e física.
 
@@ -406,7 +406,7 @@ Aqui está como ele funciona:
 
 ![](pics/dp3t.png)
 
-(& [e aqui está o quadrinho completo](https://ncase.me/contact-tracing/))
+([e aqui está o quadrinho completo](https://ncase.me/contact-tracing/))
 
 Junto com times similares como o protocolo TCN[^tcn] e MIT PACT[^pact], eles inspiraram a Apple e o Google para inserir o rastreamento de contatos, com prioridade na privacidade, diretamente no Android/iOS.[^gapple] (Você não confia no Google/Apple? Ótimo! A beleza deste sistema é que ele não *precisa* de confiança!) Em breve sua agência de saúde pública local pode solicitar que você baixe um app. Se ele colocar privacidade em primeiro lugar, com código-fonte público por favor faça! 
 
@@ -559,7 +559,7 @@ Sem mencionar todas as *outras* intervenções que poderíamos fazer, para empur
 * [Substituir apertos de mão por cumprimento com os pés](https://twitter.com/V_actually/status/1233785527788285953)
 * E tudo mais que a engenhosidade humana pode trazer
 
-. . .
+<p>. . .</p>
 
 Nós esperamos que estes planos dêem esperança para você.
 
@@ -668,7 +668,7 @@ Mesmo no cenário de pesadelo de "sem vacinas", nós ainda temos 3 saídas. Da m
 
 Até mesmo sob o cenário de *pior* caso... a vida persevera.
 
-. . .
+<p>. . .</p>
 
 Talvez você goste de desafiar nossas premissas, e tentar R<sub>0</sub>'s ou números diferentes. Ou tentar simular suas *próprias* combinações de planos de intervenção!
 

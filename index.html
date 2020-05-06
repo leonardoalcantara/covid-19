@@ -44,9 +44,8 @@
 </div>
 
 <div id="sharing">
-	Ajude este guia a
-	atingir 
-	R &gt; 1:
+	Ajude este guia a	<br>
+	atingir R > 1:
 	<br>
 	<span id='share_title'>
 		O Que Vem Pela Frente? COVID-19, Possíveis Futuros Explicados com Simulações
@@ -63,437 +62,434 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - -->
 
 <article>
-	<div class="section">
-	    <div>
-			<iframe id="splash" width="960" height="480" src="banners/splash.html"></iframe>
-			<div style="top: 70px;font-size: 75px;font-weight: bold;">
-				O Que Vem Pela Frente?
-			</div>
-			<div style="font-weight: 500;top: 140px;left: 10px;font-size: 29px;">
-				COVID-19, Possíveis Futuros Explicados com Simulações
-			</div>
-			<div style="font-weight: 100;top: 189px;left: 10px;font-size: 19px;line-height: 21px;">
-				<b>
-					🕐 Leitura/Simulações em 30 min
-					&nbsp;&middot;&nbsp;
-				</b>
-				por
-				<a href="https://scholar.google.com/citations?user=_wHMGkUAAAAJ&hl=en">Marcel Salathé</a>
-				(epidemiologista)
-				&
-				<a href="https://ncase.me/">Nicky Case</a>
-				(arte/código)
-			</div>
-	    </div>
-	</div>
-
-	<p>“A única coisa a temer é o próprio medo” é um conselho estúpido.</p>
-	<p>Claro, não junte papel higiênico - mas se os governantes temem o próprio medo eles irão minimizar os reais perigos de “pânico em massa”. O medo não é o problema, mas, sim, como nós <em>canalizamos</em> nosso medo. O medo nos dá energia para lidar com os perigos agora, e se preparar para os perigos mais à frente.</p>
-	<p>Honestamente, nós (Marcel, epidemiologista + Nicky, artista/programador) estamos preocupados. Nós podemos apostar que você está também! Por isto nós canalizamos nosso medo para criar estas <strong>simulações lúdicas</strong>, para que <em>você</em> possa canalizar seu medo para entender:</p>
-	<ul>
-	<li><strong>Os Últimos Meses</strong> (epidemiologia 101, modelo SEIR, R & R<sub>0</sub>)</li>
-	<li><strong>Os Próximos Meses</strong> (lockdowns, rastreamento de contato, máscaras)</li>
-	<li><strong>Os Próximos Anos</strong> (perda de imunidade? sem vacinas?)</li>
-	</ul>
-	<p>Este guia (publicado em 1º de Maio de 2020. clique nesta nota de rodapé!→<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) visa trazer para você esperança <em>e</em> medo. Para derrotar o COVID-19 <strong>de uma forma que também proteja nossa saúde mental e financeira</strong>, nós precisamos de otimismo para criar planos, e pessimismo para criar planos emergenciais. Como Gladys Bronwyn Stern disse uma vez, <em>“O otimista inventa o avião e o pessimista o paraquedas.”</em></p>
-	<p>Então, apertem os cintos: nós estamos prestes a experimentar alguma turbulência.</p>
-	<div class="section chapter">
-		<div>
-			<img src="banners/curve.png" height=480 style="position: absolute;"/>
-			<div>Os Últimos Meses</div>
-		</div>
-	</div>
-	<p>Pilotos usam simuladores de vôo para aprender a não destruir aviões.</p>
-	<p><strong>Epidemiologistas usam simuladores epidêmicos para aprender como não destruir a humanidade.</strong></p>
-	<p>Então, vamos construir um “simulador de vôo epidêmico” muito, muito simples!, <icon i></icon> Nesta simulação, pessoas infectadas podem tornar <icon s></icon> Pessoas suscetíveis em mais <icon i></icon>Pessoas infectadas:</p>
-	<p><img src="pics/spread.png" /></p>
-	<p>É estimado que, <em>no início</em> do surto de COVID-19, o vírus passa de uma <icon i></icon> para uma <icon s></icon> a cada 4 dias, <em>em média</em>. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (lembre-se, há muita variação)</p>
-	<p>Se nós simularmos “dobra a cada 4 dias” <em>e nada mais</em>, em uma população, começando com apenas 0.001% <icon i></icon>, o que acontece?</p>
-	<p><strong>Clique “Iniciar” para rodar a simulação! Você pode rodar outras vezes com outros parâmetros:</strong> (ressalvas técnicas:<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>)</p>
-	<div class="sim">
-		<iframe src="sim?stage=epi-1" width="800" height="540"></iframe>
-	</div>
-	<p>Esta é a <strong>curva de crescimento exponencial.</strong> Começa pequena, e então explode. “Oh é apenas uma gripe”para “Tá certo, gripes não criam <em>cemitérios de valas comuns em cidades ricas</em>”.</p>
-	<p><img src="pics/exponential.png" /></p>
-	<p>Mas, esta simulação está errada. O crescimento exponencial, ainda bem, não pode ser perpétuo. Uma razãopara impedir o espalhamento do vírus é se outras pessoas <em>já</em> tem o vírus:</p>
-	<p><img src="pics/susceptibles.png" /></p>
-	<p>Quanto mais <icon i></icon>s existem, mais rápido <icon s></icon>s se tornam <icon i></icon>s, <strong>mas quanto menos <icon s></icon>s existem, mais <em>lentamente</em> <icon s></icon>s se tornam <icon i></icon>s.</strong></p>
-	<p>Como isto muda o crescimento de uma epidemia? Vamos descobrir:</p>
-	<div class="sim">
-		<iframe src="sim?stage=epi-2" width="800" height="540"></iframe>
-	</div>
-	<p>Esta é a <strong>curva de crescimento logístico.</strong> em formato de S. Começa devagar, explode, e desacelera de novo.</p>
-	<p>Mas, esta simulação <em>ainda</em> está errada. Nós estamos esquecendo o fato que <icon i></icon>Pessoas infectadas em algum momento param de ser infecciosas, seja 1) se recuperando, 2)“se recuperando” com dano aos pulmões, ou 3) morrendo.</p>
-	<p>Por questão de simplicidade, vamos fingir que todas as <icon i></icon> Pessoas infectadas se tornem <icon r></icon> Recuperadas. (Apenas lembrem-se que na realidade algumas morrem.) <icon r></icon>s não podem ser infectadas de novo, e vamos assumir – <em>por enquanto!</em> – que se tornam imunes por toda a vida.</p>
-	<p>No caso da COVID-19, é estimado que você permaneça <icon i></icon> Infectado por 10 dias, <em>em média</em>.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Isto significa que alguns vão se recuperar antes de 10 dias e outros depois. <strong>Este é o resultado, com uma simulação <em>começando</em> com 100% <icon i></icon>:</strong></p>
-	<div class="sim">
-		<iframe src="sim?stage=epi-3" width="800" height="540"></iframe>
-	</div>
-	<p>Isto é o oposto do crescimento exponencial, a <strong>curva de decaimento exponencial.</strong></p>
-	<p>Agora, o que acontece se você simular crescimento logístico em formato de S <em>com</em> a recuperação?</p>
-	<p><img src="pics/graphs_q.png" /></p>
-	<p>Vamos descobrir.</p>
-	<p><b style='color:#ff4040'>Curva vermelha</b> são os casos <em>atuais</em><icon i></icon>,<br />
-	<b style='color:#999999'>Curva cinza</b> é o <em>total</em> de casos (atuais + recuperados <icon r></icon>), que se inicia em apenas 0.001% <icon i></icon>:</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=epi-4" width="800" height="540"></iframe></code></pre>
-	</div>
-	<p>E é <em>daí</em> que esta famosa curva veio! Não é uma curva em sino, e não é nem mesmo uma curva “log-normal”. Ela não tem nome. Mas você já deve ter visto um zilhão de vezes, e torcido muito para que ela achatasse.</p>
-	<p>Este é o <strong>Modelo SIR</strong>,<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a><br />
-	(<icon s></icon><strong>S</strong>uscetível <icon i></icon><strong>I</strong>nfectado <icon r></icon><strong>R</strong>ecuperado)<br />
-	a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
-	<p><img src="pics/sir.png" /></p>
-	<p><strong>NOTA: A simulações que informam as políticas são muito, <em>muito</em> mais sofisticadas que isto!</strong> Mas o Modelo SIR ainda serve para encontrarmos as mesmas conclusõesgerais, mesmo que deixando passar algumas nuances.</p>
-	<p>De fato, vamos acrescentar uma nuance adicional: antes de um <icon s></icon> se tornar <icon i></icon>, ele primeiro se torna <icon e></icon> Exposto. Isto é quando ele tem o vírus mas ainda não pode passar adiante - infec<em>tado</em> mas não infec<em>cioso</em>.</p>
-	<p><img src="pics/seir.png" /></p>
-	<p>(Esta variante é chamada o <strong>Modelo SEIR</strong><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, onde o “E” significa <icon e></icon> “Exposto”. Note que este <em>não é</em> o significado usual de “exposto”, em que você pode ou não ter o vírus. Nesta definição técnica “Exposto” significa que você definitivamente tem. A terminologia científica é ruim.)</p>
-	<p>No caso da COVID-19, é estimado que você fique <icon e></icon> infectado-mas-não-infeccioso por 3 dias, <em>em média</em>.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> O que acontece se adicionarmos isto à simulação?</p>
-	<p><b style='color:#ff4040'>Curva Vermelha</b> <b style='color:#FF9393'>+ Rosa</b> são os casos <em>atuais</em> (infeccioso <icon i></icon> + exposto <icon e></icon>),<br />
-	<b style='color:#888'>Curva cinza</b> são casos <em>totais</em> (atuais + recuperados <icon r></icon>):</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=epi-5" width="800" height="540"></iframe></code></pre>
-	</div>
-	<p>Não há muitas mudanças! O tempo que você permanece <icon e></icon> Exposto muda a razão de <icon e></icon>-para-<icon i></icon>, e <em>quando</em> os casos correntes atingem o pico… mas a <em>altura</em> do pico, e o total de casos no final, permanecem os mesmos.</p>
-	<p>Por que isto acontece? Por causa da mais importante idéia em Epidemiologia 101:</p>
-	<p><img src="pics/r.png" /></p>
-	<p>Abreviação de “Número de reprodução”. É o número <em>médio</em> de pessoas que um <icon i></icon> infecta <em>antes</em> de se recuperar (ou morrer).</p>
-	<p><img src="pics/r2.png" /></p>
-	<p><strong>R</strong> muda durante o curso de um surto, já que ganhamos mais imunidade e intervenções.</p>
-	<p><strong>R<sub>0</sub></strong> (pronounced R-nought) is what R is <em>at the start of an outbreak, before immunity or interventions</em>. R<sub>0</sub> more closely reflects the power of the virus itself, but it still changes from place to place. For example, R<sub>0</sub> is higher in dense cities than sparse rural areas.</p>
-	<p>(Most news articles – and even some research papers! – confuse R and R<sub>0</sub>. Again, science terminology is bad)</p>
-	<p>The R<sub>0</sub> for “the” seasonal flu is around 1.28<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>. This means, at the <em>start</em> of a flu outbreak, each <icon i></icon> infects 1.28 others <em>on average.</em> (If it sounds weird that this isn’t a whole number, remember that the “average” mom has 2.4 children. This doesn’t mean there’s half-children running about.)</p>
-	<p>The R<sub>0</sub> for COVID-19 is estimated to be around 2.2,<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> though one <em>not-yet-finalized</em> study estimates it was 5.7(!) in Wuhan.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
-	<p>Nas nossa simulações – <em>no início & na média</em> – um <icon i></icon> infecta alguém a cada 4 dias, em 10 dias. “4 dias” ocorre dentro de “10 dias” duas vezes e meia. Isto significa – <em>no início & na média</em> – cada <icon i></icon> infecta 2.5 outros. Então, R<sub>0</sub> = 2.5. (ressalvas:<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>)</p>
-	<p><strong>Brinque com esta calculadora de R<sub>0</sub>, para ver como R<sub>0</sub> depende dos tempos de recuperação e nova infecção:</strong></p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=epi-6a&format=calc" width="285" height="255"></iframe></code></pre>
-	</div>
-	<p>But remember, the fewer <icon s></icon>s there are, the <em>slower</em> <icon s></icon>s become <icon i></icon>s. The <em>current</em> reproduction number (R) depends not just on the <em>basic</em> reproduction number (R<sub>0</sub>), but <em>also</em> on how many people are no longer <icon s></icon> Susceptible. (For example, by recovering & getting natural immunity.)</p>
-	<p>Mas lembre-se, quanto menos <icon s></icon>s há, mais <em>lentamente</em> <icon s></icon>s tornam-se <icon i></icon>s. O número de reprodução (R) <em>corrente</em> depende não apenas do número de reprodução <em>básico</em> (R<sub>0</sub>), mas <em>também</em> em quantas pessoas não são mais <icon s></icon> Suscetíveis. (Por exemplo, por se recuperar e conseguindo imunidade natural.)</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=epi-6b&format=calc" width="285" height="390"></iframe></code></pre>
-	</div>
-	<p>When enough people have immunity, R < 1, and the virus is contained! This is called <strong>herd immunity</strong>. For flus, herd immunity is achieved <em>with a vaccine</em>. Trying to achieve “natural herd immunity” by letting folks get infected is a <em>terrible</em> idea. (But not for the reason you may think! We’ll explain later.) Quando pessoas suficientes tem imunidade, R < 1, e o vírus é contido! Isto é chamado <strong>imunidade de rebanho</strong>. Para gripes, a imunidade de rebanho é atingida <em>com uma vacina</em>. Tentando atingir “imunidade de rebanho natural” deixando as pessoas se infectarem é uma idéia <em>terrível</em>. (Mas não pelas razões que você pode pensar! Explicaremos mais a frente.)</p>
-	<p>Vamos rodar o Modelo SEIR outra vez, mas mostrando R<sub>0</sub>, R ao longo do tempo, e o limiar de imunidade de rebanho:</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=epi-7" width="800" height="540"></iframe></code></pre>
-	</div>
-	<p><strong>NOTA: O total de casos <em>não para</em> na imunidade de rebanho, mas ultrapassa ele!</strong> E ele cruza o limiar <em>exatamente</em> quando os casos correntes atingem o pico. (Isto acontece não importa como você mude os ajustes - tente você mesmo!)</p>
-	<p>Isto ocorre porque quando há mais não-<icon s></icon>s do que o limiar da imunidade de rebanho, você tem R < 1. E quando R < 1, novos casos param de crescer: um pico.</p>
-	<p><strong>Se houver apenas uma lição para você tirar deste guia é esta</strong> - é um diagrama extremamente complexo, então tome um tempo para absorvê-lo completamente:</p>
-	<p><img src="pics/r3.png" /></p>
-	<p><strong>Isto significa: nós NÃO precisamos impedir todas as transmissões, ou nem mesmo algo próximo de todas as transmissões, para parar o COVID-19!</strong></p>
-	<p>É um paradoxo. COVID-19 é extremamente contagioso, porém para contê-lo, nós “só” precisamos impedir 60% das infecções. 60%?! Se fosse uma nota no boletim seria um D-. Mas se R<sub>0</sub> = 2.5, cortando isto por 61% nós temos R = 0.975, que é R < 1, vírus contido! (fórmula exata:<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>)</p>
-	<p><img src="pics/r4.png" /></p>
-	<p>(Se você pensa que R<sub>0</sub> ou outros números nas nossas simulações são muito baixos/altos, isto é bom pois está desafiando nossas premissas! Haverá um “Modo Caixa de Areia” no fim deste guia, onde você poderá inserir os seus <em>próprios</em> números, e simular o que acontece.)</p>
-	<p><em>Cada</em> intervenção sobre COVID-19 que você já ouviu sobre - lavar as mãos, distanciamento social/físico, lockdowns, auto-isolamento, rastreamento de contatos e quarentena, máscaras faciais, e mesmo “imunidade de rebanho” - todas estão visando a mesma coisa:</p>
-	<p>Fazer R < 1.</p>
-	<p>Então agora, vamos usar nosso “simulador de vôo epidemico” para descobrir o seguinte: Como podemos conseguir ter R < 1 de uma forma que <strong>também proteja nossa saúde mental <em>e</em> financeira?</strong></p>
-	<p>Preparem-se para uma aterrisagem de emergência…</p>
-	<section class="chapter">
-	<pre><code><div>
-		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-		<div>Os Próximos Meses</div>
-	</div></code></pre>
-	</section>
-	<p>…poderia ter sido pior. Aqui está um universo paralelo que evitamos:</p>
-	<p>###Cenário 0: Não Fazer Absolutamente Nada</p>
-	<p>Perto de 1 em cada 20 pessoas infectadas com COVID-19 precisam ir para um UTI(Unidade de Terapia Intensiva.)<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a> Em um país rico como os EUA, há 1 cama de UTI para cada 3400 pessoas. <a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a> Portanto os EUA podem tratar 20 de 3400 pessoas <em>simultaneamente</em> infectadas - ou 0.6% da população.</p>
-	<p>Mesmo se nós <em>mais que triplicarmos</em> esta capacidade para 2%, aqui está o que aconteceria <em>se não fizessemos absolutamente nada:</em></p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=int-1&format=lines" width="800" height="540"></iframe></code></pre>
-	</div>
-	<p>Nada bom.</p>
-	<p>Isto é o que <a href="http://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/">o relatório do Imperial College em 16 de março</a> descobriu: se não fizessemos nada ficaríamos sem camas de UTI, com mais de 80% da população infectada. (lembre-se: o número total de casos <em>ultrapassa</em> a imunidade de rebanho).</p>
-	<p>Mesmo se apenas 0.5% dos infectados morressem - uma suposição generosa quando não há mais vagas na UTI - em um país grande como os EUA, com 300 milhões de pessoas, 0.5% de 80% de 300 milhões = ainda são 1.2 milhões de mortos… <em>SE não fizessemos nada.</em></p>
-	<p>(Muitos canais de notícia e mídia social reportaram “80% serão infectados” <em>SEM</em> o “SE NÃO FIZERMOS NADA”. O medo foi canalizado em clicks, e não para o entendimento. <em>Suspiro.</em>)</p>
-	<p>###Cenário 1: Achatar a Curva / Imunidade de Rebanho</p>
-	<p>O plano de “Achatar a Curva” foi apregoado por todas as organizações de saúde pública, enquanto que o plano original de “imunidade de rebanho” do Reino Unido era universalmente vaiado. Eles eram <em>o mesmo plano.</em> O Reino Unido apenas comunicou mal seu plano.[^yong]</p>
-	<p>“Ele diz que a meta real é a mesma dos outros países: achatar a curva ao escalonar o início as infecções. Como consequência, a nação deve atingir imunidade de rebanho; é um efeito colateral, e não um objetivo. […] O verdadeiro plano de ação para o coronavírus do gorverno, disponível online, não menciona imunidade de rebanho em nenhum lugar.”"</p>
-	<pre><code>Do [artigo de Ed Yong para o The Atlantic](https://www.theatlantic.com/health/archive/2020/03/coronavirus-pandemic-herd-immunity-uk-boris-johnson/608065/)</code></pre>
-	<p>Ambos os planos, entretanto, tinham literalmente uma falha fatal.</p>
-	<p>Primeiro, vamos olhar nas duas principais formas de “achatar a curva”: lavar as mãos e distanciamento físico.</p>
-	<p>O aumento da lavagem das mãos corta a incidência de gripes e resfriados em países de alta renda em ~25%<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>, enquanto o lockdown de toda a cidade de Londres corta os contatos próximos em ~70%<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>. Então, vamos assumir que a lavagem de mãos pode reduzir R <em>em até</em> 25%, e o distanciamento pode reduzir R <em>em até</em> 70%:</p>
-	<p><strong>Brinque com esta calculadora para ver qual o % de non-<icon s></icon>, lavagem de mão, e distanciamento reduzem R:</strong> (esta calculadora visualiza os seus efeitos <em>relativos</em>, e é por isto que incrementando um <em>parece</em> como se estivessemos diminuindo o efeito de outros.<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>)</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=int-2a&format=calc" width="285" height="260"></iframe></code></pre>
-	</div>
-	<p>Agora, vamos simular o que acontece com uma epidemia de COVID-19 se, começando em março de 2020, nós tivessemos aumentado a lavagem de mãos mas adotado apenas <em>leve</em> distanciamento físico - de tal forma que R é mais baixo, mas ainda acima de 1:</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=int-2&format=lines" width="800" height="540"></iframe></code></pre>
-	</div>
-	<p>Três notas:</p>
-	<ol type="1">
-	<li><p>Isto <em>reduz</em> o total de casos! <strong>Mesmo se você não consegue R < 1, reduzindo R ainda salva vidas, ao reduzir o tanto que se ultrapassa sobre a imunidade de rebanho.</strong> Muitos pensam que “Achatar a Curva” espalha os casos sem reduzir o seu número total. Isto é impossível em <em>qualquer</em> modelo em Epidemiologia 101. Mas como a mídia reportou “mais de 80% serão infectados” como inevitável, as pessoas pensam que o número total de casos será o mesmo não importando nada. <em>Suspiro.</em></p></li>
-	<li><p>Devido as intervenções extra, os casos correntes atingem o pico <em>antes</em> que a imunidade de rebanho seja alcançada. De fato, nesta simulação, o número total de casos apenas ultrapass <em>um pouco</em> acimna da imunidade de rebanho - o plano do Reino Unido! Neste ponto, R < 1, você pode descartar todas as outras intervenções, e a COVID-19 permanece contida! Bem, exceto por um problema…</p></li>
-	<li><p>Você continua sem leitos de UTI. Por vários meses. (e lembre-se, nós <em>já</em> triplicamos as UTIs nestas simulações)</p></li>
-	</ol>
-	<p>Este foi o outro achado do relatório do Imperial College em 16 de março, que convenceu o Reino Unido a abandonar o plano original. Qualquer tentativa de <strong>mitigação</strong> (reduzir R, mas com R>1) iria falhar. A única saída seria <strong>supressão</strong> (reduzir R de forma que R < 1).</p>
-	<p><img src="pics/mitigation_vs_suppression.png" /></p>
-	<p>Isto é, não apenas “achate” a curva, <em>esmague</em> a curva. Por exemplo, com um…</p>
-	<p>###Cenário 3: Lockdown de Meses</p>
-	<p>Vamos ver o que acontece se nós <em>esmagamos</em> a curva com um lockdown de 5 meses, reduzindo <icon i></icon> para quase nada, e então - <em>finalmente</em> - retornando para a vida normal:</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=int-3&format=lines" width="800" height="540"></iframe></code></pre>
-	</div>
-	<p>Oh.</p>
-	<p>Esta é a “segunda onda” que todo mundo está falando a respeito. Assim que removemos o lockdown, nós voltamos a ter R > 1 de novo. Então, um único <icon i></icon> deixado para trás (ou importado) pode causar um disparo nos casos que é quase tão ruim como se tivessemos feito o Cenário 0: Absolutamente Nada.</p>
-	<p><strong>Um lockdown não é a cura, ele é apenas um reinício.</strong></p>
-	<p>Então o que? Nós apenas entramos em lockdown de novo e de novo?</p>
-	<p>###Cenário 3: Lockdown Intermitente</p>
-	<p>Esta solução foi sugerida inicialmente pelo relatório do Imperial College de 16 de março, e de novo por um artigo de Harvard.<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a></p>
-	<p><strong>Aqui está uma simulação:</strong> (Depois de brincar com o “cenário gravado”, você pode tentar simular seus <em>próprios</em> cronogramas de lockdown, mudando os cursores <em>enquanto</em> a simulação está rodando! Lembre-se que você pode parar e continuar a simulação, e alterar a sua velocidade).</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=int-4&format=lines" width="800" height="540"></iframe></code></pre>
-	</div>
-	<p>Isto <em>iria</em> manter os casos abaixo da capacidade das UTIs! E é <em>muito</em> melhor que um lockdown de 18 meses até que uma vacina esteja disponível. (E se não houver vacina, repita até que a imunidade de rebanho seja atingida… em 2022.)</p>
-	<p>Veja, é legal desenhar uma linha dizendo “capacidade das UTIs”, mas tem várias coisas importantes que nós <em>não podemos</em> simular aqui. Como:</p>
-	<p><strong>Saúde Mental:</strong> Solidão é um dos maiores fatores de risco para depressão, ansiedade, e suicídio. E está tão associado com a morte prematura quanto fumar 15 cigarros por dia.[^loneliness]</p>
-	<p>Veja <a href="https://journals.sagepub.com/doi/abs/10.1177/1745691614568352">Figure 6 from Holt-Lunstad & Smith 2010</a>. Claro, grande ressalva que eles encontraram uma <em>correlação</em>. Mas a não ser que você queira tentar aleatóriamente designar pessoas para serem solitárias a vida toda evidência de observação é tudo que você pode ter.</p>
-	<p><strong>Saúde Financeira:</strong> “E a respeito da economia” soa como se você se importasse mais com dólares que com vidas, mas “a economia” não é apenas a bolsa de valores: é a capacidade das pessoas prover comida e abrigo para os seus entes queridos, para investir no futuro dos seus filhos, e desfrutar de artes, comidas, videogames - as coisas que fazem a vida valer a pena. E além disto, pobreza <em>por si só</em> tem impactos horríveis na saúde mental e física.</p>
-	<p>Não estou dizendo que nós <em>não devamos</em> ter outro lockdown! Nós iremos falar de lockdowns “disjuntores” depois. De toda forma não é o ideal.</p>
-	<p>Mas espere… Formosa e a Coréia do Sul não contiveram a COVID-19? Por 4 meses inteiros <em>sem</em> quarentenas de longo prazo?</p>
-	<p>Como?</p>
-	<p>###Cenário 4: Teste, Rastreie, Isole</p>
-	<p><em>“Claro, nós *poderíamos* ter feito o que Formosa e Coréia do Sul fizeram desde o início, mas agora é tarde demais. Nós perdemos a largada.”</em></p>
-	<p>Mas é exatamente isto! “Uma quarentena não é a cura, é apenas um recomeço”… <strong>e um recomeço do zero é tudo que precisamos.</strong></p>
-	<p>Para entender como Formosa e Coréia do Sul contiveram o COVID-19, nós necessitaríamos entender a exata linha do tempo de uma típica infecção de COVID-19<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>:</p>
-	<p><img src="pics/timeline1.png" /></p>
-	<p>Se os casos só se auto-isolam quando eles sabem que estão doentes (isto é, eles sentem sintomas), o vírus ainda pode se espalhar:</p>
-	<p><img src="pics/timeline2.png" /></p>
-	<p>E de fato, 44% de todas as transmissões são assim: <em>pré</em>-sintomáticas! <a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a></p>
-	<p>Mas, se nós encontrarmos <em>e colocarmos em quarentena</em> os contatos próximos recentes de um caso sintomático… nós paramos o espalhamento, por estar um passo a frente!</p>
-	<p><img src="pics/timeline3.png" /></p>
-	<p>Isto é chamado <strong>rastreamento de contato</strong>. É uma idéia antigaa, que foi utilizada em uma escala sem precedentes para conter o Ebola<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>, e agora é parte central de como Formosa e Coréia do Sul estão contendo o COVID-19!</p>
-	<p>(Isto também permite que utilizemos nossos recursos de teste limitados de forma mais eficiente, para encontrar <icon i></icon>s pré-sintomáticos sem a necessidade de testar quase todo mundo).</p>
-	<p>Tradicionalmente, os contatos são encontrados com entrevistas pessoais, mas estas <em>sozinhas</em> são muito lentas para a janela de ~48h do COVID-19. Este é o motivo pelo qual os rastreadores de contato precisam de ajuda, e serem auxíliados por - <em>NÃO</em> substituídos por - apps de rastreamento de contatos.</p>
-	<p>(Esta idéias não surgiu de “techies”: usar um app para lutar contra o COVID-19 foi proposto por <a href="https://science.sciencemag.org/content/early/2020/04/09/science.abb6936">um time de epidemiologistas de Oxford</a>.)</p>
-	<p>Mas espere aí, apps que rastreiam com quem você esteve em contato?… Isto significa abrir mão da sua privacidade, sucumbindo ao Big Brother?</p>
-	<p>Nada disto! <strong><a href="https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing">DP-3T</a></strong>, um time de epidemiologistas e criptografos (incluindo um de nós, Marcel Salathé) <em>já</em> está desenvolvento um app de rastreamento de contatos - com o código disponível para o público - que não revela <strong>nenhuma informação sobre a sua identidade, localização, quem são seus contatos, ou nem mesmo <em>quantos contatos</em> você teve.</strong></p>
-	<p>Aqui está como ele funciona:</p>
-	<p><img src="pics/dp3t.png" /></p>
-	<p>(& <a href="https://ncase.me/contact-tracing/">e aqui está o quadrinho completo</a>)</p>
-	<p>Junto com times similares como o protocolo TCN<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a> e MIT PACT<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a>, eles inspiraram a Apple e o Google para inserir o rastreamento de contatos, com prioridade na privacidade, diretamente no Android/iOS.<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a> (Você não confia no Google/Apple? Ótimo! A beleza deste sistema é que ele não <em>precisa</em> de confiança!) Em breve sua agência de saúde pública local pode solicitar que você baixe um app. Se ele colocar privacidade em primeiro lugar, com código-fonte público por favor faça!</p>
-	<p>Mas e as pessoas que não tem smartphones? Ou as infecções por maçanetas de portas? Ou casos “verdadeiramente” assintomáticos? Os apps de rastreamento de contatos não podem pegar todas estas transmissões… <em>e isto não é problema!</em> Nós não precisamos pegar <em>todas</em> as transmissões, apenas 60%+ para conseguir R < 1.</p>
-	<p>(Resmungo sobre a confusão a respeito de casos pré-sintomáticos vs “verdadeiramente” assintomáticos. “Verdadeiramente” assintomáticos são raros:<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>)</p>
-	<p>O isolamento de casos <em>sintomáticos</em> reduziria R em cerca de 40%, e colocando em quarentena os seus contatos <em>pré-sintomáticos ou assintomáticos</em> reduziria R em até 50%<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>:</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=int-4a&format=calc" width="285" height="340"></iframe></code></pre>
-	</div>
-	<p>Então, mesmo sem 100% de distanciamento, nós podemos chegar a R < 1 <em>sem um lockdown!</em> Muito melhor para a nossa saúde mental e financeira. (E para os custos das pessoas que tiverem que se auto-isolar/entrar em quarentena, <em>os governos devem sustentá-los</em> - pagar pelos testes, proteger seus empregos, subsidiar licenças remuneradas, etc. Ainda será muito mais barato que lockdown intermitente.)</p>
-	<p>Se nós mantivermos R < 1 até que nós tenhamos uma vacina, que tornará suscetíveis <icon s></icon>s em imunizados <icon r></icon>s. Imunidade de rebanho, o jeito <em>certo</em>:</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=int-4b&format=calc" width="285" height="230"></iframe></code></pre>
-	</div>
-	<p>(Note: this calculator pretends the vaccines are 100% effective. Just remember that in reality, you’d have to compensate by vaccinating <em>more</em> than “herd immunity”, to <em>actually</em> get herd immunity)</p>
-	<p>Okay, enough talk. Here’s a simulation of:</p>
-	<ol type="1">
-	<li>A few-month lockdown, until we can…</li>
-	<li>Switch to “Test, Trace, Isolate” until we can…</li>
-	<li>Vaccinate enough people, which means…</li>
-	<li>We win.</li>
-	</ol>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=int-5&format=lines" width="800" height="540"></iframe></code></pre>
-	</div>
-	<p>So that’s it! That’s how we make an emergency landing on this plane.</p>
-	<p>That’s how we beat COVID-19.</p>
-	<p>…</p>
-	<p>But what if things <em>still</em> go wrong? Things have gone horribly wrong already. That’s fear, and that’s good! Fear gives us energy to create <em>backup plans</em>.</p>
-	<p>The pessimist invents the parachute.</p>
-	<p>###Scenario 4+: Masks For All, Summer, Circuit Breakers</p>
-	<p>What if R<sub>0</sub> is way higher than we thought, and the above interventions, even with mild distancing, <em>still</em> aren’t enough to get R < 1?</p>
-	<p>Remember, even if we can’t get R < 1, reducing R still reduces the “overshoot” in total cases, thus saving lives. But still, R < 1 is the ideal, so here’s a few other ways to reduce R:</p>
-	<p><strong>Masks For All:</strong></p>
-	<p><em>“Wait,”</em> you might ask, <em>“I thought face masks don’t stop you from getting sick?”</em></p>
-	<p>You’re right. Masks don’t stop you from getting sick<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>… they stop you from getting <em>others</em> sick.</p>
-	<p><img src="pics/masks.png" /></p>
-	<p>To put a number on it: surgical masks <em>on the sick person</em> reduce cold & flu viruses in aerosols by 70%.<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a> Reducing transmissions by 70% would be as large an impact as a lockdown!</p>
-	<p>However, we don’t know for sure the impact of masks on COVID-19 <em>specifically</em>. In science, one should only publish a finding if you’re 95% sure of it. (…should.<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>) Masks, as of May 1st 2020, are less than “95% sure”.</p>
-	<p>However, pandemics are like poker. <strong>Make bets only when you’re 95% sure, and you’ll lose everything at stake.</strong> As a recent article on masks in the British Medical Journal notes,<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a> we <em>have</em> to make cost/benefit analyses under uncertainty. Like so:</p>
-	<p>Cost: If homemade cloth masks (which are ~2/3 as effective as surgical masks<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a>), super cheap. If surgical masks, more expensive but still pretty cheap.</p>
-	<p>Benefit: Even if it’s a 50–50 chance of surgical masks reducing transmission by 0% or 70%, the average “expected value” is still 35%, same as a half-lockdown! So let’s guess-timate that surgical masks reduce R by up to 35%, discounted for our uncertainty. (Again, you can challenge our assumptions by turning the sliders up/down)</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=int-6a&format=calc" width="285" height="380"></iframe></code></pre>
-	</div>
-	<p>(other arguments for/against masks:<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>)</p>
-	<p><strong>“They’re hard to wear correctly.”</strong> It’s also hard to wash your hands according to the WHO Guidelines – seriously, “Step 3) right palm over left dorsum”?! – but we still recommend handwashing, because imperfect is still better than nothing.</p>
-	<p><strong>“It’ll make people more reckless with handwashing & social distancing.”</strong> Sure, and safety belts make people ignore stop signs, and flossing makes people eat rocks. But seriously, we’d argue the opposite: masks are a <em>constant physical reminder</em> to be careful – and in East Asia, masks are also a symbol of solidarity!</p>
-	<p>Masks <em>alone</em> won’t get R < 1. But if handwashing & “Test, Trace, Isolate” only gets us to R = 1.10, having just 1/3 of people wear masks would tip that over to R < 1, virus contained!</p>
-	<p><strong>Summer:</strong></p>
-	<p>Okay, this isn’t an “intervention” we can control, but it will help! Some news outlets report that summer won’t do anything to COVID-19. They’re half right: summer won’t get R < 1, but it <em>will</em> reduce R.</p>
-	<p>For COVID-19, every extra 1° Celsius (2.2° Fahrenheit) makes R drop by 1.2%.<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a> The summer-winter difference in New York City is 15°C (60°F), so summer will make R drop by 18%.</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=int-6b&format=calc" width="285" height="220"></iframe></code></pre>
-	</div>
-	<p>Summer alone won’t make R < 1, but if we have limited resources, we can scale back some interventions in the summer – so we can scale them <em>higher</em> in the winter.</p>
-	<p><strong>A “Circuit Breaker” Lockdown:</strong></p>
-	<p>And if all that <em>still</em> isn’t enough to get R < 1… we can do another lockdown.</p>
-	<p>But we wouldn’t have to be 2-months-closed / 1-month-open over & over! Because R is reduced, we’d only need one or two more “circuit breaker” lockdowns before a vaccine is available. (Singapore had to do this recently, “despite” having controlled COVID-19 for 4 months. That’s not failure: this <em>is</em> what success takes.)</p>
-	<p>Here’s a simulation a “lazy case” scenario:</p>
-	<ol type="1">
-	<li>Lockdown, then</li>
-	<li>A moderate amount of hygiene & “Test, Trace, Isolate”, with a mild amount of “Masks For All”, then…</li>
-	<li>One more “circuit breaker” lockdown before a vaccine’s found.</li>
-	</ol>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=int-7&format=lines&height=620" width="800" height="620"></iframe></code></pre>
-	</div>
-	<p>Not to mention all the <em>other</em> interventions we could do, to further push R down:</p>
-	<ul>
-	<li>Travel restrictions/quarantines</li>
-	<li>Temperature checks at malls & schools</li>
-	<li>Deep-cleaning public spaces</li>
-	<li><a href="https://twitter.com/V_actually/status/1233785527788285953">Replacing hand-shaking with foot-bumping</a></li>
-	<li>And all else human ingenuity shall bring</li>
-	</ul>
-	<p>. . .</p>
-	<p>Nós esperamos que estes planos dêem esperança para você.</p>
-	<p><strong>Mesmo em um cenário pessimista é possível bater o COVID-19, enquanto protegemos nossa saúde mental e financeira.</strong> Usando o lockdown como um “botão de reinício”, mantendo R < 1 com isolaamento de casos + rastreamento de contatos que proteja a privacidade + <em>pelo menos</em> máscaras de pano para todos… e a vida pode voltar a uma normalidade!</p>
-	<p>Claro, você pode terá suas mãos ressecadas, mas você poderá convidar alguém para um encontro em uma livraria de histórias em quadrinhos! Você poderá sair com amigos para assistir o último caça-níqueis de Hollywood. Você poderá ficar observando as pessoas em uma livraria, ficando alegre de vê-las fazendo coisas simples como <em>estarem vivas.</em>.</p>
-	<p>Mesmo no cenário de pior caso… a vida persevera.</p>
-	<p>Então agora vamos planejar para alguns dos <em>piores</em> cenários dentre os de pior caso. Aterrisando na água, pegue seu colete de sobrevivência, e por favor siga as luzes para as saídas de emergência:</p>
-	<section class="chapter">
-	<pre><code><div>
-		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-		<div>Os Próximos Anos</div>
-	</div></code></pre>
-	</section>
-	<p>Se você tiver COVID-19, e se recuperar. Ou tomar a vacina da COVID-19. De qualquer forma você agora estará imune…</p>
-	<p>…<em>por quanto tempo?</em></p>
-	<ul>
-	<li>COVID-19 é mais similar ao SARS, que dava aos seus sobreviventes 2 anos de imunidade.[^SARS immunity]</li>
-	<li>Os coronavírus que causam “o” resfriado comum dão a você 8 meses de imunidade.[^cold immunity]</li>
-	<li>Há relatos de pessoas recuperadas do COVID-19, que depois voltam a testar positivo, mas ainda é incerto se estes são falsos positivos.<a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a></li>
-	<li>Um estudo <em>ainda-não-revisado-por-pares</em> em macacos mostrou imunidade ao coronavírus do COVID-19 por pelo menos 28 dias.<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a></li>
-	</ul>
-	<p>Mas para o COVID-19 <em>em humanos</em>, em 1 de maio de 2020, o “quanto tempo” é a grande dúvida.</p>
-	<p>[^SARS immunity]: “Anticorpos específicos para o SARS foram mantidos por uma média de 2 anos […] Então pacientes do SARS devem ser suscetíveis a reinfecção ≥3 anos depois da exposição inicial.” <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2851497/">Wu LP, Wang NC, Chang YH, et al.</a> “Infelizmente” nós nunca saberemos por quanto tempo a imunidade do SARS teria realmente durado já que a erradicamos tão rapidamente.</p>
-	<p>[^cold immunity]: “Nós não encontramos nenhuma diferença significativa entre a probabilidade de testar positivo pelo menos uma vez e a probabilidade de recorrência para os beta-coronavírus HKU1 e OC43 em 34 semanas depois da inscrição/primeira infecção.” <a href="http://www.columbia.edu/~jls106/galanti_shaman_ms_supp.pdf">Marta Galanti & Jeffrey Shaman (PDF)</a></p>
-	<p>Para estas simulações, digamos é um ano. <strong>Aqui temos uma simulação iniciando com 100% <icon r></icon></strong>, decaindo exponencialmente para suscetíveis, sem imunidade <icon s></icon>s depois de 1 ano, na <em>média</em>, com variação:</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=yrs-1&format=lines&height=600" width="800" height="600"></iframe></code></pre>
-	</div>
-	<p>O Retorno do decaimento exponencial!</p>
-	<p>Este é o <strong>Modelo SEIRS</strong>. O último “S” significa <icon s></icon> suscetível, de novo.</p>
-	<p><img src="pics/seirs.png" /></p>
-	<p>Agora vamos simular um surto de COVID-19, no período de 10 anos, sem intervenções… <em>se a imunidade durar apenas um ano:</em></p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=yrs-2&format=lines&height=600" width="800" height="600"></iframe></code></pre>
-	</div>
-	<p>Nas simulações prévias, nós tinhamos apenas <em>um</em> pico de superlotação das UTIs. Agora nós temos vários, <em>e</em> <icon i></icon> casos convergem para ficar <em>permanentemente na</em> capacidade das UTIs. (Que, lembre-se, nós <em>triplicamos</em> para estas simulações)</p>
-	<p>R = 1, é <strong>endêmico.</strong></p>
-	<p>Felizmente, como o verão reduz o R isto melhorará a situação:</p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=yrs-3&format=lines&height=640" width="800" height="640"></iframe></code></pre>
-	</div>
-	<p>Oh.</p>
-	<p>Contraintuitivamente, o verão faz os surtos piores <em>e</em> regulares! Isto acontece por que o verão reduz novos <icon i></icon>s, mas isto por outro lado reduz novos <icon r></icon>s imunes. O que significa que a imunidade despenca no verão, <em>criando</em> surtos grandes e regulares no inverno.</p>
-	<p>Por sorte, a solução é bem direta - apenas vacines as pessoas todo outono/inverno, como nós fazemos com as vacinas da gripe:</p>
-	<p><strong>(Depois de rodar a simulação padrão tente simular suas próprias campanhas de vacinação! Lembre-se que você pode pausar/continuar a simulação a qualquer momento)</strong></p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=yrs-4&format=lines" width="800" height="540"></iframe></code></pre>
-	</div>
-	<p>Mas aqui vai uma questão mais assustadora:</p>
-	<p>E se não houver vacina por <em>anos</em>? Ou <em>nunca?</em></p>
-	<p><strong>Para deixar claro: isto é improvável.</strong> A maior parte dos epidemiologistas espera uma vacina em 1 ou 2 anos. Claro, nunca houve uma vacina para outro coronavírus antes, mas por que a SARS foi erradicada rapidamente, e “a” gripe comum não vale o investimento.</p>
-	<p>Ainda, pesquisadores de doenças infecciosas expressaram preocupações: E se nós não pudermos fazer a quantidade suficiente?<a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a> E se nós corrermos com ela, e ela não for segura?<a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a></p>
-	<p>Mesmo no cenário de pesadelo de “sem vacinas”, nós ainda temos 3 saídas. Da mais para a menos terrível:</p>
-	<ol type="1">
-	<li><p>Fazer intervenções R < 1, intermitentes ou avulsas, para atingir a “imunidade de rebanho natural”. (Aviso: isto resultará em muitas mortes e pulmões lesionados). <em>E</em> não irá funcionar se a imunidade não durar.)</p></li>
-	<li><p>Fazer intervenções R < 1 para sempre. Rastreamento de contatos e usar máscaras simplesmente se tornará a nova norma no mundo pós-COVID-19, como testes para DST e usar camisinhas se tornaram a nova norma no mundo pós-HIV.</p></li>
-	<li><p>Fazer intervenções R < 1 até que nós desenvolvamos tratamentos que façam a COVID-19 muito, muito menos provável de precisar de cuidados intensivos. (O que nós devemos já estar fazendo <em>de qualquer forma!</em>) Reduzindo o uso de UTIs por um fator de 10x é o mesmo que aumentar nossa capacidade de leitos de UTI em 10x:</p></li>
-	</ol>
-	<p><strong>Aqui está uma simulação de imunidade <em>não</em> duradoura, <em>sem</em> vacinas, e mesmo sem nenhuma intervenção - apenas incrementando lentamente a capacidade de sobrevivência aos surtos de longo prazo:</strong></p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=yrs-5&format=lines" width="800" height="540"></iframe></code></pre>
-	</div>
-	<p>Até mesmo sob o cenário de <em>pior</em> caso… a vida persevera.</p>
-	<p>. . .</p>
-	<p>Talvez você goste de desafiar nossas premissas, e tentar R<sub>0</sub>’s ou números diferentes. Ou tentar simular suas <em>próprias</em> combinações de planos de intervenção!</p>
-	<p><strong>Aqui está um Modo de Caixa de Areia(optional), com <em>tudo</em> disponível. (role a tela para ver todos os controles) Simule e brinque a vontade:</strong></p>
-	<div class="sim">
-	<pre><code>    <iframe src="sim?stage=SB&format=sb" width="800" height="540"></iframe></code></pre>
-	</div>
-	<p>Este “simulador de vôo epidemico” básico nos ensinou tanto. Ele nos permite responder questões sobre nossos últimos meses, os próximos meses, e os próximos anos.</p>
-	<p>Então finalmente, vamos retornar para…</p>
-	<section class="chapter">
-	<pre><code><div>
-		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-		<div>O Agora</div>
-	</div></code></pre>
-	</section>
-	<p>O avião afundou. Nós subimos nos botes salva-vidas. É hora de encontrar terra firme.<a href="#fn38" class="footnote-ref" id="fnref38" role="doc-noteref"><sup>38</sup></a></p>
-	<p>Equipes de epidemiologistas e governantes (<a href="https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/">left</a>, <a href="https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/">right</a>, e <a href="https://ethics.harvard.edu/covid-roadmap">multi-partisan</a>) chegaram a um consenso em como bater a COVID-19, enquento protegem nossas vidas <em>e</em> liberdades.</p>
-	<p>Aqui segue uma idéia geral, com alguns (menos consensuais) planos de emergência:</p>
-	<p><img src="pics/plan.png" /></p>
-	<p>Então o que isto significa para VOCÊ, agora?</p>
-	<p><strong>Para todo mundo</strong> Respeite a quarentena para que nós possamos sair da Fase I tão logo quanto possível. Continue lavando as suas mãos. Faça suaa própria máscara. Baixe um app de rastreamento de contatos <em>que protejam identidades</em> quando estes estiverem disponíveis no próximo mês. Se mantenha física e mentalmente saudável! E escreva para seu legislador local para levantar a bunda da cadeira e…</p>
-	<p><strong>Para legisladores:</strong> Crie leis que deem suporte a quem tem que se isolar/ficar em quarentena. Contrate mais rastreadores de contato manuais, <em>auxiliados</em> por app de rastreamento de contatos <em>que protejam identidades</em>. Direcione mais fundos para as coisas que deveríamos estar fazendo, tais como…</p>
-	<p><strong>Para produtores:</strong> Produzam testes. Produzam respiradores. Produzam equipamentos de proteção para hospitais. Produzam testes. Produzam máscaras. Produzam apps. Produzam antivirais, profiláticos, e outros tratamentos que não são vacinas. Produzam vacinas. Produzam testes. Produzam testes. Produzam testes. Produzam esperança.</p>
-	<p>Não minimize o medo para construir esperança. Nosso medo deve <em>trabalhar junto</em> com nossa esperança, como os inventores de aviões e paraquedas. Se preparar para futuros horríveis é como nós <em>criamos</em> um futuro de esperança.</p>
-	<p>A única coisa a temer é a idéia que a única coisa a temer é o próprio medo.</p>
-	<section class="footnotes" role="doc-endnotes">
-	<hr />
-	<ol>
-	<li id="fn1" role="doc-endnote"><p>Estas notas de rodapé terão fontes, links ou comentário bônus. Como este comentário!</p>
-	<p><strong>Este guia foi publicado em 1º de maio de 2020.</strong> Muitos detalhes irão se tornar desatualizados, mas nós estamos confiantes que o guia cobrirá 95% dos futuros possíveis, e que Epidemiologia 101 será útil para sempre.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn2" role="doc-endnote"><p>“The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)”. <a href="https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article">Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L</a> (Disclaimer: Early release articles are not considered as final versions)<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn3" role="doc-endnote"><p><strong>Lembre-se: todas estas simulações são super simplificadas, para propósitos educacionais.</strong> Uma simplificação: Quando você pede que a simulação “Infecte 1 nova pessoa a cada x dias”, ele de fato está aumentando o número de infectados 1/x a cada dia. O mesmo ocorre para os demais ajustes destas simulações. - “Recuperar a cada x dias” está de fato reduzindo o número de infectados 1/x a cada dia.</p>
-	<p>Estas <em>não são</em> exatamente as mesmas coisas, mas são próximas o suficiente, e para propósitos educacionais é menos obscuro que ajustar as taxas de transmissão e recuperação diretamente.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn4" role="doc-endnote"><p>“The median communicable period […] was 9.5 days.” <a href="https://link.springer.com/article/10.1007/s11427-020-1661-4">Hu, Z., Song, C., Xu, C. et al</a> Yes, we know “median” is not the same as “average”. For simplified educational purposes, close enough.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn5" role="doc-endnote"><p>Para mais explicações técnicas do Modelo SIR, veja <a href="https://www.idmod.org/docs/hiv/model-sir.html#">the Institute for Disease Modeling</a> e <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SIR_model">Wikipedia</a><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn6" role="doc-endnote"><p>Para mais explicações técnicas do Modelo SEIR, veja <a href="https://www.idmod.org/docs/hiv/model-seir.html">the Institute for Disease Modeling</a> e <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SEIR_model">Wikipedia</a><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn7" role="doc-endnote"><p>“Assumindo uma distribuição do período de incubação de 5.2 dias, em média, resultado de um estudo em separado dos primeiros casos de COVID-19, nós inferimos que o contágio começa a partir de 2.3 dias ((95% IC, 0.8-3.0 dias) antes dos sintomas se instalarem.” (traduzindo: assumindo que os sintomas começam no dia 5, o contágio começa 2 dias antes = contágio começa no dia 3) <a href="https://www.nature.com/articles/s41591-020-0869-5">He, X., Lau, E.H.Y., Wu, P. et al.</a><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn8" role="doc-endnote"><p>“The median R value for seasonal influenza was 1.28 (IQR: 1.19–1.37)” <a href="https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480">Biggerstaff, M., Cauchemez, S., Reed, C. et al.</a><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn9" role="doc-endnote"><p>“We estimated the basic reproduction number R0 of 2019-nCoV to be around 2.2 (90% high density interval: 1.4–3.8)” <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001239/">Riou J, Althaus CL.</a><a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn10" role="doc-endnote"><p>“we calculated a median R0 value of 5.7 (95% CI 3.8–8.9)” <a href="https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article">Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.</a><a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn11" role="doc-endnote"><p>Isto é assumindo que você é igualmente infeccioso durante todo o “período infeccioso”. Mais uma vez simplificações para propósitos educacionais.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn12" role="doc-endnote"><p>Lembre-se R = R<sub>0</sub> * a proporção das transmissões ainda permitidas. Lembre-se ainda que a proporção das transmissões ainda permitidas = 1 - proporção das transmissões <em>impedidas</em>.</p>
-	<p>Logo, para ter R < 1, você precisa ter R<sub>0</sub> * TransmissõesPermitidas < 1.</p>
-	<p>Logo, TransmissõesPermitidas < 1/R<sub>0</sub></p>
-	<p>Logo, 1 - TransmissõesImpedidas < 1/R<sub>0</sub></p>
-	<p>Logo, TransmissõesImpedidas > 1 - 1/R<sub>0</sub></p>
-	<p>Logo, você precisa parar mais que <strong>1 - 1/R<sub>0</sub></strong> das transmissões para conseguir R < 1 e conter o vírus!<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn13" role="doc-endnote"><p><a href="https://www.statista.com/statistics/1105420/covid-icu-admission-rates-us-by-age-group/">“Percentage of COVID-19 cases in the United States from February 12 to March 16, 2020 that required intensive care unit (ICU) admission, by age group”</a>. Entre 4.9% e 11.5% de <em>todos</em> os casos de COVID-19 requereram UTI. Generosamente escolhendo a faixa inferior, isto significa 5% ou 1 em 20. Note que este total é específico para a estrutura etária dos EUA, e será maior em países com populações mais velhas, e menor em países com populações mais jovens.<a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn14" role="doc-endnote"><p>“Números de camas de UTI = 96,596”. Em <a href="https://sccm.org/Blog/March-2020/United-States-Resource-Availability-for-COVID-19">the Society of Critical Care Medicine</a> População dos EUA era 328.200.000 em 2019. 96.596 de cada 328,200,000 = aproximadamente 1 em 3400.<a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn15" role="doc-endnote"><p>“Todos os oito estudos elegíveis reportaram que lavagem de mãos reduziram os riscos de infecção respiratória, com redução de riscos entre 6% a 44% [valor agrupado 24% (95% IC 6-40%)].”Nós arredondamos o valor agrupado para 25% nestas simulações por simplicidade.<a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-3156.2006.01568.x">Rabie, T. and Curtis, V.</a> Nota: como esta meta-análise aponta, a qualidade dos estudos para lavagem de mãos (pelo menos em países de alta renda) é péssima.<a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn16" role="doc-endnote"><p>“Nós encontramos uma redução de 73% no número de contatos diários observados por participante. Isto seria suficiente para reduzir R<sub>0</sub> de um valor de 2.6 antes do lockdown para 0.62 (0.37 - 0.89) durante o lockdown”. Nós arredondamos este valor para 70% nestas simulações por simplicidade. <a href="https://cmmid.github.io/topics/covid19/comix-impact-of-physical-distance-measures-on-transmission-in-the-UK.html">Jarvis and Zandvoort et al</a><a href="#fnref16" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn17" role="doc-endnote"><p>Esta distorção sumiria se plotassemos R em uma escala logarítimca… mas então teríamos que explicar <em>escalas logarítimicas</em><a href="#fnref17" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn18" role="doc-endnote"><p>“Na falta de outras intervenções, uma métrica chave para o sucesso do distanciamento social é se as capacidades críticas de cuidado são excedidas. Para evitar isto, distanciamento social prolongado ou intermitente pode ser necessário até 2022.” <a href="https://science.sciencemag.org/content/early/2020/04/14/science.abb5793">Kissler and Tedijanto et al</a><a href="#fnref18" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn19" role="doc-endnote"><p><strong>3 dias em média para o contágio:</strong> “Assumindo uma distribuição do período de incubação de 5.2 dias, em média, resultado de um estudo em separado dos primeiros casos de COVID-19, nós inferimos que o contágio começa a partir de 2.3 dias ((95% IC, 0.8-3.0 dias) antes dos sintomas se instalarem.” (traduzindo: assumindo que os sintomas começam no dia 5, o contágio começa 2 dias antes = contágio começa no dia 3)<a href="https://www.nature.com/articles/s41591-020-0869-5">He, X., Lau, E.H.Y., Wu, P. et al.</a></p>
-	<p><strong>4 dias na média para infectar outra pessoa:</strong> “The mean [serial] interval was 3.96 dias (95% IC 3.53-4.39 dias)” <a href="https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article">Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L</a></p>
-	<p><strong>5 dias em média para sentir os sintomas:</strong> “O período médio de incubação foi estimado em 5.1 dias (95% IC, 4.5 a 5.8 dias)” <a href="https://annals.org/AIM/FULLARTICLE/2762808/INCUBATION-PERIOD-CORONAVIRUS-DISEASE-2019-COVID-19-FROM-PUBLICLY-REPORTED">Lauer SA, Grantz KH, Bi Q, et al</a><a href="#fnref19" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn20" role="doc-endnote"><p>“Nós estimamos que 44% (95% IC, 25-69%) de casos secundários foram infectados durante o estágio pré-sintomático dos casos índice”<a href="https://www.nature.com/articles/s41591-020-0869-5">He, X., Lau, E.H.Y., Wu, P. et al</a><a href="#fnref20" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn21" role="doc-endnote"><p>“Rastreamento de contatos foi uma intervenção crítica na Libéria e representou um dos maiores esforços de rastreamento de contatos durante uma epidemia na história.” <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6152989/">Swanson KC, Altare C, Wesseh CS, et al.</a><a href="#fnref21" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn22" role="doc-endnote"><p><a href="https://github.com/TCNCoalition/TCN#tcn-protocol">TCN - Números de Contato Temporários, um protocolo de rastreamento de contatos descentralizado, com privacidade em primeiro lugar</a><a href="#fnref22" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn23" role="doc-endnote"><p><a href="https://pact.mit.edu/">PACT: Rastreamento de Contatos Automatizado com Privacidade</a><a href="#fnref23" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn24" role="doc-endnote"><p><a href="https://www.apple.com/ca/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/">Apple e Google fazem parceria em tecnologia de rastreamento de contatos para o COVID-19</a>. Repare que <em>eles mesmos</em> não estão fazendo os apps, apenas criando os sistemas que darão <em>suporte</em> a estes apps.<a href="#fnref24" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn25" role="doc-endnote"><p>Muitos artigos de notícia - e honestamente, muitos artigos científicos - não distinguem entre “casos que não mostraram nenhum sintoma quando nós os testamos” (pré-sintomáticos) e “casos que não mostraram nenhum sintoma <em>nunca</em>” (verdadeiramente assintomáticos). A única forma de você diferenciá-los é fazer o acompanhamento dos casos depois.</p>
-	<p>E isto é o que <a href="https://wwwnc.cdc.gov/eid/article/26/8/20-1274_article">este estudo</a> fez. (Ressalva: “Artigos com divulgação antecipada não são considerados como versões finais.”) Em um call center na Coréia do Sul onde houve um surto “apenas 4 (1.9%) permaneceram assintomáticos dentro de 14 dias de quarentena, e nenhum de seus contatos domiciliares adquiriram infecções secundárias.”</p>
-	<p>Então isto significa que “verdadeiramente assintomáticos” são raros, e ser contaminado por um verdadeiramente assintomático pode ser ainda mais raro!<a href="#fnref25" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn26" role="doc-endnote"><p>Do mesmo estudo de Oxford que inicialmente recomendou o uso de apps para combater a COVID-19: <a href="https://science.sciencemag.org/content/early/2020/04/09/science.abb6936/tab-figures-data">Luca Ferretti & Chris Wymant et al</a> Veja a Figura 2. Assumindo R<sub>0</sub> = 2.0, eles encontraram que:</p>
-	<ul>
-	<li>Sintomáticos contribuem R = 0.8 (40%)</li>
-	<li>Pré-sintomáticos contribuem R = 0.9 (45%)</li>
-	<li>Assintomáticos contribute R = 0.1 (5%, apesar que o seu modelo tem incertezas e este valor pode ser muito mais baixo)</li>
-	<li>Elementos ambientais como maçanetas contribuem R = 0.2 (10%)</li>
-	</ul>
-	<p>E adicione os contatos pré & assintomáticos (45% + 5%) e você terá 50% de R!<a href="#fnref26" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn27" role="doc-endnote"><p>“None of these surgical masks exhibited adequate filter performance and facial fit characteristics to be considered respiratory protection devices.” <a href="https://www.sciencedirect.com/science/article/pii/S0196655307007742">Tara Oberg & Lisa M. Brosseau</a><a href="#fnref27" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn28" role="doc-endnote"><p>“The overall 3.4 fold reduction [70% reduction] in aerosol copy numbers we observed combined with a nearly complete elimination of large droplet spray demonstrated by Johnson et al. suggests that surgical masks worn by infected persons could have a clinically significant impact on transmission.” <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3591312/">Milton DK, Fabian MP, Cowling BJ, Grantham ML, McDevitt JJ</a><a href="#fnref28" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn29" role="doc-endnote"><p>Any actual scientist who read that last sentence is probably laugh-crying right now. See: <a href="https://en.wikipedia.org/wiki/Data_dredging">p-hacking</a>, <a href="https://en.wikipedia.org/wiki/Replication_crisis">the replication crisis</a>)<a href="#fnref29" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn30" role="doc-endnote"><p>“It is time to apply the precautionary principle” <a href="https://www.bmj.com/content/bmj/369/bmj.m1435.full.pdf">Trisha Greenhalgh et al [PDF]</a><a href="#fnref30" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn31" role="doc-endnote"><p><a href="https://www.cambridge.org/core/journals/disaster-medicine-and-public-health-preparedness/article/testing-the-efficacy-of-homemade-masks-would-they-protect-in-an-influenza-pandemic/0921A05A69A9419C862FA2F35F819D55">Davies, A., Thompson, K., Giri, K., Kafatos, G., Walker, J., & Bennett, A</a> See Table 1: a 100% cotton T-shirt has around 2/3 the filtration efficiency as a surgical mask, for the two bacterial aerosols they tested.<a href="#fnref31" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn32" role="doc-endnote"><p><strong>“We need to save supplies for hospitals.”</strong> <em>Absolutely agreed.</em> But that’s more of an argument for increasing mask production, not rationing. In the meantime, we can make cloth masks.<a href="#fnref32" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn33" role="doc-endnote"><p>“One-degree Celsius increase in temperature […] lower[s] R by 0.0225” and “The average R-value of these 100 cities is 1.83”. 0.0225 ÷ 1.83 = ~1.2%. <a href="https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3551767">Wang, Jingyuan and Tang, Ke and Feng, Kai and Lv, Weifeng</a><a href="#fnref33" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn34" role="doc-endnote"><p>“Uma vez que uma pessoa enfrentou um vírus partículas virais tendem a permanecer por algum tempo. Estas não podem causar infecções, mas elas podem disparar um teste positivo.” <a href="https://www.statnews.com/2020/04/20/everything-we-know-about-coronavirus-immunity-and-antibodies-and-plenty-we-still-dont/">de STAT News por Andrew Joseph</a><a href="#fnref34" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn35" role="doc-endnote"><p>De <a href="https://www.biorxiv.org/content/10.1101/2020.03.13.990226v1.abstract">Bao et al.</a> <em>Ressalva: Este artigo é uma pré-impressão e não foi certificado por revisão por pares (ainda).</em> Também para enfatizar: eles somente testaram para reinfecção 28 dias depois.<a href="#fnref35" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn36" role="doc-endnote"><p>“Se uma vacina para o coronavírus surgir poderemos fazer em quantidade suficiente?” <a href="https://www.nature.com/articles/d41586-020-01063-8">por Roxanne Khamsi, na revista Nature</a><a href="#fnref36" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn37" role="doc-endnote"><p>“Não corra para distribuir vacinas e drogas para o COVID-19 sem garantias de segurança suficientes”<a href="https://www.nature.com/articles/d41586-020-00751-9">por Shibo Jiang, na revista Nature</a><a href="#fnref37" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	<li id="fn38" role="doc-endnote"><p>A metáfora de terra firme <a href="https://www.statnews.com/2020/04/01/navigating-covid-19-pandemic/">from Marc Lipsitch & Yonatan Grad, on STAT News</a><a href="#fnref38" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-	</ol>
+<div class="section">
+    <div>
+        <iframe id="splash" width="960" height="480" src="banners/splash.html"></iframe>
+        <div style="top: 70px;font-size: 75px;font-weight: bold;">
+            O Que Vem Pela Frente?
+        </div>
+        <div style="font-weight: 500;top: 140px;left: 10px;font-size: 29px;">
+            COVID-19, Futuros Explicados com Simulações Interativas
+        </div>
+        <div style="font-weight: 100;top: 189px;left: 10px;font-size: 19px;line-height: 21px;">
+            <b>
+                🕐 Leitura/Simulações em 30 min
+                &nbsp;&middot;&nbsp;
+            </b>
+            por
+            <a href="https://scholar.google.com/citations?user=_wHMGkUAAAAJ&amp;hl=en">Marcel Salathé</a>
+            (epidemiologista)
+            &
+            <a href="https://ncase.me/">Nicky Case</a>
+            (artista/programador)
+        </div>
+    </div>
+</div>
+<p>"A única coisa a temer é o próprio medo" é um conselho estúpido.</p>
+<p>Claro, não junte papel higiênico - mas se os governantes temem o próprio medo eles irão minimizar os reais perigos de "pânico em massa". O medo não é o problema, mas, sim, como nós <em>canalizamos</em> nosso medo. O medo nos dá energia para lidar com os perigos agora, e se preparar para os perigos mais à frente.</p>
+<p>Honestamente, nós (Marcel, epidemiologista + Nicky, artista/programador) estamos preocupados. Nós podemos apostar que você está também! Por isto nós canalizamos nosso medo para criar estas <strong>simulações lúdicas</strong>, para que <em>você</em> possa canalizar seu medo para entender:</p>
+<ul>
+<li><strong>Os Últimos Meses</strong> (epidemiologia 101, modelo SEIR, R &amp; R<sub>0</sub>)</li>
+<li><strong>Os Próximos Meses</strong> (confinamentos (lockdown), rastreamento de contato, máscaras)</li>
+<li><strong>Os Próximos Anos</strong> (perda de imunidade? sem vacinas?)</li>
+</ul>
+<p>Este guia (publicado em 1º de Maio de 2020. clique nesta nota de rodapé!→<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) visa trazer para você esperança <em>e</em> medo. Para derrotar o COVID-19 <strong>de uma forma que também proteja nossa saúde mental e financeira</strong>, nós precisamos de otimismo para criar planos, e pessimismo para criar planos emergenciais. Como Gladys Bronwyn Stern disse uma vez, <em>"O otimista inventa o avião e o pessimista o paraquedas."</em></p>
+<p>Então, apertem os cintos: nós estamos prestes a experimentar alguma turbulência.</p>
+<div class="section chapter">
+    <div>
+        <img src="banners/curve.png" height=480 style="position: absolute;"/>
+        <div>Os Últimos Meses</div>
+    </div>
+</div>
+<p>Pilotos usam simuladores de vôo para aprender a não destruir aviões.</p>
+<p><strong>Epidemiologistas usam simuladores epidêmicos para aprender como não destruir a humanidade.</strong></p>
+<p>Então, vamos construir um "simulador de vôo epidêmico" muito, muito simples!, <icon i></icon> Nesta simulação, pessoas infectadas podem tornar <icon s></icon> Pessoas suscetíveis em mais <icon i></icon>Pessoas infectadas:</p>
+<p><img src="pics/spread.png" /></p>
+<p>É estimado que, <em>no início</em> do surto de COVID-19, o vírus passa de uma <icon i></icon> para uma <icon s></icon> a cada 4 dias, <em>em média</em>. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (lembre-se, há muita variação)</p>
+<p>Se nós simularmos "dobra a cada 4 dias" <em>e nada mais</em>, em uma população, começando com apenas 0.001% <icon i></icon>, o que acontece?</p>
+<p><strong>Clique "Iniciar" para rodar a simulação! Você pode rodar outras vezes com outros parâmetros:</strong> (ressalvas técnicas:<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>)</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-1" width="800" height="540"></iframe>
+</div>
+<p>Esta é a <strong>curva de crescimento exponencial.</strong> Começa pequena, e então explode. "Oh é apenas uma gripe"para "Tá certo, gripes não criam <em>cemitérios de valas comuns em cidades ricas</em>".</p>
+<p><img src="pics/exponential.png" /></p>
+<p>Mas, esta simulação está errada. O crescimento exponencial, ainda bem, não pode ser perpétuo. Uma razãopara impedir o espalhamento do vírus é se outras pessoas <em>já</em> tem o vírus:</p>
+<p><img src="pics/susceptibles.png" /></p>
+<p>Quanto mais <icon i></icon>s existem, mais rápido <icon s></icon>s se tornam <icon i></icon>s, <strong>mas quanto menos <icon s></icon>s existem, mais <em>lentamente</em> <icon s></icon>s se tornam <icon i></icon>s.</strong></p>
+<p>Como isto muda o crescimento de uma epidemia? Vamos descobrir:</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-2" width="800" height="540"></iframe>
+</div>
+<p>Esta é a <strong>curva de crescimento logístico.</strong> em formato de S. Começa devagar, explode, e desacelera de novo.</p>
+<p>Mas, esta simulação <em>ainda</em> está errada. Nós estamos esquecendo o fato que <icon i></icon>Pessoas infectadas em algum momento param de ser infecciosas, seja 1) se recuperando, 2)"se recuperando" com dano aos pulmões, ou 3) morrendo.</p>
+<p>Por questão de simplicidade, vamos fingir que todas as <icon i></icon> Pessoas infectadas se tornem <icon r></icon> Recuperadas. (Apenas lembrem-se que na realidade algumas morrem.) <icon r></icon>s não podem ser infectadas de novo, e vamos assumir – <em>por enquanto!</em> – que se tornam imunes por toda a vida.</p>
+<p>No caso da COVID-19, é estimado que você permaneça <icon i></icon> Infectado por 10 dias, <em>em média</em>.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Isto significa que alguns vão se recuperar antes de 10 dias e outros depois. <strong>Este é o resultado, com uma simulação <em>começando</em> com 100% <icon i></icon>:</strong></p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-3" width="800" height="540"></iframe>
+</div>
+<p>Isto é o oposto do crescimento exponencial, a <strong>curva de decaimento exponencial.</strong></p>
+<p>Agora, o que acontece se você simular crescimento logístico em formato de S <em>com</em> a recuperação?</p>
+<p><img src="pics/graphs_q.png" /></p>
+<p>Vamos descobrir.</p>
+<p><b style='color:#ff4040'>Curva vermelha</b> são os casos <em>atuais</em><icon i></icon>,<br />
+<b style='color:#999999'>Curva cinza</b> é o <em>total</em> de casos (atuais + recuperados <icon r></icon>), que se inicia em apenas 0.001% <icon i></icon>:</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-4" width="800" height="540"></iframe>
+</div>
+<p>E é <em>daí</em> que esta famosa curva veio! Não é uma curva em sino, e não é nem mesmo uma curva "log-normal". Ela não tem nome. Mas você já deve ter visto um zilhão de vezes, e torcido muito para que ela achatasse.</p>
+<p>Este é o <strong>Modelo SIR</strong>,<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a><br />
+(<icon s></icon><strong>S</strong>uscetível <icon i></icon><strong>I</strong>nfectado <icon r></icon><strong>R</strong>ecuperado)<br />
+a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
+<p><img src="pics/sir.png" /></p>
+<p><strong>NOTA: A simulações que informam as políticas são muito, <em>muito</em> mais sofisticadas que isto!</strong> Mas o Modelo SIR ainda serve para encontrarmos as mesmas conclusõesgerais, mesmo que deixando passar algumas nuances.</p>
+<p>De fato, vamos acrescentar uma nuance adicional: antes de um <icon s></icon> se tornar <icon i></icon>, ele primeiro se torna <icon e></icon> Exposto. Isto é quando ele tem o vírus mas ainda não pode passar adiante - infec<em>tado</em> mas não infec<em>cioso</em>.</p>
+<p><img src="pics/seir.png" /></p>
+<p>(Esta variante é chamada o <strong>Modelo SEIR</strong><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, onde o "E" significa <icon e></icon> "Exposto". Note que este <em>não é</em> o significado usual de "exposto", em que você pode ou não ter o vírus. Nesta definição técnica "Exposto" significa que você definitivamente tem. A terminologia científica é ruim.)</p>
+<p>No caso da COVID-19, é estimado que você fique <icon e></icon> infectado-mas-não-infeccioso por 3 dias, <em>em média</em>.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> O que acontece se adicionarmos isto à simulação?</p>
+<p><b style='color:#ff4040'>Curva Vermelha</b> <b style='color:#FF9393'>+ Rosa</b> são os casos <em>atuais</em> (infeccioso <icon i></icon> + exposto <icon e></icon>),<br />
+<b style='color:#888'>Curva cinza</b> são casos <em>totais</em> (atuais + recuperados <icon r></icon>):</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-5" width="800" height="540"></iframe>
+</div>
+<p>Não há muitas mudanças! O tempo que você permanece <icon e></icon> Exposto muda a razão de <icon e></icon>-para-<icon i></icon>, e <em>quando</em> os casos correntes atingem o pico... mas a <em>altura</em> do pico, e o total de casos no final, permanecem os mesmos.</p>
+<p>Por que isto acontece? Por causa da mais importante idéia em Epidemiologia 101:</p>
+<p><img src="pics/r.png" /></p>
+<p>Abreviação de "Número de reprodução". É o número <em>médio</em> de pessoas que um <icon i></icon> infecta <em>antes</em> de se recuperar (ou morrer).</p>
+<p><img src="pics/r2.png" /></p>
+<p><strong>R</strong> muda durante o curso de um surto, já que ganhamos mais imunidade e intervenções.</p>
+<p><strong>R<sub>0</sub></strong> (pronunciado R-zero) é o R <em>no início do surto, antes de que surjam imunidade e intervenções</em>. R<sub>0</sub> reflete de forma mais próxima a força do vírus em si, mas ainda assim varia de lugar para lugar. Por exemplo, R<sub>0</sub> é maior em cidades densamente povoadas que em áreas rurais esparsas.</p>
+<p>(A maior parte das reportagens - e até alguns artigos científicos! - confundem R e R<sub>0</sub>. Mais uma vez, a terminologia científica é ruim)</p>
+<p>O R<sub>0</sub> para "a" gripe sazonal é cerca de 1.28<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>. Isto significa que no <em>início</em> de um surto de gripe, cada <icon i></icon> infecta 1.28 outros <em>em média.</em> (Se parecer estranho não ser um número inteiro lembre-se que uma "mãe" em média tem 2.4 filhos. Isto não significa que vemos meia criança correndo por aí.)</p>
+<p>O R<sub>0</sub> para a COVID-19 é estimado para cerca de 2.2,<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> porém um estudo <em>ainda não finalizado</em> estima que foi 5.7(!) em Wuhan.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
+<p>Nas nossa simulações – <em>no início &amp; na média</em> – um <icon i></icon> infecta alguém a cada 4 dias, em 10 dias. "4 dias" ocorre dentro de "10 dias" duas vezes e meia. Isto significa – <em>no início &amp; na média</em> – cada <icon i></icon> infecta 2.5 outros. Então, R<sub>0</sub> = 2.5. (ressalvas:<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>)</p>
+<p><strong>Brinque com esta calculadora de R<sub>0</sub>, para ver como R<sub>0</sub> depende dos tempos de recuperação e nova infecção:</strong></p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-6a&format=calc" width="285" height="255"></iframe>
+</div>
+<p>Mas lembre-se, quanto menos <icon s></icon>s há, mais <em>lentamente</em> <icon s></icon>s tornam-se <icon i></icon>s. O número de reprodução (R) <em>corrente</em> depende não apenas do número de reprodução <em>básico</em> (R<sub>0</sub>), mas <em>também</em> em quantas pessoas não são mais <icon s></icon> Suscetíveis. (Por exemplo, por se recuperar e conseguindo imunidade natural.)</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-6b&format=calc" width="285" height="390"></iframe>
+</div>
+<p>Quando pessoas suficientes tem imunidade, R &lt; 1, e o vírus é contido! Isto é chamado <strong>imunidade de rebanho</strong>. Para gripes, a imunidade de rebanho é atingida <em>com uma vacina</em>. Tentando atingir "imunidade de rebanho natural" deixando as pessoas se infectarem é uma idéia <em>terrível</em>. (Mas não pelas razões que você pode pensar! Explicaremos mais a frente.)</p>
+<p>Vamos rodar o Modelo SEIR outra vez, mas mostrando R<sub>0</sub>, R ao longo do tempo, e o limiar de imunidade de rebanho:</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-7" width="800" height="540"></iframe>
+</div>
+<p><strong>NOTA: O total de casos <em>não para</em> na imunidade de rebanho, mas ultrapassa ele!</strong> E ele cruza o limiar <em>exatamente</em> quando os casos correntes atingem o pico. (Isto acontece não importa como você mude os ajustes - tente você mesmo!)</p>
+<p>Isto ocorre porque quando há mais não-<icon s></icon>s do que o limiar da imunidade de rebanho, você tem R &lt; 1. E quando R &lt; 1, novos casos param de crescer: um pico.</p>
+<p><strong>Se houver apenas uma lição para você tirar deste guia é esta</strong> - é um diagrama extremamente complexo, então tome um tempo para absorvê-lo completamente:</p>
+<p><img src="pics/r3.png" /></p>
+<p><strong>Isto significa: nós NÃO precisamos impedir todas as transmissões, ou nem mesmo algo próximo de todas as transmissões, para parar o COVID-19!</strong></p>
+<p>É um paradoxo. COVID-19 é extremamente contagioso, porém para contê-lo, nós "só" precisamos impedir 60% das infecções. 60%?! Se fosse uma nota no boletim seria um D-. Mas se R<sub>0</sub> = 2.5, cortando isto por 61% nós temos R = 0.975, que é R &lt; 1, vírus contido! (fórmula exata:<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>)</p>
+<p><img src="pics/r4.png" /></p>
+<p>(Se você pensa que R<sub>0</sub> ou outros números nas nossas simulações são muito baixos/altos, isto é bom pois está desafiando nossas premissas! Haverá um "Modo Caixa de Areia" no fim deste guia, onde você poderá inserir os seus <em>próprios</em> números, e simular o que acontece.)</p>
+<p><em>Cada</em> intervenção sobre COVID-19 que você já ouviu sobre - lavar as mãos, distanciamento social/físico, confinamentos, auto-isolamento, rastreamento de contatos e quarentena, máscaras faciais, e mesmo "imunidade de rebanho" - todas estão visando a mesma coisa:</p>
+<p>Fazer R &lt; 1.</p>
+<p>Então agora, vamos usar nosso "simulador de vôo epidemico" para descobrir o seguinte: Como podemos conseguir ter R &lt; 1 de uma forma que <strong>também proteja nossa saúde mental <em>e</em> financeira?</strong></p>
+<p>Preparem-se para uma aterrisagem de emergência...</p>
+<div class="section chapter">
+    <div>
+        <img src="banners/curve.png" height=480 style="position: absolute;"/>
+        <div>Os Próximos Meses</div>
+    </div>
+</div>
+<p>...poderia ter sido pior. Aqui está um universo paralelo que evitamos:</p>
+<h3>Cenário 0: Não Fazer Absolutamente Nada</h3>
+<p>Perto de 1 em cada 20 pessoas infectadas com COVID-19 precisam ir para um UTI(Unidade de Terapia Intensiva.)<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a> Em um país rico como os EUA, há 1 cama de UTI para cada 3400 pessoas. <a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a> Portanto os EUA podem tratar 20 de 3400 pessoas <em>simultaneamente</em> infectadas - ou 0.6% da população.</p>
+<p>Mesmo se nós <em>mais que triplicarmos</em> esta capacidade para 2%, aqui está o que aconteceria <em>se não fizessemos absolutamente nada:</em></p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-1&format=lines" width="800" height="540"></iframe>
+</div>
+<p>Nada bom.</p>
+<p>Isto é o que <a href="http://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/">o relatório do Imperial College em 16 de março</a> descobriu: se não fizessemos nada ficaríamos sem camas de UTI, com mais de 80% da população infectada. (lembre-se: o número total de casos <em>ultrapassa</em> a imunidade de rebanho).</p>
+<p>Mesmo se apenas 0.5% dos infectados morressem - uma suposição generosa quando não há mais vagas na UTI - em um país grande como os EUA, com 300 milhões de pessoas, 0.5% de 80% de 300 milhões = ainda são 1.2 milhões de mortos... <em>SE não fizessemos nada.</em></p>
+<p>(Muitos canais de notícia e mídia social reportaram "80% serão infectados" <em>SEM</em> o "SE NÃO FIZERMOS NADA". O medo foi canalizado em cliques, e não para o entendimento. <em>Suspiro.</em>)</p>
+<h3>Cenário 1: Achatar a Curva / Imunidade de Rebanho</h3>
+<p>O plano de "Achatar a Curva" foi apregoado por todas as organizações de saúde pública, enquanto que o plano original de "imunidade de rebanho" do Reino Unido era universalmente vaiado. Eles eram <em>o mesmo plano.</em> O Reino Unido apenas comunicou mal seu plano.<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a></p>
+<p>Ambos os planos, entretanto, tinham literalmente uma falha fatal.</p>
+<p>Primeiro, vamos olhar nas duas principais formas de "achatar a curva": lavar as mãos e distanciamento físico.</p>
+<p>O aumento da lavagem das mãos corta a incidência de gripes e resfriados em países de alta renda em ~25%<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>, enquanto o confinamento de toda a cidade de Londres corta os contatos próximos em ~70%<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>. Então, vamos assumir que a lavagem de mãos pode reduzir R <em>em até</em> 25%, e o distanciamento pode reduzir R <em>em até</em> 70%:</p>
+<p><strong>Brinque com esta calculadora para ver qual o % de non-<icon s></icon>, lavagem de mão, e distanciamento reduzem R:</strong> (esta calculadora visualiza os seus efeitos <em>relativos</em>, e é por isto que incrementando um <em>parece</em> como se estivessemos diminuindo o efeito de outros.<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>)</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-2a&format=calc" width="285" height="260"></iframe>
+</div>
+<p>Agora, vamos simular o que acontece com uma epidemia de COVID-19 se, começando em março de 2020, nós tivessemos aumentado a lavagem de mãos mas adotado apenas <em>leve</em> distanciamento físico - de tal forma que R é mais baixo, mas ainda acima de 1:</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-2&format=lines" width="800" height="540"></iframe>
+</div>
+<p>Três notas:</p>
+<ol>
+<li><p>Isto <em>reduz</em> o total de casos! <strong>Mesmo se você não consegue R &lt; 1, reduzindo R ainda salva vidas, ao reduzir o tanto que se ultrapassa sobre a imunidade de rebanho.</strong> Muitos pensam que "Achatar a Curva" espalha os casos sem reduzir o seu número total. Isto é impossível em <em>qualquer</em> modelo em Epidemiologia 101. Mas como a mídia reportou "mais de 80% serão infectados" como inevitável, as pessoas pensam que o número total de casos será o mesmo não importando nada. <em>Suspiro.</em></p></li>
+<li><p>Devido as intervenções extra, os casos correntes atingem o pico <em>antes</em> que a imunidade de rebanho seja alcançada. De fato, nesta simulação, o número total de casos apenas ultrapass <em>um pouco</em> acimna da imunidade de rebanho - o plano do Reino Unido! Neste ponto, R &lt; 1, você pode descartar todas as outras intervenções, e a COVID-19 permanece contida! Bem, exceto por um problema...</p></li>
+<li><p>Você continua sem leitos de UTI. Por vários meses. (e lembre-se, nós <em>já</em> triplicamos as UTIs nestas simulações)</p></li>
+</ol>
+<p>Este foi o outro achado do relatório do Imperial College em 16 de março, que convenceu o Reino Unido a abandonar o plano original. Qualquer tentativa de <strong>mitigação</strong> (reduzir R, mas com R&gt;1) iria falhar. A única saída seria <strong>supressão</strong> (reduzir R de forma que R &lt; 1).</p>
+<p><img src="pics/mitigation_vs_suppression.png" /></p>
+<p>Isto é, não apenas "achate" a curva, <em>esmague</em> a curva. Por exemplo, com um...</p>
+<h3>Cenário 3: Confinamento de Meses</h3>
+<p>Vamos ver o que acontece se nós <em>esmagamos</em> a curva com um confinamento de 5 meses, reduzindo <icon i></icon> para quase nada, e então - <em>finalmente</em> - retornando para a vida normal:</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-3&format=lines" width="800" height="540"></iframe>
+</div>
+<p>Oh.</p>
+<p>Esta é a "segunda onda" que todo mundo está falando a respeito. Assim que removemos o confinamento, nós voltamos a ter R &gt; 1 de novo. Então, um único <icon i></icon> deixado para trás (ou importado) pode causar um disparo nos casos que é quase tão ruim como se tivessemos feito o Cenário 0: Absolutamente Nada.</p>
+<p><strong>Um confinamento não é a cura, ele é apenas um reinício.</strong></p>
+<p>Então o que? Nós apenas entramos em confinamento de novo e de novo?</p>
+<h3>Cenário 3: Confinamento Intermitente</h3>
+<p>Esta solução foi sugerida inicialmente pelo relatório do Imperial College de 16 de março, e de novo por um artigo de Harvard.<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a></p>
+<p><strong>Aqui está uma simulação:</strong> (Depois de brincar com o "cenário gravado", você pode tentar simular seus <em>próprios</em> cronogramas de confinamento, mudando os cursores <em>enquanto</em> a simulação está rodando! Lembre-se que você pode parar e continuar a simulação, e alterar a sua velocidade).</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-4&format=lines" width="800" height="540"></iframe>
+</div>
+<p>Isto <em>iria</em> manter os casos abaixo da capacidade das UTIs! E é <em>muito</em> melhor que um confinamento de 18 meses até que uma vacina esteja disponível. (E se não houver vacina, repita até que a imunidade de rebanho seja atingida... em 2022.)</p>
+<p>Veja, é legal desenhar uma linha dizendo "capacidade das UTIs", mas tem várias coisas importantes que nós <em>não podemos</em> simular aqui. Como:</p>
+<p><strong>Saúde Mental:</strong> Solidão é um dos maiores fatores de risco para depressão, ansiedade, e suicídio. E está tão associado com a morte prematura quanto fumar 15 cigarros por dia.[^loneliness]</p>
+<p>Veja <a href="https://journals.sagepub.com/doi/abs/10.1177/1745691614568352">Figure 6 from Holt-Lunstad &amp; Smith 2010</a>. Claro, grande ressalva que eles encontraram uma <em>correlação</em>. Mas a não ser que você queira tentar aleatóriamente designar pessoas para serem solitárias a vida toda evidência de observação é tudo que você pode ter.</p>
+<p><strong>Saúde Financeira:</strong> "E a respeito da economia" soa como se você se importasse mais com dólares que com vidas, mas "a economia" não é apenas a bolsa de valores: é a capacidade das pessoas prover comida e abrigo para os seus entes queridos, para investir no futuro dos seus filhos, e desfrutar de artes, comidas, videogames - as coisas que fazem a vida valer a pena. E além disto, pobreza <em>por si só</em> tem impactos horríveis na saúde mental e física.</p>
+<p>Não estou dizendo que nós <em>não devamos</em> ter outro confinamento! Nós iremos falar de confinamentos "disjuntores" depois. De toda forma não é o ideal.</p>
+<p>Mas espere... Formosa e a Coréia do Sul não contiveram a COVID-19? Por 4 meses inteiros <em>sem</em> quarentenas de longo prazo?</p>
+<p>Como?</p>
+<h3>Cenário 4: Teste, Rastreie, Isole</h3>
+<p><em>"Claro, nós *poderíamos* ter feito o que Formosa e Coréia do Sul fizeram desde o início, mas agora é tarde demais. Nós perdemos a largada."</em></p>
+<p>Mas é exatamente isto! "Uma quarentena não é a cura, é apenas um recomeço"... <strong>e um recomeço do zero é tudo que precisamos.</strong></p>
+<p>Para entender como Formosa e Coréia do Sul contiveram o COVID-19, nós necessitaríamos entender a exata linha do tempo de uma típica infecção de COVID-19<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a>:</p>
+<p><img src="pics/timeline1.png" /></p>
+<p>Se os casos só se auto-isolam quando eles sabem que estão doentes (isto é, eles sentem sintomas), o vírus ainda pode se espalhar:</p>
+<p><img src="pics/timeline2.png" /></p>
+<p>E de fato, 44% de todas as transmissões são assim: <em>pré</em>-sintomáticas! <a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a></p>
+<p>Mas, se nós encontrarmos <em>e colocarmos em quarentena</em> os contatos próximos recentes de um caso sintomático... nós paramos o espalhamento, por estar um passo a frente!</p>
+<p><img src="pics/timeline3.png" /></p>
+<p>Isto é chamado <strong>rastreamento de contato</strong>. É uma idéia antigaa, que foi utilizada em uma escala sem precedentes para conter o Ebola<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a>, e agora é parte central de como Formosa e Coréia do Sul estão contendo o COVID-19!</p>
+<p>(Isto também permite que utilizemos nossos recursos de teste limitados de forma mais eficiente, para encontrar <icon i></icon>s pré-sintomáticos sem a necessidade de testar quase todo mundo).</p>
+<p>Tradicionalmente, os contatos são encontrados com entrevistas pessoais, mas estas <em>sozinhas</em> são muito lentas para a janela de ~48h do COVID-19. Este é o motivo pelo qual os rastreadores de contato precisam de ajuda, e serem auxíliados por - <em>NÃO</em> substituídos por - apps de rastreamento de contatos.</p>
+<p>(Esta idéias não surgiu de "techies": usar um app para lutar contra o COVID-19 foi proposto por <a href="https://science.sciencemag.org/content/early/2020/04/09/science.abb6936">um time de epidemiologistas de Oxford</a>.)</p>
+<p>Mas espere aí, apps que rastreiam com quem você esteve em contato?... Isto significa abrir mão da sua privacidade, sucumbindo ao Big Brother?</p>
+<p>Nada disto! <strong><a href="https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing">DP-3T</a></strong>, um time de epidemiologistas e criptografos (incluindo um de nós, Marcel Salathé) <em>já</em> está desenvolvento um app de rastreamento de contatos - com o código disponível para o público - que não revela <strong>nenhuma informação sobre a sua identidade, localização, quem são seus contatos, ou nem mesmo <em>quantos contatos</em> você teve.</strong></p>
+<p>Aqui está como ele funciona:</p>
+<p><img src="pics/dp3t.png" /></p>
+<p>(&amp; <a href="https://ncase.me/contact-tracing/">e aqui está o quadrinho completo</a>)</p>
+<p>Junto com times similares como o protocolo TCN<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a> e MIT PACT<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>, eles inspiraram a Apple e o Google para inserir o rastreamento de contatos, com prioridade na privacidade, diretamente no Android/iOS.<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a> (Você não confia no Google/Apple? Ótimo! A beleza deste sistema é que ele não <em>precisa</em> de confiança!) Em breve sua agência de saúde pública local pode solicitar que você baixe um app. Se ele colocar privacidade em primeiro lugar, com código-fonte público por favor faça!</p>
+<p>Mas e as pessoas que não tem smartphones? Ou as infecções por maçanetas de portas? Ou casos "verdadeiramente" assintomáticos? Os apps de rastreamento de contatos não podem pegar todas estas transmissões... <em>e isto não é problema!</em> Nós não precisamos pegar <em>todas</em> as transmissões, apenas 60%+ para conseguir R &lt; 1.</p>
+<p>(Esclarecimento sobre a confusão a respeito de casos pré-sintomáticos vs "verdadeiramente" assintomáticos. "Verdadeiramente" assintomáticos são raros:<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>)</p>
+<p>O isolamento de casos <em>sintomáticos</em> reduziria R em cerca de 40%, e colocando em quarentena os seus contatos <em>pré-sintomáticos ou assintomáticos</em> reduziria R em até 50%<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>:</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-4a&format=calc" width="285" height="340"></iframe>
+</div>
+<p>Então, mesmo sem 100% de distanciamento, nós podemos chegar a R &lt; 1 <em>sem confinamento!</em> Muito melhor para a nossa saúde mental e financeira. (E para os custos das pessoas que tiverem que se auto-isolar/entrar em quarentena, <em>os governos devem sustentá-los</em> - pagar pelos testes, proteger seus empregos, subsidiar licenças remuneradas, etc. Ainda será muito mais barato que confinamento intermitente.)</p>
+<p>Se nós mantivermos R &lt; 1 até que nós tenhamos uma vacina, que tornará suscetíveis <icon s></icon>s em imunizados <icon r></icon>s. Imunidade de rebanho, o jeito <em>certo</em>:</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-4b&format=calc" width="285" height="230"></iframe>
+</div>
+<p>(Nota: esta calculadora assume que as vacinas são 100% efetivas. Apenas se lembre que na realidade você deve compensar vacinando <em>mais</em> que a "imunidade de rebanho" para <em>de fato</em> atingir a imunidade de rebanho)</p>
+<p>Bom, chega de conversa. Aqui temos uma simulação de:</p>
+<ol>
+<li>Confinamento de alguns meses, até que possamos...</li>
+<li>Mudar para "Testas, Rastrear, Isolar" até que possamos...</li>
+<li>Vacinar pessoas suficientes, que significa...</li>
+<li>Nós vencemos.</li>
+</ol>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-5&format=lines" width="800" height="540"></iframe>
+</div>
+<p>Então é isto! É assim que nós fazemos um pouso de emergência com este avião.</p>
+<p>É assim que derrotaremos a COVID-19.</p>
+<p>...</p>
+<p>Mas se <em>ainda assim</em> as coisas não derem certo? As coisas já tem dado horrivelmente errado. Isto é medo, e isto é bom! O medo nos dá energia para criar <em>planos emergenciais</em>.</p>
+<p>O pessimista inventa o paraquedas.</p>
+<h3>Cenário 4+: Máscaras Para Todos, Verão, Interruptores</h3>
+<p>E se R<sub>0</sub> é muito mais alto do que nós imaginamos, e as intervenções acima, mesmo com um leve distanciamento, <em>ainda</em> não são suficientes para conseguir R &lt; 1?</p>
+<p>Lembre-se, mesmo se nós não pudermos conseguir R &lt; 1 reduzir R ainda reduz o "excesso" no total de casos, salvando vidas. Mas como R &lt; 1 ainda é o ideal há outras formas de reduzir R:</p>
+<p><strong>Máscaras Para Todos:</strong></p>
+<p><em>"Espere,"</em> você pode perguntar, <em>"Eu pensei que máscaras não impedissem você de ficar doente?"</em></p>
+<p>Você está certo. Máscaras não impedem você de ficar doente<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>... elas impedem que você de fazer os <em>outros</em> ficarem doentes.</p>
+<p><img src="pics/masks.png" /></p>
+<p>Para colocar um número nisto: máscaras cirúrgicas <em>em uma pessoa doente</em> reduzem vírus de gripe e resfriado em aerosóis em 70% <a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a> Reduzir as transmissões em 70% teria um impacto tão grande quanto um confinamento!</p>
+<p>Entretanto, nós não sabemos com certeza o impacto das máscaras <em>especificamente</em> no COVID-19. Em ciência alguém só pode publicar uma descoberta se estiver com 95% de certeza. (...poderia.<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>) Máscaras, em 1 de maio de 2020, são menos de "95% de certas" de funcionar.</p>
+<p>Entretanto pandemias são como poker. <strong>Aposte apenas quando você tiver 95% de certeza e você perderá tudo que está em jogo.</strong> Como um artigo recente sobre máscaras no British Medical Journal diz <a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a> nós <em>temos</em> que fazer análises de custo/benefício diante da incerteza. Assim sendo:</p>
+<p>Custos: Se máscaras caseiras de tecido (que tem ~2/3 da efetividade das máscaras cirúrgicas<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>), super baratas. Se máscaras cirúrgicas, mais caro, mas ainda bem barato.</p>
+<p>Benefícios: Mesmo se para uma chance de 50-50 de máscaras cirúrgicas reduzirem a transmissão por 0% ou 70%, na média o "valor esperado" é ainda 35%, o mesmo que meio confinamento! Então vamos chutar que máscaras cirúrgicas reduzem R em até 35%, descontada por toda a nossa incerteza. (De novo, você pode desafiar nossas premissas movendo os cursores para cima/para baixo)</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-6a&format=calc" width="285" height="380"></iframe>
+</div>
+<p>(outros argumentos a favor/contra máscaras:<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a>)</p>
+<p><strong>"Elas são difíceis de usar corretamente."</strong> Também é difícil de lavar suas mãos de acordo com a recomendações da OMS - sério, "Passo 3) palma da mão direita sobre o dorso da mão esquerda"?! - mas nós ainda podemos recomendar a lavagem de mãos, por que imperfeito ainda é melhor que nada.</p>
+<p><strong>"Isto fará com que as pessoas se tornem descuidadas com menos lavagens de mãos e distanciamento social."</strong> Claro, e cintos de segurança fazem as pessoas ignorarem sinais de trânsito, e passar fio dental faz com que pessoas comam pedras. Mas sério, nós podemos argumentar o contrário: máscaras são um <em>lembrete físico constante</em> para ser cuidadoso - e na Ásia Oriental máscaras são também um símbolo de solidariedade!</p>
+<p><em>Apenas</em> as máscaras não tornarão R &lt; 1. Mas se a lavagem de mãos &amp; "Testar, Rastrear e Isolar" só nos levar a R = 1.10, ter apenas 1/3 da população usando máscaras será o suficiente para levar a R &lt; 1, vírus contido!</p>
+<p><strong>Verão:</strong></p>
+<p>Certo, isto não é uma "intervenção" que nós podemos controlar, mas também ajuda! Alguns veículos de notícias reportam que o verão não fara diferença para a COVID-19. Eles estão meio certos: o verão não irá fazer R &lt; 1, mas ele <em>irá</em> reduzir R.</p>
+<p>Para a COVID-19, cada 1º Celsius a mais faz com que R caia 1.2%. <a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a> A diferença de temperatura verão/inverno na cidade de Nova Iorque é 15ºC, então o verão fará R cair 18%.</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-6b&format=calc" width="285" height="220"></iframe>
+</div>
+<p>Apenas o verão não trará R &lt; 1, mas se temos recursos limitados, nós podemos reduzir a escala de algumas intervenções no verão - para que nós possamos <em>aumentar</em> a sua escala no inverno.</p>
+<p><strong>Um Confinamento "Interruptor":</strong></p>
+<p>E se tudo isto <em>ainda</em> não for suficiente para fazer R &lt; 1... nós podemos ter outro confinamento.</p>
+<p>Mas nós não precisaríamos ficar fechados por 2 meses / abertos por 1 mês para sempre! Por que como R foi diminuído nós só precisaríamos de um ou dois confinamentos "interruptores" antes que uma vacina esteja disponível. (Cingapura teve que fazer isto recentemente, "apesar" de ter controlado a COVID-19 por 4 meses. Isto não é falha: isto <em>é</em> o que o sucesso requer.)</p>
+<p>Aqui está uma simulação para um cenário "simplificado":</p>
+<ol>
+<li>Confinamento, e então</li>
+<li>Uma quantidade moderada de higiene e "Testar, Rastrear, Isolar", com uma pequena quantidade de "Máscaras para Todos", e então.</li>
+<li>Mais um confinamento "Interruptor" antes que a vacina seja encontrada.</li>
+</ol>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-7&format=lines&height=620" width="800" height="620"></iframe>
+</div>
+<p>Sem mencionar todas as <em>outras</em> intervenções que poderíamos fazer, para empurrar R para baixo:</p>
+<ul>
+<li>Restrições de viagem/quarentenas</li>
+<li>Verificações de Temperatura em centros comerciais e escolas</li>
+<li>Limpeza profunda de espaços públicos</li>
+<li><a href="https://twitter.com/V_actually/status/1233785527788285953">Substituir apertos de mão por cumprimento com os pés</a></li>
+<li>E tudo mais que a engenhosidade humana pode trazer</li>
+</ul>
+<p>. . .</p>
+<p>Nós esperamos que estes planos dêem esperança para você.</p>
+<p><strong>Mesmo em um cenário pessimista é possível bater o COVID-19, enquanto protegemos nossa saúde mental e financeira.</strong> Usando o confinamento como um "botão de reinício", mantendo R &lt; 1 com isolaamento de casos + rastreamento de contatos que proteja a privacidade + <em>pelo menos</em> máscaras de pano para todos... e a vida pode voltar a uma normalidade!</p>
+<p>Claro, você pode terá suas mãos ressecadas, mas você poderá convidar alguém para um encontro em uma livraria de histórias em quadrinhos! Você poderá sair com amigos para assistir o último caça-níqueis de Hollywood. Você poderá ficar observando as pessoas em uma livraria, ficando alegre de vê-las fazendo coisas simples como <em>estarem vivas.</em>.</p>
+<p>Mesmo no cenário de pior caso... a vida persevera.</p>
+<p>Então agora vamos planejar para alguns dos <em>piores</em> cenários dentre os de pior caso. Aterrisando na água, pegue seu colete de sobrevivência, e por favor siga as luzes para as saídas de emergência:</p>
+<div class="section chapter">
+    <div>
+        <img src="banners/curve.png" height=480 style="position: absolute;"/>
+        <div>Os Próximos Anos</div>
+    </div>
+</div>
+<p>Se você tiver COVID-19, e se recuperar. Ou tomar a vacina da COVID-19. De qualquer forma você agora estará imune...</p>
+<p>...<em>por quanto tempo?</em></p>
+<ul>
+<li>COVID-19 é mais similar ao SARS, que dava aos seus sobreviventes 2 anos de imunidade.[^SARS immunity]</li>
+<li>Os coronavírus que causam "o" resfriado comum dão a você 8 meses de imunidade.[^cold immunity]</li>
+<li>Há relatos de pessoas recuperadas do COVID-19, que depois voltam a testar positivo, mas ainda é incerto se estes são falsos positivos.<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a></li>
+<li>Um estudo <em>ainda-não-revisado-por-pares</em> em macacos mostrou imunidade ao coronavírus do COVID-19 por pelo menos 28 dias.<a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a></li>
+</ul>
+<p>Mas para o COVID-19 <em>em humanos</em>, em 1 de maio de 2020, o "quanto tempo" é a grande dúvida.</p>
+<p>[^SARS immunity]: "Anticorpos específicos para o SARS foram mantidos por uma média de 2 anos [...] Então pacientes do SARS devem ser suscetíveis a reinfecção ≥3 anos depois da exposição inicial." <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2851497/">Wu LP, Wang NC, Chang YH, et al.</a> "Infelizmente" nós nunca saberemos por quanto tempo a imunidade do SARS teria realmente durado já que a erradicamos tão rapidamente.</p>
+<p>[^cold immunity]: "Nós não encontramos nenhuma diferença significativa entre a probabilidade de testar positivo pelo menos uma vez e a probabilidade de recorrência para os beta-coronavírus HKU1 e OC43 em 34 semanas depois da inscrição/primeira infecção." <a href="http://www.columbia.edu/~jls106/galanti_shaman_ms_supp.pdf">Marta Galanti &amp; Jeffrey Shaman (PDF)</a></p>
+<p>Para estas simulações, digamos é um ano. <strong>Aqui temos uma simulação iniciando com 100% <icon r></icon></strong>, decaindo exponencialmente para suscetíveis, sem imunidade <icon s></icon>s depois de 1 ano, na <em>média</em>, com variação:</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=yrs-1&format=lines&height=600" width="800" height="600"></iframe>
+</div>
+<p>O Retorno do decaimento exponencial!</p>
+<p>Este é o <strong>Modelo SEIRS</strong>. O último "S" significa <icon s></icon> suscetível, de novo.</p>
+<p><img src="pics/seirs.png" /></p>
+<p>Agora vamos simular um surto de COVID-19, no período de 10 anos, sem intervenções... <em>se a imunidade durar apenas um ano:</em></p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=yrs-2&format=lines&height=600" width="800" height="600"></iframe>
+</div>
+<p>Nas simulações prévias, nós tinhamos apenas <em>um</em> pico de superlotação das UTIs. Agora nós temos vários, <em>e</em> <icon i></icon> casos convergem para ficar <em>permanentemente na</em> capacidade das UTIs. (Que, lembre-se, nós <em>triplicamos</em> para estas simulações)</p>
+<p>R = 1, é <strong>endêmico.</strong></p>
+<p>Felizmente, como o verão reduz o R isto melhorará a situação:</p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=yrs-3&format=lines&height=640" width="800" height="640"></iframe>
+</div>
+<p>Oh.</p>
+<p>Contraintuitivamente, o verão faz os surtos piores <em>e</em> regulares! Isto acontece por que o verão reduz novos <icon i></icon>s, mas isto por outro lado reduz novos <icon r></icon>s imunes. O que significa que a imunidade despenca no verão, <em>criando</em> surtos grandes e regulares no inverno.</p>
+<p>Por sorte, a solução é bem direta - apenas vacines as pessoas todo outono/inverno, como nós fazemos com as vacinas da gripe:</p>
+<p><strong>(Depois de rodar a simulação padrão tente simular suas próprias campanhas de vacinação! Lembre-se que você pode pausar/continuar a simulação a qualquer momento)</strong></p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=yrs-4&format=lines" width="800" height="540"></iframe>
+</div>
+<p>Mas aqui vai uma questão mais assustadora:</p>
+<p>E se não houver vacina por <em>anos</em>? Ou <em>nunca?</em></p>
+<p><strong>Para deixar claro: isto é improvável.</strong> A maior parte dos epidemiologistas espera uma vacina em 1 ou 2 anos. Claro, nunca houve uma vacina para outro coronavírus antes, mas por que a SARS foi erradicada rapidamente, e "a" gripe comum não vale o investimento.</p>
+<p>Ainda, pesquisadores de doenças infecciosas expressaram preocupações: E se nós não pudermos fazer a quantidade suficiente?<a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a> E se nós corrermos com ela, e ela não for segura?<a href="#fn38" class="footnote-ref" id="fnref38" role="doc-noteref"><sup>38</sup></a></p>
+<p>Mesmo no cenário de pesadelo de "sem vacinas", nós ainda temos 3 saídas. Da mais para a menos terrível:</p>
+<p>1) Fazer intervenções R &lt; 1, intermitentes ou avulsas, para atingir a "imunidade de rebanho natural". (Aviso: isto resultará em muitas mortes e pulmões lesionados). <em>E</em> não irá funcionar se a imunidade não durar.)</p>
+<p>2) Fazer intervenções R &lt; 1 para sempre. Rastreamento de contatos e usar máscaras simplesmente se tornará a nova norma no mundo pós-COVID-19, como testes para DST e usar camisinhas se tornaram a nova norma no mundo pós-HIV.</p>
+<p>3) Fazer intervenções R &lt; 1 até que nós desenvolvamos tratamentos que façam a COVID-19 muito, muito menos provável de precisar de cuidados intensivos. (O que nós devemos já estar fazendo <em>de qualquer forma!</em>) Reduzindo o uso de UTIs por um fator de 10x é o mesmo que aumentar nossa capacidade de leitos de UTI em 10x:</p>
+<p><strong>Aqui está uma simulação de imunidade <em>não</em> duradoura, <em>sem</em> vacinas, e mesmo sem nenhuma intervenção - apenas incrementando lentamente a capacidade de sobrevivência aos surtos de longo prazo:</strong></p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=yrs-5&format=lines" width="800" height="540"></iframe>
+</div>
+<p>Até mesmo sob o cenário de <em>pior</em> caso... a vida persevera.</p>
+<p>. . .</p>
+<p>Talvez você goste de desafiar nossas premissas, e tentar R<sub>0</sub>'s ou números diferentes. Ou tentar simular suas <em>próprias</em> combinações de planos de intervenção!</p>
+<p><strong>Aqui está um Modo de Caixa de Areia(optional), com <em>tudo</em> disponível. (role a tela para ver todos os controles) Simule e brinque a vontade:</strong></p>
+<div class="sim">
+        <iframe src="https://ncase.github.io/covid-19/sim?stage=SB&format=sb" width="800" height="540"></iframe>
+</div>
+<p>Este "simulador de vôo epidemico" básico nos ensinou tanto. Ele nos permite responder questões sobre nossos últimos meses, os próximos meses, e os próximos anos.</p>
+<p>Então finalmente, vamos retornar para...</p>
+<div class="section chapter">
+    <div>
+        <img src="banners/curve.png" height=480 style="position: absolute;"/>
+        <div>O Agora</div>
+    </div>
+</div>
+<p>O avião afundou. Nós subimos nos botes salva-vidas. É hora de encontrar terra firme.<a href="#fn39" class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a></p>
+<p>Equipes de epidemiologistas e governantes (<a href="https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/">left</a>, <a href="https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/">right</a>, e <a href="https://ethics.harvard.edu/covid-roadmap">multi-partisan</a>) chegaram a um consenso em como bater a COVID-19, enquento protegem nossas vidas <em>e</em> liberdades.</p>
+<p>Aqui segue uma idéia geral, com alguns (menos consensuais) planos de emergência:</p>
+<p><img src="pics/plan.png" /></p>
+<p>Então o que isto significa para VOCÊ, agora?</p>
+<p><strong>Para todo mundo</strong> Respeite a quarentena para que nós possamos sair da Fase I tão logo quanto possível. Continue lavando as suas mãos. Faça suaa própria máscara. Baixe um app de rastreamento de contatos <em>que protejam identidades</em> quando estes estiverem disponíveis no próximo mês. Se mantenha física e mentalmente saudável! E escreva para seu legislador local para levantar a bunda da cadeira e...</p>
+<p><strong>Para legisladores:</strong> Crie leis que deem suporte a quem tem que se isolar/ficar em quarentena. Contrate mais rastreadores de contato manuais, <em>auxiliados</em> por app de rastreamento de contatos <em>que protejam identidades</em>. Direcione mais fundos para as coisas que deveríamos estar fazendo, tais como...</p>
+<p><strong>Para produtores:</strong> Produzam testes. Produzam respiradores. Produzam equipamentos de proteção para hospitais. Produzam testes. Produzam máscaras. Produzam apps. Produzam antivirais, profiláticos, e outros tratamentos que não são vacinas. Produzam vacinas. Produzam testes. Produzam testes. Produzam testes. Produzam esperança.</p>
+<p>Não minimize o medo para construir esperança. Nosso medo deve <em>trabalhar junto</em> com nossa esperança, como os inventores de aviões e paraquedas. Se preparar para futuros horríveis é como nós <em>criamos</em> um futuro de esperança.</p>
+<p>A única coisa a temer é a idéia que a única coisa a temer é o próprio medo.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Estas notas de rodapé terão fontes, links ou comentário bônus. Como este comentário!</p>
+<p><strong>Este guia foi publicado em 1º de maio de 2020.</strong> Muitos detalhes irão se tornar desatualizados, mas nós estamos confiantes que o guia cobrirá 95% dos futuros possíveis, e que Epidemiologia 101 será útil para sempre.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>“A média [serial] do intervalo foi de 3.96 dias (95% IC 3.53–4.39 dias)”. <a href="https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article">Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L</a> (Ressalva: "Artigos com divulgação antecipada não são considerados como versões finais.")<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p><strong>Lembre-se: todas estas simulações são super simplificadas, para propósitos educacionais.</strong> Uma simplificação: Quando você pede que a simulação "Infecte 1 nova pessoa a cada x dias", ele de fato está aumentando o número de infectados 1/x a cada dia. O mesmo ocorre para os demais ajustes destas simulações. - "Recuperar a cada x dias" está de fato reduzindo o número de infectados 1/x a cada dia.</p>
+<p>Estas <em>não são</em> exatamente as mesmas coisas, mas são próximas o suficiente, e para propósitos educacionais é menos obscuro que ajustar as taxas de transmissão e recuperação diretamente.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>"A mediana do período contagioso [...] era de 9.5 dias.” <a href="https://link.springer.com/article/10.1007/s11427-020-1661-4">Hu, Z., Song, C., Xu, C. et al</a> Sim nós sabemos que "mediana" não é igual a "média". Para o propósito educacional simplificado é perto o suficiente.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>Para mais explicações técnicas do Modelo SIR, veja <a href="https://www.idmod.org/docs/hiv/model-sir.html#">the Institute for Disease Modeling</a> e <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SIR_model">Wikipedia</a><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6" role="doc-endnote"><p>Para mais explicações técnicas do Modelo SEIR, veja <a href="https://www.idmod.org/docs/hiv/model-seir.html">the Institute for Disease Modeling</a> e <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SEIR_model">Wikipedia</a><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7" role="doc-endnote"><p>“Assumindo uma distribuição do período de incubação de 5.2 dias, em média, resultado de um estudo em separado dos primeiros casos de COVID-19, nós inferimos que o contágio começa a partir de 2.3 dias ((95% IC, 0.8-3.0 dias) antes dos sintomas se instalarem." (traduzindo: assumindo que os sintomas começam no dia 5, o contágio começa 2 dias antes = contágio começa no dia 3) <a href="https://www.nature.com/articles/s41591-020-0869-5">He, X., Lau, E.H.Y., Wu, P. et al.</a><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8" role="doc-endnote"><p>“O valor médio R para a influenza sazonal foi 1.28 (IQR: 1.19–1.37)” <a href="https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480">Biggerstaff, M., Cauchemez, S., Reed, C. et al.</a><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9" role="doc-endnote"><p>“Nós estimamos que o número de reprodução básica R0 para a 2019-nCoV seja 2.2 (90% intervalo de alta densidade: 1.4–3.8)” <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001239/">Riou J, Althaus CL.</a><a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10" role="doc-endnote"><p>“nós calculamos o valor médio R0 de 5.7 (95% IC 3.8–8.9)” <a href="https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article">Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.</a><a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11" role="doc-endnote"><p>Isto é assumindo que você é igualmente infeccioso durante todo o "período infeccioso". Mais uma vez simplificações para propósitos educacionais.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12" role="doc-endnote"><p>Lembre-se R = R<sub>0</sub> * a proporção das transmissões ainda permitidas. Lembre-se ainda que a proporção das transmissões ainda permitidas = 1 - proporção das transmissões <em>impedidas</em>.</p>
+<p>Logo, para ter R &lt; 1, você precisa ter R<sub>0</sub> * TransmissõesPermitidas &lt; 1.</p>
+<p>Logo, TransmissõesPermitidas &lt; 1/R<sub>0</sub></p>
+<p>Logo, 1 - TransmissõesImpedidas &lt; 1/R<sub>0</sub></p>
+<p>Logo, TransmissõesImpedidas &gt; 1 - 1/R<sub>0</sub></p>
+<p>Logo, você precisa parar mais que <strong>1 - 1/R<sub>0</sub></strong> das transmissões para conseguir R &lt; 1 e conter o vírus!<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13" role="doc-endnote"><p><a href="https://www.statista.com/statistics/1105420/covid-icu-admission-rates-us-by-age-group/">"Percentagem dos casos de COVID-19 nos Estados Unidos de 12 de fevereiro a 16 de março de 2020 que necessitaram admissão em Unidades de Terapia Intensiva (UTI), por faixa etária"</a>. Entre 4.9% e 11.5% de <em>todos</em> os casos de COVID-19 requereram UTI. Generosamente escolhendo a faixa inferior, isto significa 5% ou 1 em 20. Note que este total é específico para a estrutura etária dos EUA, e será maior em países com populações mais velhas, e menor em países com populações mais jovens.<a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn14" role="doc-endnote"><p>“Números de camas de UTI = 96,596”. Em <a href="https://sccm.org/Blog/March-2020/United-States-Resource-Availability-for-COVID-19">the Society of Critical Care Medicine</a> População dos EUA era 328.200.000 em 2019. 96.596 de cada 328,200,000 = aproximadamente 1 em 3400.<a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn15" role="doc-endnote"><p>"Ele diz que a meta real é a mesma dos outros países: achatar a curva ao escalonar o início as infecções. Como consequência, a nação deve atingir imunidade de rebanho; é um efeito colateral, e não um objetivo. [...] O verdadeiro plano de ação para o coronavírus do gorverno, disponível online, não menciona imunidade de rebanho em nenhum lugar.""</p>
+<p>Do <a href="https://www.theatlantic.com/health/archive/2020/03/coronavirus-pandemic-herd-immunity-uk-boris-johnson/608065/">artigo de Ed Yong para o The Atlantic</a><a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn16" role="doc-endnote"><p>"Todos os oito estudos elegíveis reportaram que lavagem de mãos reduziram os riscos de infecção respiratória, com redução de riscos entre 6% a 44% [valor agrupado 24% (95% IC 6-40%)]."Nós arredondamos o valor agrupado para 25% nestas simulações por simplicidade.<a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-3156.2006.01568.x">Rabie, T. and Curtis, V.</a> Nota: como esta meta-análise aponta, a qualidade dos estudos para lavagem de mãos (pelo menos em países de alta renda) é péssima.<a href="#fnref16" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn17" role="doc-endnote"><p>"Nós encontramos uma redução de 73% no número de contatos diários observados por participante. Isto seria suficiente para reduzir R<sub>0</sub> de um valor de 2.6 antes do confinamento para 0.62 (0.37 - 0.89) durante o confinamento". Nós arredondamos este valor para 70% nestas simulações por simplicidade. <a href="https://cmmid.github.io/topics/covid19/comix-impact-of-physical-distance-measures-on-transmission-in-the-UK.html">Jarvis and Zandvoort et al</a><a href="#fnref17" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn18" role="doc-endnote"><p>Esta distorção sumiria se plotassemos R em uma escala logarítimca... mas então teríamos que explicar <em>escalas logarítimicas</em><a href="#fnref18" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn19" role="doc-endnote"><p>"Na falta de outras intervenções, uma métrica chave para o sucesso do distanciamento social é se as capacidades críticas de cuidado são excedidas. Para evitar isto, distanciamento social prolongado ou intermitente pode ser necessário até 2022." <a href="https://science.sciencemag.org/content/early/2020/04/14/science.abb5793">Kissler and Tedijanto et al</a><a href="#fnref19" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn20" role="doc-endnote"><p><strong>3 dias em média para o contágio:</strong> “Assumindo uma distribuição do período de incubação de 5.2 dias, em média, resultado de um estudo em separado dos primeiros casos de COVID-19, nós inferimos que o contágio começa a partir de 2.3 dias ((95% IC, 0.8-3.0 dias) antes dos sintomas se instalarem." (traduzindo: assumindo que os sintomas começam no dia 5, o contágio começa 2 dias antes = contágio começa no dia 3)<a href="https://www.nature.com/articles/s41591-020-0869-5">He, X., Lau, E.H.Y., Wu, P. et al.</a></p>
+<p><strong>4 dias na média para infectar outra pessoa:</strong> "The mean [serial] interval was 3.96 dias (95% IC 3.53-4.39 dias)" <a href="https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article">Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L</a></p>
+<p><strong>5 dias em média para sentir os sintomas:</strong> "O período médio de incubação foi estimado em 5.1 dias (95% IC, 4.5 a 5.8 dias)" <a href="https://annals.org/AIM/FULLARTICLE/2762808/INCUBATION-PERIOD-CORONAVIRUS-DISEASE-2019-COVID-19-FROM-PUBLICLY-REPORTED">Lauer SA, Grantz KH, Bi Q, et al</a><a href="#fnref20" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn21" role="doc-endnote"><p>“Nós estimamos que 44% (95% IC, 25-69%) de casos secundários foram infectados durante o estágio pré-sintomático dos casos índice"<a href="https://www.nature.com/articles/s41591-020-0869-5">He, X., Lau, E.H.Y., Wu, P. et al</a><a href="#fnref21" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn22" role="doc-endnote"><p>“Rastreamento de contatos foi uma intervenção crítica na Libéria e representou um dos maiores esforços de rastreamento de contatos durante uma epidemia na história.” <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6152989/">Swanson KC, Altare C, Wesseh CS, et al.</a><a href="#fnref22" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn23" role="doc-endnote"><p><a href="https://github.com/TCNCoalition/TCN#tcn-protocol">TCN - Números de Contato Temporários, um protocolo de rastreamento de contatos descentralizado, com privacidade em primeiro lugar</a><a href="#fnref23" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn24" role="doc-endnote"><p><a href="https://pact.mit.edu/">PACT: Rastreamento de Contatos Automatizado com Privacidade</a><a href="#fnref24" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn25" role="doc-endnote"><p><a href="https://www.apple.com/ca/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/">Apple e Google fazem parceria em tecnologia de rastreamento de contatos para o COVID-19</a>. Repare que <em>eles mesmos</em> não estão fazendo os apps, apenas criando os sistemas que darão <em>suporte</em> a estes apps.<a href="#fnref25" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn26" role="doc-endnote"><p>Muitos artigos de notícia - e honestamente, muitos artigos científicos - não distinguem entre "casos que não mostraram nenhum sintoma quando nós os testamos" (pré-sintomáticos) e "casos que não mostraram nenhum sintoma <em>nunca</em>" (verdadeiramente assintomáticos). A única forma de você diferenciá-los é fazer o acompanhamento dos casos depois.</p>
+<p>E isto é o que <a href="https://wwwnc.cdc.gov/eid/article/26/8/20-1274_article">este estudo</a> fez. (Ressalva: "Artigos com divulgação antecipada não são considerados como versões finais.") Em um call center na Coréia do Sul onde houve um surto "apenas 4 (1.9%) permaneceram assintomáticos dentro de 14 dias de quarentena, e nenhum de seus contatos domiciliares adquiriram infecções secundárias."</p>
+<p>Então isto significa que "verdadeiramente assintomáticos" são raros, e ser contaminado por um verdadeiramente assintomático pode ser ainda mais raro!<a href="#fnref26" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn27" role="doc-endnote"><p>Do mesmo estudo de Oxford que inicialmente recomendou o uso de apps para combater a COVID-19: <a href="https://science.sciencemag.org/content/early/2020/04/09/science.abb6936/tab-figures-data">Luca Ferretti &amp; Chris Wymant et al</a> Veja a Figura 2. Assumindo R<sub>0</sub> = 2.0, eles encontraram que:</p>
+<ul>
+<li>Sintomáticos contribuem R = 0.8 (40%)</li>
+<li>Pré-sintomáticos contribuem R = 0.9 (45%)</li>
+<li>Assintomáticos contribute R = 0.1 (5%, apesar que o seu modelo tem incertezas e este valor pode ser muito mais baixo)</li>
+<li>Elementos ambientais como maçanetas contribuem R = 0.2 (10%)</li>
+</ul>
+<p>E adicione os contatos pré &amp; assintomáticos (45% + 5%) e você terá 50% de R!<a href="#fnref27" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn28" role="doc-endnote"><p>"Nenhuma destas máscaras cirúrgicas apresentaram desempenho de filtragem adequado e características de encaixe facial para serem consideradas dispositivos de proteção respiratória." <a href="https://www.sciencedirect.com/science/article/pii/S0196655307007742">Tara Oberg &amp; Lisa M. Brosseau</a><a href="#fnref28" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn29" role="doc-endnote"><p>"A redução geral de 3.4 vezes [redução de 70%] nos números de cópias do aerosol que foram observados junto com uma eliminação quase completa de grandes gotas de spray demonstradas por Johnson et al. sugerem que as máscaras cirúrgicas usadas por pessoas infectadas pode ter um impacto clinico significante na transmissão." <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3591312/">Milton DK, Fabian MP, Cowling BJ, Grantham ML, McDevitt JJ</a><a href="#fnref29" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn30" role="doc-endnote"><p>Qualquer cientista de verdade que leu o parágrafo acima está provavelmente morrendo de rir agora. Veja: <a href="https://en.wikipedia.org/wiki/Data_dredging">p-hacking</a>, <a href="https://en.wikipedia.org/wiki/Replication_crisis">the replication crisis</a>)<a href="#fnref30" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn31" role="doc-endnote"><p>“É hora de aplicar o princípio da precaução.” <a href="https://www.bmj.com/content/bmj/369/bmj.m1435.full.pdf">Trisha Greenhalgh et al [PDF]</a><a href="#fnref31" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn32" role="doc-endnote"><p><a href="https://www.cambridge.org/core/journals/disaster-medicine-and-public-health-preparedness/article/testing-the-efficacy-of-homemade-masks-would-they-protect-in-an-influenza-pandemic/0921A05A69A9419C862FA2F35F819D55">Davies, A., Thompson, K., Giri, K., Kafatos, G., Walker, J., &amp; Bennett, A</a> Veja a Tabela 1: uma camiseta de 100% algodão tem cerca de 2/3 de eficiência de filtragem de uma máscara cirúrgica, para os dois aerosóis de bacterias que foram testados.<a href="#fnref32" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn33" role="doc-endnote"><p><strong>"Nós precisamos reservar os insumos para os hospitais."</strong> <em>Concordo totalmente.</em> Mas este é mais um argumento para aumentar a produção de máscaras, e não para racionar. No meio tempo nós podemos usar máscaras de pano.<a href="#fnref33" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn34" role="doc-endnote"><p>“Aumento de 1º Celsius na temperatura [...] diminui R em 0.0225” e “O valor médio de R destas 100 cidades é 1.83”. 0.0225 ÷ 1.83 = ~1.2%. <a href="https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3551767">Wang, Jingyuan and Tang, Ke and Feng, Kai and Lv, Weifeng</a><a href="#fnref34" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn35" role="doc-endnote"><p>"Uma vez que uma pessoa enfrentou um vírus partículas virais tendem a permanecer por algum tempo. Estas não podem causar infecções, mas elas podem disparar um teste positivo." <a href="https://www.statnews.com/2020/04/20/everything-we-know-about-coronavirus-immunity-and-antibodies-and-plenty-we-still-dont/">de STAT News por Andrew Joseph</a><a href="#fnref35" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn36" role="doc-endnote"><p>De <a href="https://www.biorxiv.org/content/10.1101/2020.03.13.990226v1.abstract">Bao et al.</a> <em>Ressalva: Este artigo é uma pré-impressão e não foi certificado por revisão por pares (ainda).</em> Também para enfatizar: eles somente testaram para reinfecção 28 dias depois.<a href="#fnref36" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn37" role="doc-endnote"><p>“Se uma vacina para o coronavírus surgir poderemos fazer em quantidade suficiente?” <a href="https://www.nature.com/articles/d41586-020-01063-8">por Roxanne Khamsi, na revista Nature</a><a href="#fnref37" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn38" role="doc-endnote"><p>“Não corra para distribuir vacinas e drogas para o COVID-19 sem garantias de segurança suficientes"<a href="https://www.nature.com/articles/d41586-020-00751-9">por Shibo Jiang, na revista Nature</a><a href="#fnref38" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn39" role="doc-endnote"><p>A metáfora de terra firme <a href="https://www.statnews.com/2020/04/01/navigating-covid-19-pandemic/">de Marc Lipsitch &amp; Yonatan Grad, em STAT News</a><a href="#fnref39" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
+
 </article>
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - -->
@@ -504,43 +500,43 @@
 
 	<div>
 		
-		Help this post get R > 1: <span class='shareables in_footer' style='position: relative; top: 17px; right: -6px;'></span>
+		Ajude este artigo a ter R > 1: <span class='shareables in_footer' style='position: relative; top: 17px; right: -6px;'></span>
 		<br><br>
-		This guide is
+		Este guia é de
 		<br>
 		<img src='sharing/cc0.png' style="margin-right: 10px; margin-top: 10px; width: 120px;"/>
-		<b style='font-size: 100px;position: relative;top: -24px;'>
-			PUBLIC DOMAIN
+		<b style='font-size: 85px;position: relative;top: -24px;'>
+			DOMÍNIO PÚBLICO
 		</b>
-		That means you <i>already</i> have permission to re-use &amp; remix
-		any of the art/code/words on this page – on blogs, news sites, classrooms, anywhere!
+        Isto significa que você <i>já</i> tem permissão para reusar e refazer qualquer 
+        parte da arte/código/texto nesta página - em blogs, sítios de notícia, salas de aula, qualquer lugar!
 		<a href='https://github.com/ncase/covid-19'>
-			(Swipe our code on Github)
+            (Pegue nosso código no Github)
+
 		</a>
 		<br>
 		<b>
-			Just remember to credit
+			Só lembre de dar créditos a
 			<a href='https://scholar.google.com/citations?user=_wHMGkUAAAAJ&hl=en'>Marcel Salathé</a>
 			&
 			<a href='https://ncase.me/'>Nicky Case</a>
-			(May 2020)
+			(Maio de 2020)
 		</b>
 		
 		
 		<br><br>
 
-		This free, open-source guide was made possible thanks to
-		Nicky's supporters on Patreon.
-		If (seriously, ONLY IF) you have some disposible income in these hard times, you can
-		<a href='https://www.patreon.com/ncase'>throw coins at Nicky!</a>
-		If not, you can share this guide or
-		<a href='https://ncase.me/'>see their other educational art/interactives</a>.
-		(excellent for homeshooling if, say, schools are currently closed
-		due to a pandemic)
+        Este guia livre e gratuito foi possível graças aos 
+        patrocinadores de Nicky no Patreon.
+		Se (realmente, SOMENTE SE) você tiver algum dinheiro sobrando nestes tempos difíceis, você pode
+		<a href='https://www.patreon.com/ncase'>dar umas moedas para Nicky!</a>
+		Se não puder, você pode compartilhar este guia ou 
+		<a href='https://ncase.me/'>ver os seus outros trabalhos artísticos/interativos</a>.
+        (excelente para estudo em casa se, digamos, as escolas ainda estiverem fechadas devido a pandemia.)
 
 		<br><br>
 
-		Here's some of the generous Patrons who made this possible: 💖
+        Aqui estão alguns do generosos Patrocinadores que fizeram isto possível: 💖
 
 		<br><br>
 
@@ -550,7 +546,7 @@
 
 		<br><br>
 
-		And <i>huge</i> thank you to these folks for playtesting/proofreading:
+		E um <i>enorme</i> obrigado para estas pessoas por testar/revisar:
 		Alex Kreitzberg,
 		Amit Patel,
 		EmilyKate McDonough,
@@ -569,19 +565,19 @@
 
 		<br><br>
 
-		Any errors remaining are probably Nicky's fault.
+        Quaisquer erros remanescentes são provavelmente falhas do Nicky.
 
 	</div>
 
 </div>
 
 <div id="footnotes_container">
-	<h2 id='show_feetnotes_button'>(Click to show Feetnotes)</h2>
-	<h2 id='shown_feetnotes'>Feetnotes:</h2-->
+	<h2 id='show_feetnotes_button'>(Clique para mostrar as notas de rodapé)</h2>
+	<h2 id='shown_feetnotes'>Notas de Rodapé:</h2-->
 </div>
 
 <div id="wash">
-	wash your hands! 👏
+	lave suas mãos! 👏
 </div>
 
 
