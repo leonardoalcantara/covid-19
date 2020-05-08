@@ -695,7 +695,7 @@ O avião afundou. Nós subimos nos botes salva-vidas. É hora de encontrar terra
 [^dry_land]: A metáfora de terra firme [de Marc Lipsitch & Yonatan Grad, em STAT News](https://www.statnews.com/2020/04/01/navigating-covid-19-pandemic/)
 
 
-Equipes de epidemiologistas e governantes ([left](https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/), [right](https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/ ), e [multi-partisan](https://ethics.harvard.edu/covid-roadmap)) chegaram a um consenso em como bater a COVID-19, enquento protegem nossas vidas *e* liberdades. 
+Equipes de epidemiologistas e governantes ([de esquerda](https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/), [de direita](https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/ ), e [pluripartidários](https://ethics.harvard.edu/covid-roadmap)) chegaram a um consenso em como bater a COVID-19, enquento protegem nossas vidas *e* liberdades. 
 
 Aqui segue uma ideia geral, com alguns (menos consensuais) planos de emergência:
 
