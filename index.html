@@ -14,13 +14,13 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="O Que Vem Pela Frente? COVID-19, Possíveis Futuros Explicados com Simulações">  <!-- TRANSLATE: content -->
 	<meta name="twitter:description" content="um guia interativo">  <!-- TRANSLATE: content -->
-	<meta name="twitter:image" content="https://ncase.me/covid-19/sharing/thumbnail.png">
+	<meta name="twitter:image" content="https://leonardoalcantara.github.io/covid-19-pt-br/sharing/thumbnail.png">
 
 	<!-- Open Graph data -->
 	<meta property="og:title" content="O Que Vem Pela Frente? COVID-19, Possíveis Futuros Explicados com Simulações">  <!-- TRANSLATE: content -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://ncase.me/covid-19/">
-	<meta property="og:image" content="https://ncase.me/covid-19/sharing/thumbnail.png">
+	<meta property="og:url" content="https://leonardoalcantara.github.io/covid-19-pt-br/">
+	<meta property="og:image" content="https://leonardoalcantara.github.io/covid-19-pt-br/sharing/thumbnail.png">
 	<meta property="og:description" content="um guia interativo">  <!-- TRANSLATE: content -->
 	<meta property="og:site_name" content="O Que Vem Pela Frente? COVID-19, Possíveis Futuros Explicados com Simulações">  <!-- TRANSLATE: content -->
 	
@@ -109,7 +109,7 @@
 <p>Se nós simularmos "dobra a cada 4 dias" <em>e nada mais</em>, em uma população, começando com apenas 0.001% <icon i></icon>, o que acontece?</p>
 <p><strong>Clique "Iniciar" para rodar a simulação! Você pode rodar outras vezes com outros parâmetros:</strong> (ressalvas técnicas:<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>)</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-1" width="800" height="540"></iframe>
+        <iframe src="sim?stage=epi-1" width="800" height="540"></iframe>
 </div>
 <p>Esta é a <strong>curva de crescimento exponencial.</strong> Começa pequena, e então explode. "Oh é apenas uma gripe"para "Tá certo, gripes não criam <em>cemitérios de valas comuns em cidades ricas</em>".</p>
 <p><img src="pics/exponential.png" /></p>
@@ -118,14 +118,14 @@
 <p>Quanto mais <icon i></icon>s existem, mais rápido <icon s></icon>s se tornam <icon i></icon>s, <strong>mas quanto menos <icon s></icon>s existem, mais <em>lentamente</em> <icon s></icon>s se tornam <icon i></icon>s.</strong></p>
 <p>Como isto muda o crescimento de uma epidemia? Vamos descobrir:</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-2" width="800" height="540"></iframe>
+        <iframe src="sim?stage=epi-2" width="800" height="540"></iframe>
 </div>
 <p>Esta é a <strong>curva de crescimento logístico.</strong> em formato de S. Começa devagar, explode, e desacelera de novo.</p>
 <p>Mas, esta simulação <em>ainda</em> está errada. Nós estamos esquecendo o fato que <icon i></icon>Pessoas infectadas em algum momento param de ser infecciosas, seja 1) se recuperando, 2)"se recuperando" com dano aos pulmões, ou 3) morrendo.</p>
 <p>Por questão de simplicidade, vamos fingir que todas as <icon i></icon> Pessoas infectadas se tornem <icon r></icon> Recuperadas. (Apenas lembrem-se que na realidade algumas morrem.) <icon r></icon>s não podem ser infectadas de novo, e vamos assumir – <em>por enquanto!</em> – que se tornam imunes por toda a vida.</p>
 <p>No caso da COVID-19, é estimado que você permaneça <icon i></icon> Infectado por 10 dias, <em>em média</em>.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Isto significa que alguns vão se recuperar antes de 10 dias e outros depois. <strong>Este é o resultado, com uma simulação <em>começando</em> com 100% <icon i></icon>:</strong></p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-3" width="800" height="540"></iframe>
+        <iframe src="sim?stage=epi-3" width="800" height="540"></iframe>
 </div>
 <p>Isto é o oposto do crescimento exponencial, a <strong>curva de decaimento exponencial.</strong></p>
 <p>Agora, o que acontece se você simular crescimento logístico em formato de S <em>com</em> a recuperação?</p>
@@ -134,7 +134,7 @@
 <p><b style='color:#ff4040'>Curva vermelha</b> são os casos <em>atuais</em><icon i></icon>,<br />
 <b style='color:#999999'>Curva cinza</b> é o <em>total</em> de casos (atuais + recuperados <icon r></icon>), que se inicia em apenas 0.001% <icon i></icon>:</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-4" width="800" height="540"></iframe>
+        <iframe src="sim?stage=epi-4" width="800" height="540"></iframe>
 </div>
 <p>E é <em>daí</em> que esta famosa curva veio! Não é uma curva em sino, e não é nem mesmo uma curva "log-normal". Ela não tem nome. Mas você já deve ter visto um zilhão de vezes, e torcido muito para que ela achatasse.</p>
 <p>Este é o <strong>Modelo SIR</strong>,<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a><br />
@@ -149,7 +149,7 @@ a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
 <p><b style='color:#ff4040'>Curva Vermelha</b> <b style='color:#FF9393'>+ Rosa</b> são os casos <em>atuais</em> (infeccioso <icon i></icon> + exposto <icon e></icon>),<br />
 <b style='color:#888'>Curva cinza</b> são casos <em>totais</em> (atuais + recuperados <icon r></icon>):</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-5" width="800" height="540"></iframe>
+        <iframe src="sim?stage=epi-5" width="800" height="540"></iframe>
 </div>
 <p>Não há muitas mudanças! O tempo que você permanece <icon e></icon> Exposto muda a razão de <icon e></icon>-para-<icon i></icon>, e <em>quando</em> os casos correntes atingem o pico... mas a <em>altura</em> do pico, e o total de casos no final, permanecem os mesmos.</p>
 <p>Por que isto acontece? Por causa da mais importante idéia em Epidemiologia 101:</p>
@@ -164,16 +164,16 @@ a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
 <p>Nas nossa simulações – <em>no início &amp; na média</em> – um <icon i></icon> infecta alguém a cada 4 dias, em 10 dias. "4 dias" ocorre dentro de "10 dias" duas vezes e meia. Isto significa – <em>no início &amp; na média</em> – cada <icon i></icon> infecta 2.5 outros. Então, R<sub>0</sub> = 2.5. (ressalvas:<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>)</p>
 <p><strong>Brinque com esta calculadora de R<sub>0</sub>, para ver como R<sub>0</sub> depende dos tempos de recuperação e nova infecção:</strong></p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-6a&format=calc" width="285" height="255"></iframe>
+        <iframe src="sim?stage=epi-6a&format=calc" width="285" height="255"></iframe>
 </div>
 <p>Mas lembre-se, quanto menos <icon s></icon>s há, mais <em>lentamente</em> <icon s></icon>s tornam-se <icon i></icon>s. O número de reprodução (R) <em>corrente</em> depende não apenas do número de reprodução <em>básico</em> (R<sub>0</sub>), mas <em>também</em> em quantas pessoas não são mais <icon s></icon> Suscetíveis. (Por exemplo, por se recuperar e conseguindo imunidade natural.)</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-6b&format=calc" width="285" height="390"></iframe>
+        <iframe src="sim?stage=epi-6b&format=calc" width="285" height="390"></iframe>
 </div>
 <p>Quando pessoas suficientes tem imunidade, R &lt; 1, e o vírus é contido! Isto é chamado <strong>imunidade de rebanho</strong>. Para gripes, a imunidade de rebanho é atingida <em>com uma vacina</em>. Tentando atingir "imunidade de rebanho natural" deixando as pessoas se infectarem é uma idéia <em>terrível</em>. (Mas não pelas razões que você pode pensar! Explicaremos mais a frente.)</p>
 <p>Vamos rodar o Modelo SEIR outra vez, mas mostrando R<sub>0</sub>, R ao longo do tempo, e o limiar de imunidade de rebanho:</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=epi-7" width="800" height="540"></iframe>
+        <iframe src="sim?stage=epi-7" width="800" height="540"></iframe>
 </div>
 <p><strong>NOTA: O total de casos <em>não para</em> na imunidade de rebanho, mas ultrapassa ele!</strong> E ele cruza o limiar <em>exatamente</em> quando os casos correntes atingem o pico. (Isto acontece não importa como você mude os ajustes - tente você mesmo!)</p>
 <p>Isto ocorre porque quando há mais não-<icon s></icon>s do que o limiar da imunidade de rebanho, você tem R &lt; 1. E quando R &lt; 1, novos casos param de crescer: um pico.</p>
@@ -198,7 +198,7 @@ a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
 <p>Perto de 1 em cada 20 pessoas infectadas com COVID-19 precisam ir para um UTI(Unidade de Terapia Intensiva.)<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a> Em um país rico como os EUA, há 1 cama de UTI para cada 3400 pessoas. <a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a> Portanto os EUA podem tratar 20 de 3400 pessoas <em>simultaneamente</em> infectadas - ou 0.6% da população.</p>
 <p>Mesmo se nós <em>mais que triplicarmos</em> esta capacidade para 2%, aqui está o que aconteceria <em>se não fizessemos absolutamente nada:</em></p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-1&format=lines" width="800" height="540"></iframe>
+        <iframe src="sim?stage=int-1&format=lines" width="800" height="540"></iframe>
 </div>
 <p>Nada bom.</p>
 <p>Isto é o que <a href="http://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/">o relatório do Imperial College em 16 de março</a> descobriu: se não fizessemos nada ficaríamos sem camas de UTI, com mais de 80% da população infectada. (lembre-se: o número total de casos <em>ultrapassa</em> a imunidade de rebanho).</p>
@@ -211,11 +211,11 @@ a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
 <p>O aumento da lavagem das mãos corta a incidência de gripes e resfriados em países de alta renda em ~25%<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>, enquanto o confinamento de toda a cidade de Londres corta os contatos próximos em ~70%<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>. Então, vamos assumir que a lavagem de mãos pode reduzir R <em>em até</em> 25%, e o distanciamento pode reduzir R <em>em até</em> 70%:</p>
 <p><strong>Brinque com esta calculadora para ver qual o % de non-<icon s></icon>, lavagem de mão, e distanciamento reduzem R:</strong> (esta calculadora visualiza os seus efeitos <em>relativos</em>, e é por isto que incrementando um <em>parece</em> como se estivessemos diminuindo o efeito de outros.<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>)</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-2a&format=calc" width="285" height="260"></iframe>
+        <iframe src="sim?stage=int-2a&format=calc" width="285" height="260"></iframe>
 </div>
 <p>Agora, vamos simular o que acontece com uma epidemia de COVID-19 se, começando em março de 2020, nós tivessemos aumentado a lavagem de mãos mas adotado apenas <em>leve</em> distanciamento físico - de tal forma que R é mais baixo, mas ainda acima de 1:</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-2&format=lines" width="800" height="540"></iframe>
+        <iframe src="sim?stage=int-2&format=lines" width="800" height="540"></iframe>
 </div>
 <p>Três notas:</p>
 <ol>
@@ -229,7 +229,7 @@ a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
 <h3>Cenário 3: Confinamento de Meses</h3>
 <p>Vamos ver o que acontece se nós <em>esmagamos</em> a curva com um confinamento de 5 meses, reduzindo <icon i></icon> para quase nada, e então - <em>finalmente</em> - retornando para a vida normal:</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-3&format=lines" width="800" height="540"></iframe>
+        <iframe src="sim?stage=int-3&format=lines" width="800" height="540"></iframe>
 </div>
 <p>Oh.</p>
 <p>Esta é a "segunda onda" que todo mundo está falando a respeito. Assim que removemos o confinamento, nós voltamos a ter R &gt; 1 de novo. Então, um único <icon i></icon> deixado para trás (ou importado) pode causar um disparo nos casos que é quase tão ruim como se tivessemos feito o Cenário 0: Absolutamente Nada.</p>
@@ -239,12 +239,12 @@ a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
 <p>Esta solução foi sugerida inicialmente pelo relatório do Imperial College de 16 de março, e de novo por um artigo de Harvard.<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a></p>
 <p><strong>Aqui está uma simulação:</strong> (Depois de brincar com o "cenário gravado", você pode tentar simular seus <em>próprios</em> cronogramas de confinamento, mudando os cursores <em>enquanto</em> a simulação está rodando! Lembre-se que você pode parar e continuar a simulação, e alterar a sua velocidade).</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-4&format=lines" width="800" height="540"></iframe>
+        <iframe src="sim?stage=int-4&format=lines" width="800" height="540"></iframe>
 </div>
 <p>Isto <em>iria</em> manter os casos abaixo da capacidade das UTIs! E é <em>muito</em> melhor que um confinamento de 18 meses até que uma vacina esteja disponível. (E se não houver vacina, repita até que a imunidade de rebanho seja atingida... em 2022.)</p>
 <p>Veja, é legal desenhar uma linha dizendo "capacidade das UTIs", mas tem várias coisas importantes que nós <em>não podemos</em> simular aqui. Como:</p>
 <p><strong>Saúde Mental:</strong> Solidão é um dos maiores fatores de risco para depressão, ansiedade, e suicídio. E está tão associado com a morte prematura quanto fumar 15 cigarros por dia.[^loneliness]</p>
-<p>Veja <a href="https://journals.sagepub.com/doi/abs/10.1177/1745691614568352">Figure 6 from Holt-Lunstad &amp; Smith 2010</a>. Claro, grande ressalva que eles encontraram uma <em>correlação</em>. Mas a não ser que você queira tentar aleatóriamente designar pessoas para serem solitárias a vida toda evidência de observação é tudo que você pode ter.</p>
+<p>Veja a <a href="https://journals.sagepub.com/doi/abs/10.1177/1745691614568352">Figura 6 de Holt-Lunstad &amp; Smith 2010</a>. Claro, grande ressalva que eles encontraram uma <em>correlação</em>. Mas a não ser que você queira tentar aleatóriamente designar pessoas para serem solitárias a vida toda evidência de observação é tudo que você pode ter.</p>
 <p><strong>Saúde Financeira:</strong> "E a respeito da economia" soa como se você se importasse mais com dólares que com vidas, mas "a economia" não é apenas a bolsa de valores: é a capacidade das pessoas prover comida e abrigo para os seus entes queridos, para investir no futuro dos seus filhos, e desfrutar de artes, comidas, videogames - as coisas que fazem a vida valer a pena. E além disto, pobreza <em>por si só</em> tem impactos horríveis na saúde mental e física.</p>
 <p>Não estou dizendo que nós <em>não devamos</em> ter outro confinamento! Nós iremos falar de confinamentos "disjuntores" depois. De toda forma não é o ideal.</p>
 <p>Mas espere... Formosa e a Coréia do Sul não contiveram a COVID-19? Por 4 meses inteiros <em>sem</em> quarentenas de longo prazo?</p>
@@ -267,18 +267,18 @@ a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
 <p>Nada disto! <strong><a href="https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing">DP-3T</a></strong>, um time de epidemiologistas e criptografos (incluindo um de nós, Marcel Salathé) <em>já</em> está desenvolvento um app de rastreamento de contatos - com o código disponível para o público - que não revela <strong>nenhuma informação sobre a sua identidade, localização, quem são seus contatos, ou nem mesmo <em>quantos contatos</em> você teve.</strong></p>
 <p>Aqui está como ele funciona:</p>
 <p><img src="pics/dp3t.png" /></p>
-<p>(&amp; <a href="https://ncase.me/contact-tracing/">e aqui está o quadrinho completo</a>)</p>
+<p>(<a href="https://ncase.me/contact-tracing/">e aqui está o quadrinho completo</a>)</p>
 <p>Junto com times similares como o protocolo TCN<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a> e MIT PACT<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>, eles inspiraram a Apple e o Google para inserir o rastreamento de contatos, com prioridade na privacidade, diretamente no Android/iOS.<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a> (Você não confia no Google/Apple? Ótimo! A beleza deste sistema é que ele não <em>precisa</em> de confiança!) Em breve sua agência de saúde pública local pode solicitar que você baixe um app. Se ele colocar privacidade em primeiro lugar, com código-fonte público por favor faça!</p>
 <p>Mas e as pessoas que não tem smartphones? Ou as infecções por maçanetas de portas? Ou casos "verdadeiramente" assintomáticos? Os apps de rastreamento de contatos não podem pegar todas estas transmissões... <em>e isto não é problema!</em> Nós não precisamos pegar <em>todas</em> as transmissões, apenas 60%+ para conseguir R &lt; 1.</p>
 <p>(Esclarecimento sobre a confusão a respeito de casos pré-sintomáticos vs "verdadeiramente" assintomáticos. "Verdadeiramente" assintomáticos são raros:<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>)</p>
 <p>O isolamento de casos <em>sintomáticos</em> reduziria R em cerca de 40%, e colocando em quarentena os seus contatos <em>pré-sintomáticos ou assintomáticos</em> reduziria R em até 50%<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>:</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-4a&format=calc" width="285" height="340"></iframe>
+        <iframe src="sim?stage=int-4a&format=calc" width="285" height="340"></iframe>
 </div>
 <p>Então, mesmo sem 100% de distanciamento, nós podemos chegar a R &lt; 1 <em>sem confinamento!</em> Muito melhor para a nossa saúde mental e financeira. (E para os custos das pessoas que tiverem que se auto-isolar/entrar em quarentena, <em>os governos devem sustentá-los</em> - pagar pelos testes, proteger seus empregos, subsidiar licenças remuneradas, etc. Ainda será muito mais barato que confinamento intermitente.)</p>
 <p>Se nós mantivermos R &lt; 1 até que nós tenhamos uma vacina, que tornará suscetíveis <icon s></icon>s em imunizados <icon r></icon>s. Imunidade de rebanho, o jeito <em>certo</em>:</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-4b&format=calc" width="285" height="230"></iframe>
+        <iframe src="sim?stage=int-4b&format=calc" width="285" height="230"></iframe>
 </div>
 <p>(Nota: esta calculadora assume que as vacinas são 100% efetivas. Apenas se lembre que na realidade você deve compensar vacinando <em>mais</em> que a "imunidade de rebanho" para <em>de fato</em> atingir a imunidade de rebanho)</p>
 <p>Bom, chega de conversa. Aqui temos uma simulação de:</p>
@@ -289,7 +289,7 @@ a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
 <li>Nós vencemos.</li>
 </ol>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-5&format=lines" width="800" height="540"></iframe>
+        <iframe src="sim?stage=int-5&format=lines" width="800" height="540"></iframe>
 </div>
 <p>Então é isto! É assim que nós fazemos um pouso de emergência com este avião.</p>
 <p>É assim que derrotaremos a COVID-19.</p>
@@ -309,7 +309,7 @@ a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
 <p>Custos: Se máscaras caseiras de tecido (que tem ~2/3 da efetividade das máscaras cirúrgicas<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>), super baratas. Se máscaras cirúrgicas, mais caro, mas ainda bem barato.</p>
 <p>Benefícios: Mesmo se para uma chance de 50-50 de máscaras cirúrgicas reduzirem a transmissão por 0% ou 70%, na média o "valor esperado" é ainda 35%, o mesmo que meio confinamento! Então vamos chutar que máscaras cirúrgicas reduzem R em até 35%, descontada por toda a nossa incerteza. (De novo, você pode desafiar nossas premissas movendo os cursores para cima/para baixo)</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-6a&format=calc" width="285" height="380"></iframe>
+        <iframe src="sim?stage=int-6a&format=calc" width="285" height="380"></iframe>
 </div>
 <p>(outros argumentos a favor/contra máscaras:<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a>)</p>
 <p><strong>"Elas são difíceis de usar corretamente."</strong> Também é difícil de lavar suas mãos de acordo com a recomendações da OMS - sério, "Passo 3) palma da mão direita sobre o dorso da mão esquerda"?! - mas nós ainda podemos recomendar a lavagem de mãos, por que imperfeito ainda é melhor que nada.</p>
@@ -319,7 +319,7 @@ a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
 <p>Certo, isto não é uma "intervenção" que nós podemos controlar, mas também ajuda! Alguns veículos de notícias reportam que o verão não fara diferença para a COVID-19. Eles estão meio certos: o verão não irá fazer R &lt; 1, mas ele <em>irá</em> reduzir R.</p>
 <p>Para a COVID-19, cada 1º Celsius a mais faz com que R caia 1.2%. <a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a> A diferença de temperatura verão/inverno na cidade de Nova Iorque é 15ºC, então o verão fará R cair 18%.</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-6b&format=calc" width="285" height="220"></iframe>
+        <iframe src="sim?stage=int-6b&format=calc" width="285" height="220"></iframe>
 </div>
 <p>Apenas o verão não trará R &lt; 1, mas se temos recursos limitados, nós podemos reduzir a escala de algumas intervenções no verão - para que nós possamos <em>aumentar</em> a sua escala no inverno.</p>
 <p><strong>Um Confinamento "Interruptor":</strong></p>
@@ -332,7 +332,7 @@ a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
 <li>Mais um confinamento "Interruptor" antes que a vacina seja encontrada.</li>
 </ol>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=int-7&format=lines&height=620" width="800" height="620"></iframe>
+        <iframe src="sim?stage=int-7&format=lines&height=620" width="800" height="620"></iframe>
 </div>
 <p>Sem mencionar todas as <em>outras</em> intervenções que poderíamos fazer, para empurrar R para baixo:</p>
 <ul>
@@ -367,27 +367,27 @@ a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
 <p>[^cold immunity]: "Nós não encontramos nenhuma diferença significativa entre a probabilidade de testar positivo pelo menos uma vez e a probabilidade de recorrência para os beta-coronavírus HKU1 e OC43 em 34 semanas depois da inscrição/primeira infecção." <a href="http://www.columbia.edu/~jls106/galanti_shaman_ms_supp.pdf">Marta Galanti &amp; Jeffrey Shaman (PDF)</a></p>
 <p>Para estas simulações, digamos é um ano. <strong>Aqui temos uma simulação iniciando com 100% <icon r></icon></strong>, decaindo exponencialmente para suscetíveis, sem imunidade <icon s></icon>s depois de 1 ano, na <em>média</em>, com variação:</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=yrs-1&format=lines&height=600" width="800" height="600"></iframe>
+        <iframe src="sim?stage=yrs-1&format=lines&height=600" width="800" height="600"></iframe>
 </div>
 <p>O Retorno do decaimento exponencial!</p>
 <p>Este é o <strong>Modelo SEIRS</strong>. O último "S" significa <icon s></icon> suscetível, de novo.</p>
 <p><img src="pics/seirs.png" /></p>
 <p>Agora vamos simular um surto de COVID-19, no período de 10 anos, sem intervenções... <em>se a imunidade durar apenas um ano:</em></p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=yrs-2&format=lines&height=600" width="800" height="600"></iframe>
+        <iframe src="sim?stage=yrs-2&format=lines&height=600" width="800" height="600"></iframe>
 </div>
 <p>Nas simulações prévias, nós tinhamos apenas <em>um</em> pico de superlotação das UTIs. Agora nós temos vários, <em>e</em> <icon i></icon> casos convergem para ficar <em>permanentemente na</em> capacidade das UTIs. (Que, lembre-se, nós <em>triplicamos</em> para estas simulações)</p>
 <p>R = 1, é <strong>endêmico.</strong></p>
 <p>Felizmente, como o verão reduz o R isto melhorará a situação:</p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=yrs-3&format=lines&height=640" width="800" height="640"></iframe>
+        <iframe src="sim?stage=yrs-3&format=lines&height=640" width="800" height="640"></iframe>
 </div>
 <p>Oh.</p>
 <p>Contraintuitivamente, o verão faz os surtos piores <em>e</em> regulares! Isto acontece por que o verão reduz novos <icon i></icon>s, mas isto por outro lado reduz novos <icon r></icon>s imunes. O que significa que a imunidade despenca no verão, <em>criando</em> surtos grandes e regulares no inverno.</p>
 <p>Por sorte, a solução é bem direta - apenas vacines as pessoas todo outono/inverno, como nós fazemos com as vacinas da gripe:</p>
 <p><strong>(Depois de rodar a simulação padrão tente simular suas próprias campanhas de vacinação! Lembre-se que você pode pausar/continuar a simulação a qualquer momento)</strong></p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=yrs-4&format=lines" width="800" height="540"></iframe>
+        <iframe src="sim?stage=yrs-4&format=lines" width="800" height="540"></iframe>
 </div>
 <p>Mas aqui vai uma questão mais assustadora:</p>
 <p>E se não houver vacina por <em>anos</em>? Ou <em>nunca?</em></p>
@@ -399,14 +399,14 @@ a <em>segunda</em> idéia mais importante em Epidemiologia 101:</p>
 <p>3) Fazer intervenções R &lt; 1 até que nós desenvolvamos tratamentos que façam a COVID-19 muito, muito menos provável de precisar de cuidados intensivos. (O que nós devemos já estar fazendo <em>de qualquer forma!</em>) Reduzindo o uso de UTIs por um fator de 10x é o mesmo que aumentar nossa capacidade de leitos de UTI em 10x:</p>
 <p><strong>Aqui está uma simulação de imunidade <em>não</em> duradoura, <em>sem</em> vacinas, e mesmo sem nenhuma intervenção - apenas incrementando lentamente a capacidade de sobrevivência aos surtos de longo prazo:</strong></p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=yrs-5&format=lines" width="800" height="540"></iframe>
+        <iframe src="sim?stage=yrs-5&format=lines" width="800" height="540"></iframe>
 </div>
 <p>Até mesmo sob o cenário de <em>pior</em> caso... a vida persevera.</p>
 <p>. . .</p>
 <p>Talvez você goste de desafiar nossas premissas, e tentar R<sub>0</sub>'s ou números diferentes. Ou tentar simular suas <em>próprias</em> combinações de planos de intervenção!</p>
 <p><strong>Aqui está um Modo de Caixa de Areia(optional), com <em>tudo</em> disponível. (role a tela para ver todos os controles) Simule e brinque a vontade:</strong></p>
 <div class="sim">
-        <iframe src="https://ncase.github.io/covid-19/sim?stage=SB&format=sb" width="800" height="540"></iframe>
+        <iframe src="sim?stage=SB&format=sb" width="800" height="540"></iframe>
 </div>
 <p>Este "simulador de vôo epidemico" básico nos ensinou tanto. Ele nos permite responder questões sobre nossos últimos meses, os próximos meses, e os próximos anos.</p>
 <p>Então finalmente, vamos retornar para...</p>
