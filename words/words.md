@@ -582,18 +582,19 @@ Se você tiver COVID-19, e se recuperar. Ou tomar a vacina da COVID-19. De qualq
 
 ...*por quanto tempo?*
 
-* COVID-19 é mais similar ao SARS, que dava aos seus sobreviventes 2 anos de imunidade.[^SARS immunity]
-* Os coronavírus que causam "o" resfriado comum dão a você 8 meses de imunidade.[^cold immunity]
+* COVID-19 é mais similar ao SARS, que dava aos seus sobreviventes 2 anos de imunidade.[^SARSimmunity]
+* Os coronavírus que causam "o" resfriado comum dão a você 8 meses de imunidade.[^coldimmunity]
 * Há relatos de pessoas recuperadas do COVID-19, que depois voltam a testar positivo, mas ainda é incerto se estes são falsos positivos.[^unclear]
 * Um estudo *ainda-não-revisado-por-pares* em macacos mostrou imunidade ao coronavírus do COVID-19 por pelo menos 28 dias.[^monkeys]
 
 Mas para o COVID-19 *em humanos*, em 1 de maio de 2020, o "quanto tempo" é a grande dúvida.
 
-[^SARS immunity]: "Anticorpos específicos para o SARS foram mantidos por uma média de 2 anos [...] Então pacientes do SARS devem ser suscetíveis a reinfecção ≥3 anos depois da exposição inicial." [Wu LP, Wang NC, Chang YH, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2851497/) "Infelizmente" nós nunca saberemos por quanto tempo a imunidade do SARS teria realmente durado já que a erradicamos tão rapidamente.
+[^SARSimmunity]: "Anticorpos específicos para o SARS foram mantidos por uma média de 2 anos [...] Então pacientes do SARS devem ser suscetíveis a reinfecção ≥3 anos depois da exposição inicial." [Wu LP, Wang NC, Chang YH, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2851497/) "Infelizmente" nós nunca saberemos por quanto tempo a imunidade do SARS teria realmente durado já que a erradicamos tão rapidamente.
 
-[^cold immunity]: "Nós não encontramos nenhuma diferença significativa entre a probabilidade de testar positivo pelo menos uma vez e a probabilidade de recorrência para os beta-coronavírus HKU1 e OC43 em 34 semanas depois da inscrição/primeira infecção." [Marta Galanti & Jeffrey Shaman (PDF)](http://www.columbia.edu/~jls106/galanti_shaman_ms_supp.pdf)
+[^coldimmunity]: "Nós não encontramos nenhuma diferença significativa entre a probabilidade de testar positivo pelo menos uma vez e a probabilidade de recorrência para os beta-coronavírus HKU1 e OC43 em 34 semanas depois da inscrição/primeira infecção." [Marta Galanti & Jeffrey Shaman (PDF)](http://www.columbia.edu/~jls106/galanti_shaman_ms_supp.pdf)
 
 [^unclear]: "Uma vez que uma pessoa enfrentou um vírus partículas virais tendem a permanecer por algum tempo. Estas não podem causar infecções, mas elas podem disparar um teste positivo." [de STAT News por Andrew Joseph](https://www.statnews.com/2020/04/20/everything-we-know-about-coronavirus-immunity-and-antibodies-and-plenty-we-still-dont/)
+
 
 [^monkeys]: De [Bao et al.](https://www.biorxiv.org/content/10.1101/2020.03.13.990226v1.abstract) 
 *Ressalva: Este artigo é uma pré-impressão e não foi certificado por revisão por pares (ainda).* Também para enfatizar: eles somente testaram para reinfecção 28 dias depois.
