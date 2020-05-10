@@ -24,9 +24,9 @@
 
 "A única coisa a temer é o próprio medo" é um conselho estúpido.
 
-Claro, não junte papel higiênico - mas se os governantes temem o próprio medo eles irão minimizar os reais perigos de "pânico em massa". O medo não é o problema, mas, sim, como nós *canalizamos* nosso medo. O medo nos dá energia para lidar com os perigos agora, e se preparar para os perigos mais à frente.
+Claro, não compre papel higiênico em excesso - mas se os governantes temem o próprio medo eles irão minimizar os reais perigos de "pânico em massa". O medo não é o problema, mas, sim, como nós *canalizamos* nosso medo. O medo nos dá energia para lidar com os perigos agora, e nos prepararmos para os perigos mais à frente.
 
-Honestamente, nós (Marcel, epidemiologista + Nicky, artista/programador) estamos preocupados. Nós podemos apostar que você está também! Por isto nós canalizamos nosso medo para criar estas **simulações lúdicas**, para que *você* possa canalizar seu medo para entender:
+Honestamente, nós (Marcel, epidemiologista + Nicky, artista/programador) estamos preocupados. Nós podemos apostar que você está também! Por isso nós canalizamos nosso medo para criar estas **simulações interativas**, para que *você* possa canalizar seu medo para entender:
 
 * **Os Últimos Meses** (introdução à epidemiologia, modelo SEIR, R & R<sub>0</sub>)
 * **Os Próximos Meses** (confinamentos (lockdown), rastreamento de contato, máscaras)
@@ -38,7 +38,7 @@ Este guia (publicado em 1º de Maio de 2020. clique nesta nota de rodapé!→[^t
     
 	**Este guia foi publicado em 1º de maio de 2020.** Muitos detalhes irão se tornar desatualizados, mas nós estamos confiantes que o guia cobrirá 95% dos futuros possíveis, e que Epidemiologia 101 será útil para sempre.
 
-Então, apertem os cintos: nós estamos prestes a experimentar alguma turbulência.
+Então, apertem os cintos: nós estamos prestes a experimentar um pouco de turbulência.
 
 <div class="section chapter">
     <div>
@@ -59,7 +59,7 @@ Então, vamos construir um "simulador de vôo epidêmico" muito, muito simples!,
 
 [^serial_interval]: “A média [serial] do intervalo foi de 3.96 dias (95% IC 3.53–4.39 dias)”. [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article) (Ressalva: "Artigos com divulgação antecipada não são considerados como versões finais.")
 
-Se nós simularmos "dobra a cada 4 dias" *e nada mais*, em uma população, começando com apenas 0,001% <icon i></icon>, o que acontece? 
+Se nós simularmos "dobra a cada 4 dias" *e nada mais*, em uma população começando com apenas 0,001% <icon i></icon>, o que acontece? 
 
 **Clique "Iniciar" para rodar a simulação! Você pode rodar outras vezes com outros parâmetros:**
 (ressalvas técnicas:[^caveats])
@@ -74,7 +74,7 @@ Se nós simularmos "dobra a cada 4 dias" *e nada mais*, em uma população, come
 		<iframe src="sim?stage=epi-1" width="800" height="540"></iframe>
 </div>
 
-Esta é a **curva de crescimento exponencial.** Começa pequena, e então explode. De "Oh é apenas uma gripe" para "Tá certo, gripes não criam *cemitérios de valas comuns em cidades ricas*".
+Esta é a **curva de crescimento exponencial.** Começa pequena, e então explode. De "Oh é apenas uma gripe" para "Pera, gripes não criam *cemitérios de valas comuns em cidades ricas*".
 
 ![](pics/exponential.png)
 
@@ -170,13 +170,13 @@ Abreviação de "Número de reprodução". É o número *médio* de pessoas que 
 
 O R<sub>0</sub> para "a" gripe sazonal é cerca de 1,28[^r0_flu]. Isto significa que no *início* de um surto de gripe, cada <icon i></icon> infecta 1,28 outros *em média.* (Se parecer estranho não ser um número inteiro lembre-se que uma "mãe" em média tem 2,4 filhos. Isto não significa que vemos meia criança correndo por aí.)
 
-[^r0_flu]: “O valor médio R para a influenza sazonal foi 1,28 (IQR: 1,19–1,37)” [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480)
+[^r0_flu]: “O valor mediano R para a influenza sazonal foi 1,28 (IQR: 1,19–1,37)” [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480)
 
 O R<sub>0</sub> para a COVID-19 é estimado para cerca de 2,2,[^r0_covid] porém um estudo *ainda não finalizado* estima que foi 5,7(!) em Wuhan.[^r0_wuhan]
 
 [^r0_covid]: “Nós estimamos que o número de reprodução básica R0 para a 2019-nCoV seja 2,2 (90% intervalo de alta densidade: 1,4–3,8)” [Riou J, Althaus CL.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001239/)
 
-[^r0_wuhan]: “nós calculamos o valor médio R0 de 5,7 (95% IC 3,8–8,9)” [Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article)
+[^r0_wuhan]: “nós calculamos o valor mediano R0 de 5,7 (95% IC 3,8–8,9)” [Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article)
 
 Nas nossas simulações – *no início & na média* – um <icon i></icon> infecta alguém a cada 4 dias, em 10 dias. "4 dias" ocorre dentro de "10 dias" duas vezes e meia. Isto significa – *no início & na média* – cada <icon i></icon> infecta 2,5 outros. Então, R<sub>0</sub> = 2,5. (ressalvas:[^r0_caveats_sim])
 
@@ -212,9 +212,9 @@ Isto ocorre porque quando há mais não-<icon s></icon>s do que o limiar da imun
 
 **Isto significa: nós NÃO precisamos impedir todas as transmissões, ou nem mesmo algo próximo de todas as transmissões, para parar o COVID-19!**
 
-É um paradoxo. COVID-19 é extremamente contagioso, porém para contê-lo, nós "só" precisamos impedir 60% das infecções. 60%?! Se fosse uma nota no boletim seria um D-. Mas se R<sub>0</sub> = 2,5, cortando isto por 61% nós temos R = 0,975, que é R < 1, vírus contido! (fórmula exata:[^exact_formula])
+É um paradoxo. COVID-19 é extremamente contagioso, porém para contê-lo, nós "só" precisamos impedir 60% das infecções. 60%?! Se isso fosse uma nota de uma prova escolar, seria uma nota baixa. Mas se R<sub>0</sub> = 2,5, cortando isto por 61% nós temos R = 0,975, que é R < 1, vírus contido! (fórmula exata:[^exact_formula])
 
-[^exact_formula]: Lembre-se R = R<sub>0</sub> * a proporção das transmissões ainda permitidas. Lembre-se ainda que a proporção das transmissões ainda permitidas = 1 - proporção das transmissões  *impedidas*.
+[^exact_formula]: Lembre-se que R = R<sub>0</sub> * a proporção das transmissões ainda permitidas. Lembre-se ainda que a proporção das transmissões ainda permitidas = 1 - proporção das transmissões  *impedidas*.
     
     Logo, para ter R < 1, você precisa ter R<sub>0</sub> * TransmissõesPermitidas < 1. 
     
@@ -228,9 +228,9 @@ Isto ocorre porque quando há mais não-<icon s></icon>s do que o limiar da imun
 
 ![](pics/r4.png)
 
-(Se você pensa que R<sub>0</sub> ou outros números nas nossas simulações são muito baixos/altos, isto é bom pois está desafiando nossas premissas! Haverá um "Modo Caixa de Areia" no fim deste guia, onde você poderá inserir os seus *próprios* números, e simular o que acontece.)
+(Se você pensa que R<sub>0</sub> ou os outros números nas nossas simulações são muito baixos/altos, isto é bom pois você está desafiando nossas premissas! Haverá um "Modo Caixa de Areia" no fim deste guia, onde você poderá inserir os seus *próprios* números, e simular o que acontece.)
 
-*Cada* intervenção sobre COVID-19 que você já ouviu sobre - lavar as mãos, distanciamento social/físico, confinamentos, auto-isolamento, rastreamento de contatos e quarentena, máscaras faciais, e mesmo "imunidade de rebanho" - todas estão visando a mesma coisa:
+*Toda* intervenção sobre COVID-19 que você já ouviu sobre - lavar as mãos, distanciamento social/físico, confinamentos, auto-isolamento, rastreamento de contatos e quarentena, máscaras faciais, e mesmo "imunidade de rebanho" - todas estão visando a mesma coisa:
 
 Fazer R < 1.
 
@@ -245,7 +245,7 @@ Preparem-se para uma aterrisagem de emergência...
     </div>
 </div>
 
-...poderia ter sido pior. Aqui está um universo paralelo que evitamos:
+...poderiam ter sido pior. Aqui está um universo paralelo que evitamos:
 
 ###Cenário 0: Não Fazer Absolutamente Nada
 
@@ -268,7 +268,7 @@ Isto é o que [o relatório do Imperial College em 16 de março](http://www.impe
 Mesmo se apenas 0,5% dos infectados morressem - uma suposição generosa quando não há mais vagas na UTI - em um país grande como os EUA, com 300 milhões de pessoas, 0,5% de 80% de 300 milhões = ainda são 1,2 milhões de mortos...
 *SE não fizessemos nada.*
 
-(Muitos canais de notícia e mídia social reportaram "80% serão infectados" *SEM* o "SE NÃO FIZERMOS NADA". O medo foi canalizado em cliques, e não para o entendimento. *Suspiro.*)
+(Muitos canais de notícia e mídia social reportaram "80% serão infectados" *SEM* o "SE NÃO FIZERMOS NADA". O medo foi canalizado em cliques, ao invés de entendimento. *Suspiro.*)
 
 ###Cenário 1: Achatar a Curva / Imunidade de Rebanho
 
@@ -278,7 +278,7 @@ O plano de "Achatar a Curva" foi apregoado por todas as organizações de saúde
   
     Do [artigo de Ed Yong para o The Atlantic](https://www.theatlantic.com/health/archive/2020/03/coronavirus-pandemic-herd-immunity-uk-boris-johnson/608065/)
 
-Ambos os planos, entretanto, tinham literalmente uma falha fatal.
+Ambos os planos, entretanto, tinham uma falha literalmente fatal.
 
 Primeiro, vamos olhar nas duas principais formas de "achatar a curva": lavar as mãos e distanciamento físico.
 
@@ -286,7 +286,7 @@ O aumento da lavagem das mãos corta a incidência de gripes e resfriados em pa�
 
 [^handwashing]:"Todos os oito estudos elegíveis reportaram que lavagem de mãos reduziram os riscos de infecção respiratória, com redução de riscos entre 6% a 44% [valor agrupado 24% (95% IC 6-40%)]."Nós arredondamos o valor agrupado para 25% nestas simulações por simplicidade.[Rabie, T. and Curtis, V.](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-3156.2006.01568.x) Nota: como esta meta-análise aponta, a qualidade dos estudos para lavagem de mãos (pelo menos em países de alta renda) é péssima.
 
-[^london]: "Nós encontramos uma redução de 73% no número de contatos diários observados por participante. Isto seria suficiente para reduzir R<sub>0</sub> de um valor de 2,6 antes do confinamento para 0,62 (0,37 - 0,89) durante o confinamento". Nós arredondamos este valor para 70% nestas simulações por simplicidade. [Jarvis and Zandvoort et al](https://cmmid.github.io/topics/covid19/comix-impact-of-physical-distance-measures-on-transmission-in-the-UK.html)
+[^london]: "Nós encontramos uma redução de 73% no número de contatos diários observados por participante. Isto seria suficiente para reduzir R<sub>0</sub> de um valor de 2,6 antes do confinamento para 0,62 (0,37 - 0,89) durante o confinamento". Nós arredondamos este valor para 70% nessas simulações por simplicidade. [Jarvis and Zandvoort et al](https://cmmid.github.io/topics/covid19/comix-impact-of-physical-distance-measures-on-transmission-in-the-UK.html)
 
 **Brinque com esta calculadora para ver qual o % de não-<icon s></icon>, lavagem de mão, e distanciamento reduzem R:** (esta calculadora visualiza os seus efeitos *relativos*, e é por isto que incrementando um *parece* como se estivéssemos diminuindo o efeito de outros.[^log_caveat])
 
@@ -316,7 +316,7 @@ Este foi o outro achado do relatório do Imperial College em 16 de março, que c
 
 Isto é, não apenas "achate" a curva, *esmague* a curva. Por exemplo, com um...
 
-###Cenário 3: Confinamento de Meses
+###Cenário 3: Confinamento por Meses
 
 Vamos ver o que acontece se nós *esmagarmos* a curva com um confinamento de 5 meses, reduzindo <icon i></icon> para quase nada, e então - *finalmente* - retornando para a vida normal:
 
@@ -400,13 +400,19 @@ Tradicionalmente, os contatos são encontrados com entrevistas pessoais, mas est
 
 Mas espere aí, apps que rastreiam com quem você esteve em contato?... Isto significa abrir mão da sua privacidade, sucumbindo ao Big Brother?
 
-Nada disto! **[DP-3T](https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing)**, um time de epidemiologistas e criptógrafos (incluindo um de nós, Marcel Salathé) *já* está desenvolvento um app de rastreamento de contatos - com o código disponível para o público - que não revela **nenhuma informação sobre a sua identidade, localização, quem são seus contatos, ou nem mesmo *quantos contatos* você teve.**
+Nada disso! **[DP-3T](https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing)**, um time de epidemiologistas e criptógrafos (incluindo um de nós, Marcel Salathé) *já* está desenvolvento um app de rastreamento de contatos - com o código disponível para o público - que não revela **nenhuma informação sobre a sua identidade, localização, quem são seus contatos, ou nem mesmo *quantos contatos* você teve.**
 
 Aqui está como ele funciona:
 
 ![](pics/dp3t.png)
 
-([e aqui está o quadrinho completo](https://ncase.me/contact-tracing/))
+([e aqui está o quadrinho completo](https://ncase.me/contact-tracing/). Detalhes sobre "trotes"/falsos positivos/etc em nota de rodapé:[^dp3t_details])
+
+[^dp3t_details]: Para evitar "trotes" (pessoas falsamente dizendo estarem infectadas), o protocolo DP-3T requer que o hospital primeiro te dê um código de um uso que permite a você a fazer upload de suas mensagens.
+
+    Falsos positivos são um problema tanto em rastreamento manual e digital de contatos. Mesmo assim, podemos reduzir os falso positivos de 2 maneiras: 1) notificando os usuários apenas se eles ouvirem, digamos, mais de 30 minutos de mensagens, e não apenas uma mensagem quando passam perto. E 2) se o app *de fato* acha que o usuário foi exposto, ele pode encaminhar o usuário a um rastreador de contato *manual*, para uma entrevista bem detalhada.
+    
+    Para outros problemas como largura de banda, integridade do código-fonte, e outros problemas de segurança, veja [the open-source DP-3T whitepapers!](https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing)
 
 Junto com times similares como o protocolo TCN[^tcn] e MIT PACT[^pact], eles inspiraram a Apple e o Google para inserir o rastreamento de contatos, com prioridade na privacidade, diretamente no Android/iOS.[^gapple] (Você não confia no Google/Apple? Ótimo! A beleza deste sistema é que ele não *precisa* de confiança!) Em breve sua agência de saúde pública local pode solicitar que você baixe um app. Se ele colocar privacidade em primeiro lugar, com código-fonte público, por favor faça! 
 
@@ -430,10 +436,10 @@ O isolamento de casos *sintomáticos* reduziria R em cerca de 40%, e colocando e
 
 [^oxford]: Do mesmo estudo de Oxford que inicialmente recomendou o uso de apps para combater a COVID-19: [Luca Ferretti & Chris Wymant et al](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936/tab-figures-data) Veja a Figura 2. Assumindo R<sub>0</sub> = 2,0, eles encontraram que:    
   
-	* Sintomáticos contribuem R = 0,8 (40%)
-    * Pré-sintomáticos contribuem R = 0,9 (45%)
-    * Assintomáticos contribute R = 0,1 (5%, apesar que o seu modelo tem incertezas e este valor pode ser muito mais baixo)
-	* Elementos ambientais como maçanetas contribuem R = 0,2 (10%)
+	* Sintomáticos contribuem com R = 0,8 (40%)
+    * Pré-sintomáticos contribuem com R = 0,9 (45%)
+    * Assintomáticos contribuem com R = 0,1 (5%, apesar de que o seu modelo tem incertezas e este valor pode ser muito mais baixo)
+	* Elementos ambientais como maçanetas contribuem com R = 0,2 (10%)
 
 	E adicione os contatos pré & assintomáticos (45% + 5%) e você terá 50% de R!
 
@@ -441,7 +447,7 @@ O isolamento de casos *sintomáticos* reduziria R em cerca de 40%, e colocando e
 		<iframe src="sim?stage=int-4a&format=calc" width="285" height="340"></iframe>
 </div>
 
-Então, mesmo sem 100% de distanciamento, nós podemos chegar a R < 1 *sem confinamento!* Muito melhor para a nossa saúde mental e financeira. (E para os custos das pessoas que tiverem que se auto-isolar/entrar em quarentena, *os governos devem sustentá-los* - pagar pelos testes, proteger seus empregos, subsidiar licenças remuneradas, etc. Ainda será muito mais barato que confinamento intermitente.)
+Portanto, mesmo sem 100% de isolação de contatos, nós podemos chegar a R < 1 *sem confinamento!* Muito melhor para a nossa saúde mental e financeira. (E para os custos das pessoas que tiverem que se auto-isolar/entrar em quarentena, *os governos devem sustentá-los* - pagar pelos testes, proteger seus empregos, subsidiar licenças remuneradas, etc. Ainda será muito mais barato que confinamento intermitente.)
 
 Se nós mantivermos R < 1 até que nós tenhamos uma vacina, que tornará suscetíveis <icon s></icon>s em imunizados <icon r></icon>s. Imunidade de rebanho, o jeito *certo*:
 
@@ -455,7 +461,7 @@ Bom, chega de conversa. Aqui temos uma simulação de:
 
 1. Confinamento de alguns meses, até que possamos...
 2. Mudar para "Testar, Rastrear, Isolar" até que possamos...
-3. Vacinar pessoas suficientes, que significa...
+3. Vacinar pessoas suficientes, que significará...
 4. Nós vencemos.
 
 <div class="sim">
@@ -472,7 +478,7 @@ Mas se *ainda assim* as coisas não derem certo? As coisas já tem dado horrivel
 
 O pessimista inventa o paraquedas.
 
-###Cenário 4+: Máscaras Para Todos, Verão, Interruptores
+###Cenário 4+: Máscaras Para Todos, Verão, Disjuntores (ou Interruptores)
 
 E se R<sub>0</sub> é muito mais alto do que nós imaginamos, e as intervenções acima, mesmo com um leve distanciamento, *ainda* não são suficientes para conseguir R < 1?
 
@@ -486,7 +492,7 @@ Você está certo. Máscaras não impedem você de ficar doente[^incoming]... el
 
 [^incoming]: "Nenhuma destas máscaras cirúrgicas apresentaram desempenho de filtragem adequado e características de encaixe facial para serem consideradas dispositivos de proteção respiratória." [Tara Oberg & Lisa M. Brosseau](https://www.sciencedirect.com/science/article/pii/S0196655307007742)
 
-[^outgoing]: "A redução geral de 3,4 vezes [redução de 70%] nos números de cópias do aerosol que foram observados junto com uma eliminação quase completa de grandes gotas de spray demonstradas por Johnson et al. sugerem que as máscaras cirúrgicas usadas por pessoas infectadas pode ter um impacto clinico significante na transmissão." [Milton DK, Fabian MP, Cowling BJ, Grantham ML, McDevitt JJ](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3591312/)
+[^outgoing]: "A redução geral de 3,4 vezes [redução de 70%] nos números de cópias do aerosol que foram observados junto com uma eliminação quase completa de grandes gotículas de spray demonstradas por Johnson et al. sugerem que as máscaras cirúrgicas usadas por pessoas infectadas pode ter um impacto clinico significante na transmissão." [Milton DK, Fabian MP, Cowling BJ, Grantham ML, McDevitt JJ](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3591312/)
 
 [^homemade]: [Davies, A., Thompson, K., Giri, K., Kafatos, G., Walker, J., & Bennett, A](https://www.cambridge.org/core/journals/disaster-medicine-and-public-health-preparedness/article/testing-the-efficacy-of-homemade-masks-would-they-protect-in-an-influenza-pandemic/0921A05A69A9419C862FA2F35F819D55) Veja a Tabela 1: uma camiseta de 100% algodão tem cerca de 2/3 de eficiência de filtragem de uma máscara cirúrgica, para os dois aerosóis de bacterias que foram testados.
 
@@ -525,9 +531,9 @@ Benefícios: Mesmo se para uma chance de 50-50 de máscaras cirúrgicas reduzire
 
 Certo, isto não é uma "intervenção" que nós podemos controlar, mas também ajuda! Alguns veículos de notícias reportam que o verão não fará diferença para a COVID-19. Eles estão meio certos: o verão não irá fazer R < 1, mas ele *irá* reduzir R.
 
-Para a COVID-19, cada 1º Celsius a mais faz com que R caia 1,2%. [^heat] A diferença de temperatura verão/inverno na cidade de Nova Iorque é 15ºC, então o verão fará R cair 18%.
+Para a COVID-19, cada 1⁰ Celsius a mais faz com que R caia 1,2%. [^heat] A diferença de temperatura verão/inverno na cidade de Nova Iorque é 15ºC, então o verão fará R cair 18%.
 
-[^heat]: “Aumento de 1º Celsius na temperatura [...] diminui R em 0,0225” e “O valor médio de R destas 100 cidades é 1,83”. 0,0225 ÷ 1,83 = ~1,2%. [Wang, Jingyuan and Tang, Ke and Feng, Kai and Lv, Weifeng](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3551767)
+[^heat]: “Aumento de 1⁰ Celsius na temperatura [...] diminui R em 0,0225” e “O valor médio de R destas 100 cidades é 1,83”. 0,0225 ÷ 1,83 = ~1,2%. [Wang, Jingyuan and Tang, Ke and Feng, Kai and Lv, Weifeng](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3551767)
 
 <div class="sim">
 		<iframe src="sim?stage=int-6b&format=calc" width="285" height="220"></iframe>
@@ -557,15 +563,15 @@ Sem mencionar todas as *outras* intervenções que poderíamos fazer, para empur
 * Verificações de Temperatura em centros comerciais e escolas
 * Limpeza profunda de espaços públicos
 * [Substituir apertos de mão por cumprimento com os pés](https://twitter.com/V_actually/status/1233785527788285953)
-* E tudo mais que a engenhosidade humana pode trazer
+* E tudo mais que a genialidade humana pode trazer
 
 <p>. . .</p>
 
 Nós esperamos que estes planos dêem esperança para você.
 
-**Mesmo em um cenário pessimista é possível bater o COVID-19, enquanto protegemos nossa saúde mental e financeira.** Usando o confinamento como um "botão de reinício", mantendo R < 1 com isolamento de casos + rastreamento de contatos que proteja a privacidade + *pelo menos* máscaras de pano para todos... e a vida pode voltar a uma normalidade!
+**Mesmo em um cenário pessimista é possível bater o COVID-19, enquanto protegemos nossa saúde mental e financeira.** Usando o confinamento como um "botão de reinício", mantendo R < 1 com isolamento de casos + rastreamento de contatos que proteja a privacidade + *pelo menos* máscaras de pano para todos... e a vida pode voltar a uma normalidade (ou quase)!
 
-Claro, você pode terá suas mãos ressecadas, mas você poderá convidar alguém para um encontro em uma livraria de histórias em quadrinhos! Você poderá sair com amigos para assistir o último sucesso de Hollywood. Você poderá ficar observando as pessoas em uma livraria, ficando alegre de vê-las fazendo coisas simples como *estarem vivas.*.
+Claro, você poderá ter suas mãos ressecadas, mas você poderá convidar alguém para um encontro em uma livraria de histórias em quadrinhos! Você poderá sair com amigos para assistir o último sucesso de Hollywood. Você poderá ficar observando as pessoas em uma livraria, ficando alegre de vê-las fazendo coisas simples como *estarem vivas.*.
 
 Mesmo no cenário de pior caso... a vida persevera.
 
@@ -600,7 +606,7 @@ Mas para o COVID-19 *em humanos*, em 1 de maio de 2020, o "quanto tempo" é a gr
 *Ressalva: Este artigo é uma pré-impressão e não foi certificado por revisão por pares (ainda).* Também para enfatizar: eles somente testaram para reinfecção 28 dias depois.
 
 Para estas simulações, digamos é um ano.
-**Aqui temos uma simulação iniciando com 100% <icon r></icon>**, decaindo exponencialmente para suscetíveis, sem imunidade <icon s></icon>s depois de 1 ano, na *média*, com variação:
+**Aqui temos uma simulação iniciando com 100% <icon r></icon>**, decaindo exponencialmente para <icon s></icon>s suscetíveis, sem imunidade depois de 1 ano, na *média*, com variação:
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-1&format=lines&height=600" width="800" height="600"></iframe>
@@ -695,7 +701,7 @@ O avião afundou. Nós subimos nos botes salva-vidas. É hora de encontrar terra
 [^dry_land]: A metáfora de terra firme [de Marc Lipsitch & Yonatan Grad, em STAT News](https://www.statnews.com/2020/04/01/navigating-covid-19-pandemic/)
 
 
-Equipes de epidemiologistas e governantes ([de esquerda](https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/), [de direita](https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/ ), e [pluripartidários](https://ethics.harvard.edu/covid-roadmap)) chegaram a um consenso em como bater a COVID-19, enquento protegem nossas vidas *e* liberdades. 
+Equipes de epidemiologistas e legisladores ([de esquerda](https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/), [de direita](https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/ ), e [pluripartidários](https://ethics.harvard.edu/covid-roadmap)) chegaram a um consenso em como bater a COVID-19, enquento protegem nossas vidas *e* liberdades. 
 
 Aqui segue uma ideia geral, com alguns (menos consensuais) planos de emergência:
 
